@@ -14,7 +14,7 @@ export const Login = () => {
 
     const randomImage = Math.floor(Math.random() * 10)
 
-    const handleSubmit =  (data) => {
+    const handleSubmit =  (data: any) => {
         console.log('submit', data)
     }
 
