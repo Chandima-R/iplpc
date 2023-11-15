@@ -5,8 +5,6 @@ import { FinalizeScreen } from "@/components/register/FinalizeScreen";
 import { PassportSelector } from "@/components/register/PassportSelector";
 import { Button } from "@/components/ui/button";
 import { getCountryDataList} from 'countries-list';
-import { Aperture } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react";
 
 const steps = [
@@ -57,7 +55,7 @@ export default function RegistrationPage(){
       };
       
     return(
-        <div className="relative h-screen w-full flex items-center justify-center p-6">
+        <div className="relative h-screen w-full flex items-center justify-center p-4">
             <div
                 className="absolute top-10 left-10 h-[450px] w-[450px] rounded-full bg-orange-200 z-0"
             />
@@ -73,11 +71,11 @@ export default function RegistrationPage(){
             <div 
                 className="absolute top-0 left-0 right-0 bottom-0 z-30 backdrop-blur-[200px]"
             />
-            <div className="relative bg-white w-[600px] h-[600px] flex items-center justify-center p-2 z-30 shadow rounded flex-col">
+            <div className="relative bg-white w-full max-w-[600px] h-[600px] flex items-center justify-center p-2 z-30 shadow rounded flex-col">
                 {renderStep()}
                 <div className="flex items-center justify-between w-full absolute bottom-0 left-0 right-0 p-2">
                     <Button 
-                        className="w-28" 
+                        className="w-28 border" 
                         variant={'ghost'} 
                         onClick={handleBack}
                         disabled={currentStep === steps[0]}

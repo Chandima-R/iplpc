@@ -33,7 +33,7 @@ export const Login = () => {
             />
             <div>
 
-            <form onSubmit={handleSubmit} className="z-20 absolute h-screen top-0 bottom-0 left-0 right-0 flex items-center justify-center">
+            <form onSubmit={handleSubmit} className="z-20 absolute h-screen top-0 bottom-0 left-0 right-0 flex items-center justify-center mx-4">
                 <div className="grid gap-3 w-[600px] p-16 bg-white rounded shadow">
                     <div className="flex items-center justify-center w-full mb-10">
                         <Aperture className="w-16 h-16 mr-4" />
