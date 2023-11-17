@@ -40,7 +40,7 @@ export const SelectCategory = () => {
                             
                             <div className="flex items-start flex-col">
                                 {singleCategory[0]?.rules.map((rule, index) => (
-                                    <ul className="list-disc pl-6">
+                                    <ul className="list-disc pl-6" key={index}>
                                         <li className="capitalize text-sm mb-1" key={index}>{rule}</li>
                                     </ul>
                                 ))}
