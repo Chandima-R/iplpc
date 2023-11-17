@@ -15,7 +15,7 @@ export const SelectTask = () => {
     
     return(
         <div className="w-full h-full text-center p-4">
-            <h1 className="text-3xl capitalize font-bold mt-4">Select your today&quot;s task</h1>
+            <h1 className="text-3xl capitalize font-bold mt-4">Select your today&rsquo;s task</h1>
 
             <div className="flex items-center justify-center">
                 <form onSubmit={() => {}}>
