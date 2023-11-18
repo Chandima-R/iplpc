@@ -14,6 +14,12 @@ export const Navbar = () => {
                             className="w-12 h-12 mr-4"
                         />
                     </Link>
+                    <Link href="/hotels" className={'mr-4'}>
+                        <h1 className="text-sm">Hotels</h1>
+                    </Link>
+                    <Link href="/tour">
+                        <h1 className="text-sm">Tour plan</h1>
+                    </Link>
                 </div>
                 <div className="flex items-center">
                     <Link href={'/profile'} className="text-sm mr-4">Edit Profile</Link>
