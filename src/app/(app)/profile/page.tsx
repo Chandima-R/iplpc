@@ -1,6 +1,7 @@
 'use client'
 
 import { Icons } from "@/components/shared/Icons";
+import { PageHeader } from "@/components/shared/PageHeade";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
@@ -11,8 +12,9 @@ export default function Profile(){
     const [isLoading, setIsLoading] = useState<boolean>(false)
     
     return(
-        <div className="w-full mx-auto max-w-[1440px] p-6">
-            <p className="text-3xl font-bold tracking-wider capitalize mb-6">Edit your profile</p>
+        <div>
+            <PageHeader title="edit profile" subtitle="Update your profile to show your latest status." />
+
 
             <div>
                 <form onSubmit={() => {}}>

@@ -14,14 +14,6 @@ export default function ViewResult(){
 
     return(
         <div>
-            <div>
-                <Link href="/results">
-                    <Button className="rounded-full mb-4 bg-white text-black underline hover:bg-white">
-                        <ArrowLeft  size={24} className="mr-2" />
-                        Back to results
-                    </Button>
-                </Link>
-            </div>
             <div className="flex items-center justify-between">
                 <div>
                     <p className="text-3xl font-semibold capitalize">{filteredData[0]?.userName}</p>
@@ -30,7 +22,7 @@ export default function ViewResult(){
                 <div className="flex items-center rounded-full border px-6 py-2 bg-black text-white">
                     <p className="text-4xl font-bold">85.23 &nbsp;</p>
                     <p className="text-lg font-semibold"> / 100</p>
-                </div>
+                </div>3
             </div>
 
             <hr className="my-6"/>

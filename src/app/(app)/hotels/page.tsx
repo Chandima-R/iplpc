@@ -1,14 +1,13 @@
 import { HotelCard } from "@/components/hotels/HotelCard";
 import { hotelList } from "@/components/hotels/hotelData";
+import { PageHeader } from "@/components/shared/PageHeade";
 
 export default function Hotels(){
     return(
-        <div className='mx-auto max-w-[1440px] w-full p-6'>
-            <div>
-                <h1 className={'text-3xl font-bolds capitalize'}>hotels</h1>
-                <p className={'text-base'}>Check the place where you going to stay</p>
-            </div>
-            <hr  className={'my-4'}/>
+        <div>
+            
+            <PageHeader title="hotels" subtitle="Check the places where you going to stay." />
+
             <div className={'grid grid-cols-4 gap-4'}>
                 {hotelList?.map(hotel => (
                     <div key={hotel?.id}>
