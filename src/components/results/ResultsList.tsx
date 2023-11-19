@@ -13,7 +13,6 @@ export const ResultsList = () => {
                                 <ResultsCard 
                                     image={result?.image}
                                     category={result?.category}
-                                    user={result?.userId}
                                     date={result?.date}
                                     time={result?.time}
                                     score={result?.score}

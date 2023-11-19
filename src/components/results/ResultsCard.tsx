@@ -1,25 +1,25 @@
 'use client'
+
 import Image from 'next/image'
 
 interface ResultsCardProps {
     image: string,
     category: string,
-    user: number,
     date: string,
     time: string,
     score: number,
 }
 
-export const ResultsCard = ({image, category, user, date, time, score}: ResultsCardProps) => {
+export const ResultsCard = ({image, category, date, time, score}: ResultsCardProps) => {
     return(
         <div className='rounded shadow max-w-[350px] min-w-[280px] w-full group'>
-            <div className='w-[350px] h-[250px] overflow-hidden'>
-                <Image 
+            <div className='w-full h-56 overflow-hidden'>
+                <Image
                     src={image}
-                    width={350}
-                    height={300}
+                    width={1920}
+                    height={1080}
                     alt="Placeholder"
-                    className="rounded object-cover h-full group-hover:scale-105 transition-all duration-500 ease-in-out"
+                    className="rounded object-cover h-56 group-hover:scale-105 transition-all duration-500 ease-in-out "
                 />
             </div>
             <div className='p-4'>
@@ -28,10 +28,6 @@ export const ResultsCard = ({image, category, user, date, time, score}: ResultsC
                         <div className='flex w-full items-center'>
                             <p className='text-sm capitalize'>category: &nbsp;</p>
                             <p className='text-base font-semibold'>{category}</p>
-                        </div>
-                        <div className='flex w-full items-center'>
-                            <p className='text-sm capitalize'>Uploaded by: &nbsp;</p>
-                            <p className='text-base font-semibold'>{user}</p>
                         </div>
 
                         <div className='flex w-full items-center'>

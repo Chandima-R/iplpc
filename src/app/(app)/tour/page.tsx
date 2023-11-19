@@ -1,7 +1,9 @@
+import { PageHeader } from "@/components/shared/PageHeade";
+
 export default function Tours(){
     return (
-        <div className='mx-auto max-w-[1440px] w-full p-6'>
-            <h1>hello world</h1>
+        <div>
+            <PageHeader title="tour plan" subtitle="Create your own tour plan here." />
         </div>
     )
 }
