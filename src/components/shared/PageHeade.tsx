@@ -8,7 +8,7 @@ export const PageHeader = ({ title, subtitle}: PageHeaderProps) => {
         <div>
             <div>
                 <h1 className="text-3xl font-semibold capitalize">{title}</h1> 
-                <p className="text-base font-thin">{subtitle}</p>
+                <p className="text-base font-normal">{subtitle}</p>
             </div>
 
             <hr className="my-2"/>
