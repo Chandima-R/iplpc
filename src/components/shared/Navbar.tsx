@@ -20,6 +20,9 @@ export const Navbar = () => {
                     <Link href="/tour">
                         <h1 className="text-sm mr-4">Tour plan</h1>
                     </Link>
+                    <Link href="/locations">
+                        <h1 className="text-sm mr-4">Locations</h1>
+                    </Link>
                     <Link href="/results">
                         <h1 className="text-sm">My Results</h1>
                     </Link>
