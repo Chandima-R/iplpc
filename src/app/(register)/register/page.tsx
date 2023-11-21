@@ -3,23 +3,21 @@
 import { CountrySelector } from "@/components/register/CountrySelector";
 import { FinalizeScreen } from "@/components/register/FinalizeScreen";
 import { PassportSelector } from "@/components/register/PassportSelector";
+import { PaymentSelector } from "@/components/register/PaymentSelector";
+import { TicketSelector } from "@/components/register/TicketSelector";
 import { Button } from "@/components/ui/button";
-import { getCountryDataList} from 'countries-list';
 import { useState } from "react";
 
 const steps = [
     'country',
     'passport',
-    'finalize'
+    'payment',
+    'finalize',
+    'ticket'
 ]
 
 export default function RegistrationPage(){
     const [currentStep, setCurrentStep] = useState<string>(steps[0]);
-
-    const countries = getCountryDataList().map((country) => ({
-        value: country.name,
-        label: country.name,
-      })).sort((a, b) => a.label.localeCompare(b.label));
 
       const renderStep = () => {
         switch(currentStep){
@@ -31,10 +29,19 @@ export default function RegistrationPage(){
                 return(
                     <PassportSelector />
                 )
+            case 'payment':
+                return(
+                    <PaymentSelector />
+                )
             case 'finalize':
-            return(
-                <FinalizeScreen />
-            )
+                return(
+                    <FinalizeScreen />
+                )
+
+            case 'ticket':
+                return(
+                    <TicketSelector />
+                )
             default:
                 return null;
         }
@@ -71,7 +78,7 @@ export default function RegistrationPage(){
             <div 
                 className="absolute top-0 left-0 right-0 bottom-0 z-30 backdrop-blur-[200px]"
             />
-            <div className="relative bg-white w-full max-w-[600px] h-[600px] flex items-center justify-center p-2 z-30 shadow rounded flex-col">
+            <div className="relative bg-white w-full max-w-[600px] min-h-[600px] h-auto flex items-center justify-center p-2 z-30 shadow rounded flex-col">
                 {renderStep()}
                 <div className="flex items-center justify-between w-full absolute bottom-0 left-0 right-0 p-2">
                     <Button 

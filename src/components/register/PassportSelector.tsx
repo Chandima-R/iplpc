@@ -1,12 +1,10 @@
 'use client'
 
 import Image from "next/image"
-import { Aperture, Link } from "lucide-react"
 import { Label } from "@radix-ui/react-label"
-import { Icons } from "../shared/Icons"
-import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import { useState } from "react"
+import { RegisterHeader } from "./RegisterHeader"
 
 export const PassportSelector = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -14,10 +12,7 @@ export const PassportSelector = () => {
     return(
         <div>
             <div className="flex items-center flex-col">
-                <div className="flex items-center mb-10">
-                    <Aperture className="w-16 h-16 mr-4" />
-                    <h1 className="text-3xl md:text-4xl uppercase font-bold tracking-wider">Passport screen!</h1>
-                </div>
+                <RegisterHeader title="passport details" />
                 <div className="mb-10">
                     <Image
                         src="/images/logo.svg"
