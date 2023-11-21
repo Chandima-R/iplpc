@@ -30,7 +30,7 @@ export function Combobox() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-full max-w-[400px] justify-between"
+          className="w-full max-w-[500px] justify-between font-normal text-slate-700"
         >
           {value
             ? countries.find((framework) => framework.value === value)?.label
@@ -38,7 +38,7 @@ export function Combobox() {
           <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[400px] p-0 h-full max-h-[340px] overflow-y-auto scroll-smooth">
+      <PopoverContent className="w-[500px] p-0 h-full max-h-[340px] overflow-y-auto scroll-smooth">
         <Command>
           <CommandInput placeholder="Search country..." className="h-9" />
           <CommandEmpty>No country found.</CommandEmpty>
