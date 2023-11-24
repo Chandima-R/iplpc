@@ -1,11 +1,15 @@
 'use client'
 
-import { Input } from "@/components/ui/input";
-import { Label } from "@radix-ui/react-label";
-import { useState } from "react";
+import {useRef, useState} from "react";
+import {ImageUploader} from "@/components/tasks/add/ImageUploader";
 
 export const PhotoUpload = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false)
+    const [formData, setFormData] = useState<any>({})
+    const [, setIsButtonDisabled] = useState(false);
+    const refSubmitButton = useRef<HTMLButtonElement>(null);
+    const refFormSaveButton = useRef<HTMLButtonElement>(null);
+
 
     var currentDate = new Date();
 
@@ -62,24 +66,14 @@ export const PhotoUpload = () => {
                     <p className="ml-4 text-base">user id</p>
                 </div>
 
-                <div className="text-left">
-                    <div className="grid gap-1">
-                        <p className="capitalize text-sm">Upload photo</p>
 
-                        <Label className="sr-only" htmlFor="passport Number">
-                            Passport Number
-                        </Label>
-                        <Input
-                            id="email"
-                            placeholder="Upload photo"
-                            type="text"
-                            autoCapitalize="none"
-                            autoComplete="email"
-                            autoCorrect="off"
-                            disabled={isLoading}
-                        />
-                    </div>
-                </div>
+                <ImageUploader
+                    formData={formData}
+                    refFormSaveButton={refFormSaveButton}
+                    refSubmitButton={refSubmitButton}
+                    setButtonDisabled={setIsButtonDisabled}
+                    setFormData={setFormData}
+                />
             </div>
         </div>
     )
