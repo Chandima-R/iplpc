@@ -2,7 +2,7 @@ import {RegisterData} from "@/components/types";
 
 export const REGISTER_INITIAL_DATA: RegisterData = {
     country: '',
-    countryCode: 0,
+    countryCode: '',
     passportNumber: '',
     email: '',
     cardType: '',

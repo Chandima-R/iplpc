@@ -22,16 +22,19 @@ const countryScreenSchema = z.object({
 
 export const CountrySelector = ({formData, setFormData, refSubmitButton, setCurrentStep}: CountrySelectorProps) => {
 
+    const selectedCountry = countries?.filter((country) => country?.value === formData?.country)
+
     const form = useForm<z.infer<typeof countryScreenSchema>>({
         resolver: zodResolver(countryScreenSchema),
         defaultValues: {
             country: formData?.country,
         },
     })
+
     const onSubmit = (values: z.infer<typeof countryScreenSchema>) => {
         console.log(10, values)
         if(values){
-            setFormData({...formData, ...values})
+            setFormData({...formData, ...values, countryCode: selectedCountry[0]?.phone})
             setCurrentStep('passport')
         }
     }

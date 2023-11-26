@@ -1,6 +1,6 @@
 export interface RegisterData{
     country: string;
-    countryCode: number;
+    countryCode: string;
     passportNumber: string;
     email: string;
     cardType: string;
