@@ -1,7 +1,7 @@
 'use client'
 
 import {Dispatch, RefObject, SetStateAction} from "react"
-import { RegisterHeader } from "./RegisterHeader"
+import { PageHeader } from "../shared/PageHeader"
 import {RegisterData} from "@/components/types";
 import {InputField} from "@/components/shared/InputField";
 import {Form} from "@/components/ui/form";
@@ -54,7 +54,7 @@ export const TicketSelector = ({formData, setFormData, refSubmitButton, setCurre
     return(
         <div className="mb-14 mt-4">
             <div className="flex flex-col">
-                <RegisterHeader title="Add ticket details" />
+                <PageHeader title="Add ticket details" />
             </div>
 
             <div>

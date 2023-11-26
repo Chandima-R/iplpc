@@ -1,5 +1,4 @@
-import { PageHeader } from '@/components/shared/PageHeade'
-import Image from 'next/image'
+import { PageHeader } from '@/components/shared/PageHeader'
 
 export default function Home() {
   return (

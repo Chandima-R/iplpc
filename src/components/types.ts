@@ -16,3 +16,12 @@ export interface RegisterData{
     landingTo: string;
     landingTime: string;
 }
+
+export interface TaskData{
+    date: string;
+    time: string;
+    userId: string;
+    taskId: string;
+    categoryId: string;
+    photo: string[];
+}

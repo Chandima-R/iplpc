@@ -33,12 +33,23 @@ interface ComboboxProps {
     required?: boolean;
     description?: string;
     placeholder?: string;
+    onSelectTask?: (selectedTaskId: string) => void
 }
 
-export function Combobox({options, name, required, label, description, placeholder }: ComboboxProps) {
+export function Combobox({options, name, required, label, description, placeholder, onSelectTask }: ComboboxProps) {
   const [open, setOpen] = useState(false)
 
     const { setValue } = useFormContext();
+    const handleTaskSelect = (selectedValue: string) => {
+        if (onSelectTask) {
+            onSelectTask(selectedValue);
+        }
+        setValue(
+            name,
+            selectedValue
+        );
+
+    };
 
 
   return (
@@ -77,6 +88,7 @@ export function Combobox({options, name, required, label, description, placehold
                                   onSelect={(currentValue) => {
                                     setValue(field?.name, option.value)
                                     setOpen(false)
+                                    handleTaskSelect(currentValue);
                                   }}
                               >
                                 {option.label}

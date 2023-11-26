@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import {Dispatch, RefObject, SetStateAction} from "react"
-import { RegisterHeader } from "./RegisterHeader"
+import { PageHeader } from "../shared/PageHeader"
 import {RegisterData} from "@/components/types";
 import * as z from "zod";
 import {useForm} from "react-hook-form";
@@ -42,7 +42,7 @@ export const PassportSelector = ({formData, setFormData, setCurrentStep, refSubm
     return(
         <div>
             <div className="flex items-center flex-col">
-                <RegisterHeader title="passport details" />
+                <PageHeader title="passport details" />
                 <div className="mb-10">
                     <Image
                         src="/images/logo.svg"

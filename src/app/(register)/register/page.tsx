@@ -26,7 +26,6 @@ export default function RegistrationPage(){
     const [isLoading] = useState<boolean>(false);
     const refFormSaveButton = useRef<HTMLButtonElement>(null);
 
-
     const renderStep = () => {
         switch(currentStep){
             case 'country':

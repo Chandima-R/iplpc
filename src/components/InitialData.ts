@@ -18,3 +18,12 @@ export const REGISTER_INITIAL_DATA: RegisterData = {
     landingTo: '',
     landingTime: ''
 }
+
+export const TASK_INITIAL_DATA = {
+    date: '',
+    time: '',
+    userId: '',
+    taskId: '',
+    categoryId: '',
+    photo: []
+}

@@ -2,7 +2,7 @@
 
 import {Dispatch, RefObject, SetStateAction} from "react"
 import { Combobox } from "../shared/Combobox"
-import { RegisterHeader } from "./RegisterHeader"
+import { PageHeader } from "../shared/PageHeader"
 import {RegisterData} from "@/components/types";
 import * as z from "zod";
 import {useForm} from "react-hook-form";
@@ -59,7 +59,7 @@ export const PaymentSelector = ({formData, setFormData, setCurrentStep, refSubmi
     return(
         <div className="mb-4">
             <div className="flex flex-col">
-                <RegisterHeader title="Add you payments" />
+                <PageHeader title="Add you payments" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-1 gap-4">

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Combobox } from "../shared/Combobox"
-import { RegisterHeader } from "./RegisterHeader"
+import { PageHeader } from "../shared/PageHeader"
 import {Dispatch, RefObject, SetStateAction} from "react";
 import {RegisterData} from "@/components/types";
 import {useForm} from "react-hook-form";
@@ -41,7 +41,7 @@ export const CountrySelector = ({formData, setFormData, refSubmitButton, setCurr
     return(
         <div>
             <div className="flex items-center flex-col">
-                <RegisterHeader title="Welcome aboard" />
+                <PageHeader title="Welcome aboard" />
                 <div className="mb-10">
                     <Image
                         src="/images/logo.svg"

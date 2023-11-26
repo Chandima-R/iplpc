@@ -1,11 +1,42 @@
 'use client'
 
-import { Input } from "@/components/ui/input";
-import { Label } from "@radix-ui/react-label";
-import { useState } from "react";
+import {Dispatch, RefObject, SetStateAction} from "react";
+import {TaskData} from "@/components/types";
+import {InputField} from "@/components/shared/InputField";
+import {Form} from "@/components/ui/form";
+import * as z from "zod";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
 
-export const PhotoUpload = () => {
-    const [isLoading, setIsLoading] = useState<boolean>(false)
+interface PhotoUploadProps {
+    formData: TaskData;
+    setFormData: Dispatch<SetStateAction<TaskData>>;
+    refSubmitButton: RefObject<HTMLButtonElement> | null;
+    setIsButtonDisabled: (data: boolean) => void;
+    setCurrentStep: Dispatch<SetStateAction<string>>
+    refFormSaveButton: RefObject<HTMLButtonElement> | null;
+}
+
+const photoUploadSchema = z.object({
+    photos: z.array(z.string()).refine(data => data.length > 0, {
+        message: 'Please upload at least one photo.',
+    }),
+});
+
+export const PhotoUpload = ({formData, setFormData, setCurrentStep, refSubmitButton, refFormSaveButton}: PhotoUploadProps) => {
+    const form = useForm<z.infer<typeof photoUploadSchema>>({
+        resolver: zodResolver(photoUploadSchema),
+        defaultValues: {
+            photos: formData?.photo,
+        },
+    })
+    const onSubmit = (values: z.infer<typeof photoUploadSchema>) => {
+        console.log(12, values)
+        if(values){
+            setFormData({...formData, ...values})
+            setCurrentStep('payment')
+        }
+    }
 
     var currentDate = new Date();
 
@@ -54,31 +85,44 @@ export const PhotoUpload = () => {
 
                 <div className="flex items-center mb-2">
                     <p className="capitalize text-base font-semibold">task ID:</p>
-                    <p className="ml-4 text-base">user id</p>
+                    <p className="ml-4 text-base">{formData?.taskId}</p>
                 </div>
 
                 <div className="flex items-center mb-2">
                     <p className="capitalize text-base font-semibold">category ID:</p>
-                    <p className="ml-4 text-base">user id</p>
+                    <p className="ml-4 text-base">{formData?.categoryId}</p>
                 </div>
 
                 <div className="text-left">
-                    <div className="grid gap-1">
-                        <p className="capitalize text-sm">Upload photo</p>
+                    <Form {...form}>
+                        <form onSubmit={form.handleSubmit(onSubmit)}>
+                            <div className="grid gap-1">
+                                <InputField
+                                    placeholder={'passport number'}
+                                    name={'photos'}
+                                    type={'string'}
+                                    label={'passport number'}
+                                />
+                            </div>
 
-                        <Label className="sr-only" htmlFor="passport Number">
-                            Passport Number
-                        </Label>
-                        <Input
-                            id="email"
-                            placeholder="Upload photo"
-                            type="text"
-                            autoCapitalize="none"
-                            autoComplete="email"
-                            autoCorrect="off"
-                            disabled={isLoading}
-                        />
-                    </div>
+                            <button
+                                type="submit"
+                                ref={refSubmitButton}
+                                className="invisible"
+                            >
+                                submit
+                            </button>
+
+                            <button
+                                type="button"
+                                ref={refFormSaveButton}
+                                className="invisible"
+                                onClick={() => setCurrentStep('category')}
+                            >
+                                back
+                            </button>
+                        </form>
+                    </Form>
                 </div>
             </div>
         </div>
