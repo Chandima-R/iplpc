@@ -1,21 +1,43 @@
 'use client'
 
-import { Label } from "@radix-ui/react-label"
 import Image from "next/image"
 import { useState } from "react"
 import { Button } from "../ui/button"
-import { Input } from "../ui/input"
 import { Icons } from "../shared/Icons"
 import Link from "next/link"
 import { Aperture } from "lucide-react"
+import {InputField} from "@/components/shared/InputField";
+import * as z from "zod";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {useForm} from "react-hook-form";
+import { Form } from "../ui/form"
 
+const loginSchema = z.object({
+    email: z.string().email('Please enter a valid email address.'),
+    password: z.string().min(8, {
+        message: "Password must be at least 8 characters.",
+    }).nonempty('Password is required.'),
+})
 export const Login = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const randomImage = Math.floor(Math.random() * 10)
 
-    const handleSubmit =  (data: any) => {
-        console.log('submit', data)
+    const form = useForm<z.infer<typeof loginSchema>>({
+        resolver: zodResolver(loginSchema),
+        defaultValues: {
+            email: "",
+            password: "",
+        },
+    })
+    const onSubmit = (values: z.infer<typeof loginSchema>) => {
+        try{
+            setIsLoading(true)
+            console.log(values)
+        }catch(error){
+            console.log(error)
+        }finally{
+            setIsLoading(false)}
     }
 
     return(
@@ -33,64 +55,55 @@ export const Login = () => {
             />
             <div>
 
-            <form onSubmit={handleSubmit} className="z-20 absolute h-screen top-0 bottom-0 left-0 right-0 flex items-center justify-center mx-4">
-                <div className="grid gap-3 w-[600px] p-16 bg-white rounded shadow">
-                    <div className="flex items-center justify-center w-full mb-10">
-                        <Aperture className="w-16 h-16 mr-4" />
-                        <h1 className="text-4xl font-bold text-center tracking-wider uppercase">
-                            sign in
-                        </h1>
-                    </div>
-                        <div className="grid gap-1">
-                            <Label className="sr-only" htmlFor="email">
-                                Email
-                            </Label>
-                            <Input
-                            id="email"
-                            placeholder="name@example.com"
-                            type="email"
-                            autoCapitalize="none"
-                            autoComplete="email"
-                            autoCorrect="off"
-                            disabled={isLoading}
-                            />
-                        </div>
+                <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="z-20 absolute h-screen top-0 bottom-0 left-0 right-0 flex items-center justify-center mx-4">
+                        <div className="grid gap-3 w-[600px] p-16 bg-white rounded shadow">
+                            <div className="flex items-center justify-center w-full mb-10">
+                                <Aperture className="w-16 h-16 mr-4" />
+                                <h1 className="text-4xl font-bold text-center tracking-wider uppercase">
+                                    sign in
+                                </h1>
+                            </div>
 
-                        <div className="grid gap-1">
-                            <Label className="sr-only" htmlFor="password">
-                            Password
-                            </Label>
-                            <Input
-                            id="password"
-                            placeholder="Password"
-                            type="password"
-                            autoCapitalize="none"
-                            autoComplete="password"
-                            autoCorrect="off"
-                            disabled={isLoading}
-                            />
-                        </div>
+                            <div className="grid gap-1">
+                                <InputField
+                                    placeholder={'name@example.com'}
+                                    name={'email'}
+                                    type={'email'}
+                                />
+                            </div>
 
-                        <Button disabled={isLoading} className="mt-4">
-                            {isLoading && (
-                            <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-                            )}
-                            Sign In
-                        </Button>
+                            <div className="grid gap-1">
+                                <div className="grid gap-1">
+                                    <InputField
+                                        placeholder={'password'}
+                                        name={'password'}
+                                        type={'password'}
+                                    />
+                                </div>
+                            </div>
 
-                        <div className="text-center text-sm w-full flex items-center justify-center px-10 mt-10">
-                            <p className="w-auto">By clicking Sign In, you agree to our 
-                            {' '}
-                            <Link href={'/terms'} className="underline hover:text-blue-600">Terms of Service</Link>
-                            {' '}
-                            and 
-                            {' '}
-                            <Link href={'/policy'} className="underline hover:text-blue-600">Privacy Policy</Link>
-                            .
-                            </p>
+                            <Button disabled={isLoading} className="mt-4">
+                                {isLoading && (
+                                    <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                                )}
+                                Sign In
+                            </Button>
+
+                            <div className="text-center text-sm w-full flex items-center justify-center px-10 mt-10">
+                                <p className="w-auto">By clicking Sign In, you agree to our
+                                    {' '}
+                                    <Link href={'/terms'} className="underline hover:text-blue-600">Terms of Service</Link>
+                                    {' '}
+                                    and
+                                    {' '}
+                                    <Link href={'/policy'} className="underline hover:text-blue-600">Privacy Policy</Link>
+                                    .
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </Form>
             </div>
         </div>
     )

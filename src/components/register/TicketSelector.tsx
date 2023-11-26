@@ -1,123 +1,138 @@
 'use client'
 
-import { useState } from "react"
-import { Combobox } from "../shared/Combobox"
-import { Input } from "../ui/input"
-import { Label } from "../ui/label"
-import { RegisterHeader } from "./RegisterHeader"
-import Image from "next/image"
+import {Dispatch, RefObject, SetStateAction} from "react"
+import { PageHeader } from "../shared/PageHeader"
+import {RegisterData} from "@/components/types";
+import {InputField} from "@/components/shared/InputField";
+import {Form} from "@/components/ui/form";
+import {useForm} from "react-hook-form";
+import * as z from "zod";
+import {zodResolver} from "@hookform/resolvers/zod";
 
-export const TicketSelector = () => {
-    const [isLoading, setIsLoading] = useState<boolean>(false)
+interface TicketSelectorProps {
+    formData: RegisterData;
+    setFormData: Dispatch<SetStateAction<RegisterData>>;
+    refSubmitButton: RefObject<HTMLButtonElement> | null;
+    setIsButtonDisabled: (data: boolean) => void;
+    setCurrentStep: Dispatch<SetStateAction<string>>,
+    refFormSaveButton: RefObject<HTMLButtonElement> | null;
+}
+
+const TicketSelectorSchema = z.object({
+    ticketNumber: z.string().min(8, {
+        message: "Ticket number must be at least 8 characters.",
+    }),
+    flightNumber: z.string().min(8, {
+        message: "Flight number must be at least 8 characters.",
+    }),
+    takeOffFrom: z.string().nonempty('Take off from is required.'),
+    takeOffTime: z.string().nonempty('Take off time is required.'),
+    landingTo: z.string().nonempty('Landing to is required.'),
+    landingTime: z.string().nonempty('Landing time is required.'),
+})
+
+export const TicketSelector = ({formData, setFormData, refSubmitButton, setCurrentStep, refFormSaveButton}: TicketSelectorProps) => {
+
+    const form = useForm<z.infer<typeof TicketSelectorSchema>>({
+        resolver: zodResolver(TicketSelectorSchema),
+        defaultValues: {
+            ticketNumber: formData?.ticketNumber,
+            flightNumber: formData?.flightNumber,
+            takeOffFrom: formData?.takeOffFrom,
+            takeOffTime: formData?.takeOffTime,
+            landingTo: formData?.landingTo,
+            landingTime: formData?.landingTime,
+        },
+    })
+    const onSubmit = (values: z.infer<typeof TicketSelectorSchema>) => {
+        console.log(12, values)
+        if(values){
+            setFormData({...formData, ...values})
+        }
+    }
 
     return(
         <div className="mb-14 mt-4">
             <div className="flex flex-col">
-                <RegisterHeader title="Add ticket details" />
+                <PageHeader title="Add ticket details" />
             </div>
 
-            <form onSubmit={() => {}}>
-                    <div className="">
-                        <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
-                            <div className="grid gap-1">
-                                <p className="capitalize text-sm">ticket number</p>
-                                <Label className="sr-only" htmlFor="ticketNumber">
-                                    ticket number
-                                </Label>
-
-                                <Input
-                                    id="ticketNumber"
-                                    placeholder="Ticket Number"
-                                    type="text"
-                                    autoCapitalize="none"
-                                    autoComplete="text"
-                                    autoCorrect="off"
-                                    disabled={isLoading}
-                                />
-                            </div>
-
-                            <div className="grid gap-1">
-                                <p className="capitalize text-sm">flight number</p>
-                                <Label className="sr-only" htmlFor="flightNumber">
-                                    flight number
-                                </Label>
-                                <Input
-                                    id="flightNumber"
-                                    placeholder="Flight Number"
-                                    type="text"
-                                    autoCapitalize="none"
-                                    autoComplete="text"
-                                    autoCorrect="off"
-                                    disabled={isLoading}
-                                />
-                            </div>
-                            <div className="grid gap-1">
-                                <p className="capitalize text-sm">Take off from</p>
-                                <Label className="sr-only" htmlFor="takeOff">
-                                    take off from
-                                </Label>
-
-                                <Input
-                                    id="takeOff"
-                                    placeholder="Toronto"
-                                    type="text"
-                                    autoCapitalize="none"
-                                    autoComplete="text"
-                                    autoCorrect="off"
-                                    disabled={isLoading}
-                                />
-                            </div>
-
-                            <div className="grid gap-1">
-                                <p className="capitalize text-sm">start time</p>
-                                <Label className="sr-only" htmlFor="startTime">
-                                    start time
-                                </Label>
-                                <Input
-                                    id="startTime"
-                                    placeholder="Start Time"
-                                    type="text"
-                                    autoCapitalize="none"
-                                    autoComplete="text"
-                                    autoCorrect="off"
-                                    disabled={isLoading}
-                                />
-                            </div>
-                            <div className="grid gap-1">
-                                <p className="capitalize text-sm">arrival time</p>
-                                <Label className="sr-only" htmlFor="arrivalTime">
-                                    arrival time
-                                </Label>
-
-                                <Input
-                                    id="arrivalTime"
-                                    placeholder="Arrival time"
-                                    type="text"
-                                    autoCapitalize="none"
-                                    autoComplete="text"
-                                    autoCorrect="off"
-                                    disabled={isLoading}
-                                />
-                            </div>
-
-                            <div className="grid gap-1">
-                                <p className="capitalize text-sm">Airport</p>
-                                <Label className="sr-only" htmlFor="airport">
-                                    airport
-                                </Label>
-                                <Input
-                                    id="airport"
-                                    placeholder="Airport"
-                                    type="text"
-                                    autoCapitalize="none"
-                                    autoComplete="text"
-                                    autoCorrect="off"
-                                    disabled={isLoading}
-                                />
-                            </div>
+            <div>
+                <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)}>
+                        <div className="grid gap-1">
+                            <InputField
+                                placeholder={'Ticket number'}
+                                name={'ticketNumber'}
+                                type={'string'}
+                                label={'ticket number'}
+                            />
                         </div>
-                    </div>
-                </form>
+
+                        <div className="grid gap-1">
+                            <InputField
+                                placeholder={'Flight number'}
+                                name={'flightNumber'}
+                                type={'string'}
+                                label={'flight number'}
+                            />
+                        </div>
+
+                        <div className="grid gap-1">
+                            <InputField
+                                placeholder={'Take off from'}
+                                name={'takeOffFrom'}
+                                type={'string'}
+                                label={'take off from'}
+                            />
+                        </div>
+
+                        <div className="grid gap-1">
+                            <InputField
+                                placeholder={'Take off time'}
+                                name={'takeOffTime'}
+                                type={'string'}
+                                label={'take off time'}
+                            />
+                        </div>
+
+                        <div className="grid gap-1">
+                            <InputField
+                                placeholder={'Landing to'}
+                                name={'landingTo'}
+                                type={'string'}
+                                label={'landing to'}
+                            />
+                        </div>
+
+                        <div className="grid gap-1">
+                            <InputField
+                                placeholder={'Landing time'}
+                                name={'landingTime'}
+                                type={'string'}
+                                label={'landing time'}
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            ref={refSubmitButton}
+                            className="invisible"
+                        >
+                            submit
+                        </button>
+
+                        <button
+                            type="button"
+                            ref={refFormSaveButton}
+                            className="invisible"
+                            onClick={() => setCurrentStep('payment')}
+                        >
+                            submit
+                        </button>
+                    </form>
+                </Form>
+            </div>
         </div>
     )
 }

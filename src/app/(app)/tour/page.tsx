@@ -1,4 +1,4 @@
-import { PageHeader } from "@/components/shared/PageHeade";
+import { PageHeader } from "@/components/shared/PageHeader";
 
 export default function Tours(){
     return (

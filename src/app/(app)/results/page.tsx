@@ -1,6 +1,6 @@
 import { FilterBar } from "@/components/results/FilterBar";
 import { ResultsList } from "@/components/results/ResultsList";
-import { PageHeader } from "@/components/shared/PageHeade";
+import { PageHeader } from "@/components/shared/PageHeader";
 
 export default function Results(){
     return(
