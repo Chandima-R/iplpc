@@ -7,6 +7,7 @@ import {Form} from "@/components/ui/form";
 import * as z from "zod";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
+import {PageHeader} from "@/components/shared/PageHeader";
 
 interface PhotoUploadProps {
     formData: TaskData;
@@ -65,32 +66,37 @@ export const PhotoUpload = ({formData, setFormData, setCurrentStep, refSubmitBut
 
     return(
         <div className="w-full h-full text-center p-4">
-            <h1 className="text-3xl capitalize font-bold mt-4">Upload your photo</h1>
+            <PageHeader title={'upload your photos'} />
 
-            <div className="px-4 mt-10">
-                <div className="flex items-center mb-2">
-                    <p className="capitalize text-base font-semibold">Date:</p>
-                    <p className="ml-4 text-base">{formattedDate}</p>
-                </div>
+            <div className="px-4 mt-10 w-full">
+                <div className={'flex items-start w-full justify-between'}>
+                    <div>
+                        <div className="flex items-center mb-2">
+                            <p className="capitalize text-base font-semibold">user ID:</p>
+                            <p className="ml-4 text-base">user id</p>
+                        </div>
 
-                <div className="flex items-center mb-2">
-                    <p className="capitalize text-base font-semibold">Time:</p>
-                    <p className="ml-4 text-base">{formattedTime}</p>
-                </div>
+                        <div className="flex items-center mb-2">
+                            <p className="capitalize text-base font-semibold">task ID:</p>
+                            <p className="ml-4 text-base">{formData?.taskId}</p>
+                        </div>
 
-                <div className="flex items-center mb-2">
-                    <p className="capitalize text-base font-semibold">user ID:</p>
-                    <p className="ml-4 text-base">user id</p>
-                </div>
+                        <div className="flex items-center mb-2">
+                            <p className="capitalize text-base font-semibold">category ID:</p>
+                            <p className="ml-4 text-base">{formData?.categoryId}</p>
+                        </div>
+                    </div>
+                   <div>
+                       <div className="flex items-center mb-2">
+                           <p className="capitalize text-base font-semibold">Date:</p>
+                           <p className="ml-4 text-base">{formattedDate}</p>
+                       </div>
 
-                <div className="flex items-center mb-2">
-                    <p className="capitalize text-base font-semibold">task ID:</p>
-                    <p className="ml-4 text-base">{formData?.taskId}</p>
-                </div>
-
-                <div className="flex items-center mb-2">
-                    <p className="capitalize text-base font-semibold">category ID:</p>
-                    <p className="ml-4 text-base">{formData?.categoryId}</p>
+                       <div className="flex items-center mb-2">
+                           <p className="capitalize text-base font-semibold">Time:</p>
+                           <p className="ml-4 text-base">{formattedTime}</p>
+                       </div>
+                   </div>
                 </div>
 
                 <div className="text-left">

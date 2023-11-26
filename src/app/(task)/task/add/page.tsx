@@ -24,7 +24,6 @@ export default function AddTask(){
     const [isLoading] = useState<boolean>(false);
     const refFormSaveButton = useRef<HTMLButtonElement>(null);
 
-    console.log(999, formData)
     const renderStep = () => {
         switch(currentStep){
             case 'task':
@@ -81,7 +80,8 @@ export default function AddTask(){
             <div
                 className="absolute top-0 left-0 right-0 bottom-0 z-30 backdrop-blur-[200px]"
             />
-            <div className="relative bg-white w-full max-w-[600px] h-[600px] flex items-center justify-center p-2 z-30 shadow rounded flex-col">
+
+            <div className="relative h-auto min-h-[650px] max-w-[1000px] w-full shadow z-30 bg-white">
                 <div className={'h-8'}>
                     <WizardHeader
                         currentStep={currentStep}
@@ -93,14 +93,16 @@ export default function AddTask(){
                     {renderStep()}
                 </div>
 
-                <WizardFooter
-                    currentStep={currentStep}
-                    steps={steps}
-                    refSubmitButton={refSubmitButton}
-                    isButtonDisabled={isButtonDisabled}
-                    isLoading={isLoading}
-                    refFormSaveButton={refFormSaveButton}
-                />
+                <div className={'mt-10'}>
+                    <WizardFooter
+                        currentStep={currentStep}
+                        steps={steps}
+                        refSubmitButton={refSubmitButton}
+                        isButtonDisabled={isButtonDisabled}
+                        isLoading={isLoading}
+                        refFormSaveButton={refFormSaveButton}
+                    />
+                </div>
             </div>
         </div>
     )

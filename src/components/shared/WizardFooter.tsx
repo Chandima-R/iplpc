@@ -14,7 +14,6 @@ export const WizardFooter = ({refSubmitButton, isButtonDisabled, steps, currentS
     const currentStepIndex = steps.indexOf(currentStep);
     const lastStepIndex = steps.length - 1;
 
-
     return(
         <div className="flex items-center justify-between w-full absolute bottom-0 left-0 right-0 p-2">
             <Button

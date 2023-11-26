@@ -7,9 +7,9 @@ interface RegisterHeaderProps {
 
 export const PageHeader = ({title, subtitle}: RegisterHeaderProps) => {
     return(
-       <div>
+       <div className={'w-full flex flex-col justify-center items-center'}>
            <div>
-               <div className="flex items-center mb-8">
+               <div className="flex items-center mb-2">
                    <Aperture className="w-12 h-12 mr-4" />
                    <h1 className="text-3xl uppercase font-semibold tracking-wider">{title}</h1>
                </div>
@@ -17,7 +17,7 @@ export const PageHeader = ({title, subtitle}: RegisterHeaderProps) => {
                <p className="text-base font-normal">{subtitle}</p>
            </div>
 
-           <hr className="my-2"/>
+           <hr className="my-2 w-full"/>
        </div>
     )
 }

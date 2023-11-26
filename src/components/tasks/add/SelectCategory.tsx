@@ -10,6 +10,7 @@ import * as z from "zod";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {PageHeader} from "@/components/shared/PageHeader";
+import Image from "next/image";
 
 interface CategorySelectorProps {
     formData: TaskData;
@@ -50,57 +51,72 @@ export const SelectCategory = ({formData, setFormData, refSubmitButton, setCurre
     return(
         <div className="w-full h-full text-center p-4">
             <PageHeader title={`Select your today's category`} />
-            <div className="text-left mt-20 grid">
-                <div className="grid gap-1">
-                    <Form {...form}>
-                        <form onSubmit={form.handleSubmit(onSubmit)}>
-                            <div className="grid gap-1">
-                                <Combobox
-                                    onSelectTask={handleTaskSelect}
-                                    options={taskList?.map((task) => ({
-                                        label: task?.label,
-                                        value: task?.value.toString(),
-                                    }))}
-                                    name={'categoryId'}
-                                    placeholder={'category'}
-                                    required={true}
-                                    label={'select category'}
-                                />
-                            </div>
 
-                            <button
-                                type="button"
-                                ref={refFormSaveButton}
-                                className="invisible"
-                                onClick={() => setCurrentStep('task')}
-                            >
-                                submit
-                            </button>
-
-                            <button
-                                type="submit"
-                                ref={refSubmitButton}
-                                className="invisible"
-                            >
-                                submit
-                            </button>
-                        </form>
-                    </Form>
+            <div className="flex items-center justify-center w-full h-full min-h-[500px]">
+                <div className={'w-full h-auto flex items-center justify-center'}>
+                    <Image
+                        src={'/images/logo.svg'}
+                        alt={'logo'}
+                        width={1920}
+                        height={1080}
+                        className={'w-96 h-auto'}
+                    />
                 </div>
-                <div className="grid gap-1">
-                    {singleCategory[0] && (
-                        <div className="grid gap-1 my-6">
-                        <p className="capitalize text-sm">rules: </p>
 
-                        <div className="flex items-start flex-col">
-                            {singleCategory[0]?.rules.map((rule, index) => (
-                                <ul className="list-disc pl-6" key={index}>
-                                    <li className="capitalize text-sm mb-1" key={index}>{rule}</li>
-                                </ul>
-                            ))}
+                <div className="text-left mt-4 grid w-full px-4">
+                    <div className="text-left mt-4 grid">
+                        <div className="grid gap-1">
+                            <Form {...form}>
+                                <form onSubmit={form.handleSubmit(onSubmit)}>
+                                    <div className="grid gap-1">
+                                        <Combobox
+                                            onSelectTask={handleTaskSelect}
+                                            options={taskList?.map((task) => ({
+                                                label: task?.label,
+                                                value: task?.value.toString(),
+                                            }))}
+                                            name={'categoryId'}
+                                            placeholder={'category'}
+                                            required={true}
+                                            label={'select category'}
+                                        />
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        ref={refFormSaveButton}
+                                        className="invisible"
+                                        onClick={() => setCurrentStep('task')}
+                                    >
+                                        submit
+                                    </button>
+
+                                    <button
+                                        type="submit"
+                                        ref={refSubmitButton}
+                                        className="invisible"
+                                    >
+                                        submit
+                                    </button>
+                                </form>
+                            </Form>
+                        </div>
+                        <div className="grid gap-1">
+                            {singleCategory[0] && (
+                                <div className="grid gap-1 my-6">
+                                    <p className="capitalize text-lg font-semibold">rules: </p>
+
+                                    <div className="flex items-start flex-col">
+                                        {singleCategory[0]?.rules.map((rule, index) => (
+                                            <ul className="list-disc pl-6" key={index}>
+                                                <li className="capitalize text-sm mb-1" key={index}>{rule}</li>
+                                            </ul>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
-                    )}
                 </div>
             </div>
         </div>
