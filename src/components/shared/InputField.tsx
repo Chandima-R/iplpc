@@ -17,7 +17,7 @@ export const InputField = ({placeholder, description, label, name, autocomplete,
             name={name}
             render={({ field }) => (
                 <FormItem>
-                    <FormLabel className={'capitalize text-sm'}>
+                    <FormLabel className={'capitalize text-sm font-normal'}>
                         {label}
                         {required && <span className="text-red-500"> *</span>}
                     </FormLabel>
@@ -33,7 +33,7 @@ export const InputField = ({placeholder, description, label, name, autocomplete,
                     <FormDescription>
                         {description}
                     </FormDescription>
-                    <FormMessage className={'text-xs'}/>
+                    <FormMessage className={'text-xs font-normal'}/>
                 </FormItem>
             )}
         />

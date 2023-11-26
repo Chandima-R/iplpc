@@ -12,8 +12,6 @@ export const SelectCategory = () => {
       };
 
       const singleCategory = photographyCategories.filter((category) => category.id === selectedCategoryId);
-
-      console.log(45, singleCategory)
     
     return(
         <div className="w-full h-full text-center p-4">

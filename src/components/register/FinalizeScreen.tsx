@@ -1,5 +1,3 @@
-import Link from "next/link"
-import { Button } from "../ui/button"
 import { RegisterHeader } from "./RegisterHeader"
 import Image from "next/image"
 
@@ -15,6 +13,7 @@ export const FinalizeScreen = () => {
                     width={300}
                     height={200}
                     className="object-contain"
+                    priority={true}
                     />
             </div>
 
@@ -22,6 +21,7 @@ export const FinalizeScreen = () => {
                 <div className="p-2">
                     <p className="text-lg font-semibold">Note: </p>
                     <p className="text--base">You are at the last stages in the registration. If you want to finish the setup, just click next and ignore the ticket details. But if you have ticket details please update it on next screen. </p>
+
                 </div>
             </div>
         </div>

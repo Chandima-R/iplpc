@@ -15,7 +15,7 @@ export const MultiLineInputField = ({placeholder, description, label, name, requ
             name={name}
             render={({ field }) => (
                 <FormItem>
-                    <FormLabel className={'capitalize text-sm'}>
+                    <FormLabel className={'capitalize text-sm font-normal'}>
                         {label}
                         {required && <span className="text-red-500"> *</span>}
                     </FormLabel>
@@ -25,7 +25,7 @@ export const MultiLineInputField = ({placeholder, description, label, name, requ
                     <FormDescription>
                         {description}
                     </FormDescription>
-                    <FormMessage className={'text-xs'}/>
+                    <FormMessage className={'text-xs font-normal'}/>
                 </FormItem>
             )}
         />
