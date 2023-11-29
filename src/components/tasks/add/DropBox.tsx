@@ -1,31 +1,17 @@
 import React, { useRef, useState } from 'react';
-import { MoreHorizontal, UploadCloud } from 'lucide-react';
+import {  UploadCloud } from 'lucide-react';
 import Image from 'next/image';
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
+
 import {resizeFile} from "@/lib/resizeFile";
 
 interface VanillaDropBoxProps {
     setActivityImage: (data: File | undefined | null) => void;
-    componentWidth: number;
-    componentHeight: number;
     name?: string;
-    imageMaxWidth: number;
-    imageMaxHeight: number;
     initialImage?: File | null | string;
 }
 export const DropBox = ({
     setActivityImage,
-    componentWidth,
-    componentHeight,
     name,
-    imageMaxHeight,
-    imageMaxWidth,
     initialImage,
 }: VanillaDropBoxProps) => {
     const [isDragging, setIsDragging] = useState(false);
@@ -71,7 +57,7 @@ export const DropBox = ({
             {resizedImage && (
                 <div id="image" className="relative flex">
                     <div
-                        className={` max-w-${componentWidth} max-h-${componentHeight} relative`}
+                        className={`max-w-auto max-h-auto relative`}
                     >
                         {name && (
                             <div className=" border-1 absolute left-3 top-4 z-10 rounded-2xl bg-white px-2 py-1 text-[8px] text-secondary-light-700">
@@ -85,31 +71,12 @@ export const DropBox = ({
                                     ? URL.createObjectURL(resizedImage)
                                     : resizedImage
                             }
+                            width={800}
+                            height={500}
                             alt="image"
-                            width={componentWidth}
-                            height={componentHeight}
-                            className={`relative rounded-lg ${componentHeight} ${componentWidth}`}
+                            className={`relative rounded-lg w-auto h-auto`}
                         />
                     </div>
-                    <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                            <div className=" absolute right-6 top-4 flex h-8 w-8 items-center justify-center rounded-lg border-[1px] border-secondary-light-700 bg-white hover:bg-secondary-light-100">
-                                <span className="sr-only">Open menu</span>
-                                <MoreHorizontal className="h-4 w-4 text-secondary-light-700" />
-                            </div>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end">
-                            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                            <DropdownMenuItem
-                                onClick={() => {
-                                    setResizedImage(null);
-                                    setActivityImage(null);
-                                }}
-                            >
-                                Remove Photo
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
                 </div>
             )}
             {!resizedImage && (
@@ -145,7 +112,7 @@ export const DropBox = ({
                     Click to upload{' '}
                   </span>
 
-                                    {`or Drag and Drop JPG PNG only. (max.${imageMaxWidth}px x ${imageMaxHeight}px) `}
+                                    {`or Drag and Drop JPG PNG only. Max size 5MB`}
                                 </p>
                             </div>
                         </div>

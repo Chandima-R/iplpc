@@ -2,12 +2,12 @@
 
 import {Dispatch, RefObject, SetStateAction} from "react";
 import {TaskData} from "@/components/types";
-import {InputField} from "@/components/shared/InputField";
 import {Form} from "@/components/ui/form";
 import * as z from "zod";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {PageHeader} from "@/components/shared/PageHeader";
+import { ImageUploader } from "./ImageUploader";
 
 interface PhotoUploadProps {
     formData: TaskData;
@@ -24,7 +24,7 @@ const photoUploadSchema = z.object({
     }),
 });
 
-export const PhotoUpload = ({formData, setFormData, setCurrentStep, refSubmitButton, refFormSaveButton}: PhotoUploadProps) => {
+export const PhotoUpload = ({formData, setFormData, setCurrentStep, refSubmitButton, setIsButtonDisabled, refFormSaveButton}: PhotoUploadProps) => {
     const form = useForm<z.infer<typeof photoUploadSchema>>({
         resolver: zodResolver(photoUploadSchema),
         defaultValues: {
@@ -103,11 +103,13 @@ export const PhotoUpload = ({formData, setFormData, setCurrentStep, refSubmitBut
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)}>
                             <div className="grid gap-1">
-                                <InputField
-                                    placeholder={'passport number'}
+                                <ImageUploader
+                                    formData={formData}
+                                    refFormSaveButton={refFormSaveButton}
+                                    refSubmitButton={refSubmitButton}
+                                    setButtonDisabled={setIsButtonDisabled}
+                                    setFormData={setFormData}
                                     name={'photos'}
-                                    type={'string'}
-                                    label={'passport number'}
                                 />
                             </div>
 

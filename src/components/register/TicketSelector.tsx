@@ -8,6 +8,7 @@ import {Form} from "@/components/ui/form";
 import {useForm} from "react-hook-form";
 import * as z from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 
 interface TicketSelectorProps {
     formData: RegisterData;
@@ -31,7 +32,7 @@ const TicketSelectorSchema = z.object({
     landingTime: z.string().nonempty('Landing time is required.'),
 })
 
-export const TicketSelector = ({formData, setFormData, refSubmitButton, setCurrentStep, refFormSaveButton}: TicketSelectorProps) => {
+export const TicketSelector = ({formData, setFormData, refSubmitButton, refFormSaveButton}: TicketSelectorProps) => {
 
     const form = useForm<z.infer<typeof TicketSelectorSchema>>({
         resolver: zodResolver(TicketSelectorSchema),
@@ -51,6 +52,8 @@ export const TicketSelector = ({formData, setFormData, refSubmitButton, setCurre
         }
     }
 
+    const router = useRouter();
+    
     return(
         <div className="mb-14 mt-4">
             <div className="flex flex-col">
@@ -126,7 +129,7 @@ export const TicketSelector = ({formData, setFormData, refSubmitButton, setCurre
                             type="button"
                             ref={refFormSaveButton}
                             className="invisible"
-                            onClick={() => setCurrentStep('payment')}
+                            onClick={() => router.push('/')}
                         >
                             submit
                         </button>
