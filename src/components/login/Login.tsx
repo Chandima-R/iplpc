@@ -11,6 +11,7 @@ import * as z from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
 import { Form } from "../ui/form"
+import { useRouter } from "next/navigation"
 
 const loginSchema = z.object({
     email: z.string().email('Please enter a valid email address.'),
@@ -20,6 +21,7 @@ const loginSchema = z.object({
 })
 export const Login = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false)
+    const router = useRouter()
 
     const randomImage = Math.floor(Math.random() * 10)
 
@@ -83,7 +85,11 @@ export const Login = () => {
                                 </div>
                             </div>
 
-                            <Button disabled={isLoading} className="mt-4">
+                            <Button 
+                                disabled={isLoading} 
+                                className="mt-4"
+                                onClick={() => router.push('/register')}
+                            >
                                 {isLoading && (
                                     <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
                                 )}
