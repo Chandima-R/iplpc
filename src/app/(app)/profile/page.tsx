@@ -1,11 +1,9 @@
 'use client'
 
-import { Icons } from "@/components/shared/Icons";
-import { PageHeader } from "@/components/shared/PageHeade";
+import { PageHeader } from "@/components/shared/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
-import { Aperture, Link } from "lucide-react";
 import { useState } from "react";
 
 export default function Profile(){

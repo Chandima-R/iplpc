@@ -455,11 +455,6 @@ export const countries = [
     },
     {
         value: 'guernsey', 
-        label: 'Guatemala',
-        phone: '502',
-    },
-    {
-        value: 'guernsey', 
         label: 'Guernsey',
         phone: '441481',
     },
