@@ -2,7 +2,7 @@
 
 import { AdminResultsCard } from "@/components/admin/AdminResultsCard";
 import { results } from "@/components/admin/results";
-import { PageHeader } from "@/components/shared/PageHeade";
+import { PageHeader } from "@/components/shared/PageHeader";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
