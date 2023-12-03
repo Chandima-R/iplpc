@@ -1,4 +1,3 @@
-// components/MyLineChart.tsx
 "use client";
 import {
     Chart as ChartJS,
@@ -10,7 +9,6 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
-// Register ChartJS components using ChartJS.register
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -19,20 +17,7 @@ ChartJS.register(
     Tooltip
 );
 
-import { PageHeader } from '@/components/shared/PageHeade'
-import Image from 'next/image'
-import {TruncateString} from "@/lib/truncateString";
-import {HotelSelectComboBox} from "@/components/locations/SelectHotelComboBox";
-import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
-import {CalendarIcon} from "lucide-react";
-import {format} from "date-fns";
-import {Calendar} from "@/components/ui/calendar";
-import Link from "next/link";
-import {NearbyHotelCard} from "@/components/locations/NearbyHotelCard";
-
-'use client'
+import { PageHeader } from '@/components/shared/PageHeader'
 
 import {CustomCalendar} from "@/components/shared/CustomCalendar";
 
@@ -67,7 +52,7 @@ export default function Home() {
           <div className={'w-3/5 border-l-2 border-r-2 px-2'}>center</div>
           <div className={'w-1/5 px-2'}>right</div>
       </div>
-   <div>
+    <div>
       <PageHeader title="dashboard" subtitle="Every status of your work is in one place." />
 
        <div className={'flex'}>
@@ -99,6 +84,7 @@ export default function Home() {
 
            </div>
        </div>
+   </div>
    </div>
   )
 }

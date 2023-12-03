@@ -46,7 +46,6 @@ export const SelectCategory = ({formData, setFormData, refSubmitButton, setCurre
         setSelectedCategoryId(selectedCategoryId);
       };
 
-      const singleCategory = photographyCategories.filter((category) => category.id === selectedCategoryId);
       const singleCategory = photographyCategories.filter((category) => category.id.toString() === selectedCategoryId);
 
     return(

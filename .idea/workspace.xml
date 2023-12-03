@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="634568f6-c0b0-4455-855b-d6b17018f73c" name="Changes" comment="feat: add tour plans, add map 🎁">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/map/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/tour/add/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/Map.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day01.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day02.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day03.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day04.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day05.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day06.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day07.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day08.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day09.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day10.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day11.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day12.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day13.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day14.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day15.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day16.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day17.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day18.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day19.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/Day20.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/StartTour.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tour/TourPlanCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/locations/[locationId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/locations/[locationId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(register)/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(register)/register/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InitialData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InitialData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/WizardHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/WizardHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/types.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="fix/main-fixings" />
+                    <option name="lastUsedInstant" value="1701438026" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1701437109" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/admin" />
+                    <option name="lastUsedInstant" value="1701360989" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/add-task" />
+                    <option name="lastUsedInstant" value="1701268855" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="fix/upload-photo" />
+                    <option name="lastUsedInstant" value="1701243974" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2YqCmVxLvbQ3h4ZWIHZcKnUQFLf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "fix/main-fixings",
+    "last_opened_file_path": "D:/Metawiz/iplpc/src/components/tour",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "D:\\Metawiz\\iplpc\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Metawiz\iplpc\src\components\tour" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Metawiz\iplpc\src\app\(app)\tour\add" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="634568f6-c0b0-4455-855b-d6b17018f73c" name="Changes" comment="" />
+      <created>1701243881766</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701243881766</updated>
+      <workItem from="1701243883096" duration="1854000" />
+      <workItem from="1701268781353" duration="6090000" />
+      <workItem from="1701318441233" duration="10000" />
+      <workItem from="1701360677460" duration="7381000" />
+      <workItem from="1701377025756" duration="591000" />
+      <workItem from="1701377636123" duration="5000" />
+      <workItem from="1701432826975" duration="2525000" />
+      <workItem from="1701437386933" duration="5954000" />
+      <workItem from="1701610072268" duration="12147000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: add user navigation 🧭">
+      <option name="closed" value="true" />
+      <created>1701243955876</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701243955876</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: merge main to add-task ⛙">
+      <option name="closed" value="true" />
+      <created>1701244295482</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701244295482</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: upate add task ⭐">
+      <option name="closed" value="true" />
+      <created>1701360927679</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701360927679</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: update panel screens 🔘">
+      <option name="closed" value="true" />
+      <created>1701436999453</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701436999453</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/tailwind.config.js" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: add user navigation " />
+    <MESSAGE value="feat: merge main to add-task ⛙" />
+    <MESSAGE value="feat: upate add task ⭐" />
+    <MESSAGE value="feat: update panel screens " />
+    <MESSAGE value="feat: add tour plans, add map " />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add tour plans, add map " />
+  </component>
+</project>

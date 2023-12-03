@@ -14,7 +14,6 @@ const steps = [
     'country',
     'passport',
     'payment',
-    // 'finalize',
     'ticket'
 ]
 
@@ -60,13 +59,6 @@ export default function RegistrationPage(){
                         refFormSaveButton={refFormSaveButton}
                     />
                 )
-            case 'finalize':
-                // return(
-                //     <FinalizeScreen
-                //         refSubmitButton={refSubmitButton}
-                //     />
-                // )
-
             case 'ticket':
                 return(
                     <TicketSelector
