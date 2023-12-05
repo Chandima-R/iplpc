@@ -5,47 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="634568f6-c0b0-4455-855b-d6b17018f73c" name="Changes" comment="feat: add tour plans, add map 🎁">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(app)/map/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(app)/tour/add/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shared/Map.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day01.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day02.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day03.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day04.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day05.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day06.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day07.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day08.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day09.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day10.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day11.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day12.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day13.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day14.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day15.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day16.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day17.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day18.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day19.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/Day20.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/StartTour.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tour/TourPlanCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/locations/[locationId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/locations/[locationId]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(app)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(register)/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(register)/register/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InitialData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InitialData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/WizardHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/WizardHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/NavigationBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/NavigationBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mini-profile/LogoutContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mini-profile/LogoutContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/Clock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Clock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,30 +80,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "fix/main-fixings",
-    "last_opened_file_path": "D:/Metawiz/iplpc/src/components/tour",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "D:\\Metawiz\\iplpc\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fix/main-fixings&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Metawiz/iplpc/src/components/tour&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Metawiz\\iplpc\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Metawiz\iplpc\src\components\tour" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Metawiz\iplpc\public\images" />
       <recent name="D:\Metawiz\iplpc\src\app\(app)\tour\add" />
     </key>
   </component>
@@ -154,6 +125,7 @@
       <workItem from="1701432826975" duration="2525000" />
       <workItem from="1701437386933" duration="5954000" />
       <workItem from="1701610072268" duration="12147000" />
+      <workItem from="1701795455382" duration="1989000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add user navigation 🧭">
       <option name="closed" value="true" />

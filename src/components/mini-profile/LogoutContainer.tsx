@@ -18,7 +18,7 @@ import { Button } from "../ui/button"
     return (
       <AlertDialog>
         <AlertDialogTrigger asChild>
-        <Button className="cursor-pointer flex items-center hover:bg-slate-800 duration-300 transition-all ease-in-out">
+        <Button className="cursor-pointer flex items-center bg-primary hover:bg-destructive hover:text-primary duration-300 transition-all ease-in-out">
           <p>Logout</p>
           <LogOut className="ml-4 h-4 w-4"/>
         </Button>

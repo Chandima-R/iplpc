@@ -7,7 +7,7 @@ const Clock = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentDateTime(new Date());
-        }, 1000);
+        }, 100);
 
         return () => clearInterval(intervalId);
     }, []);

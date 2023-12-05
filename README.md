@@ -20,6 +20,11 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Features
+### Colors
+- Primary color: `#30302f`
+- Secondary color (destructive in tailwind): `#d5b665`
+- White: `#ffffff`
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
