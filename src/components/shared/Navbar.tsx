@@ -22,21 +22,21 @@ export const Navbar = () => {
                             className={'w-24 h-auto'}
                         />
                     </Link>
-                    <Link href="/hotels" className={'mr-4 hover:text-destructive transition-all ease-in-out duration-300'}>
+                    <Link href="/hotels" className={'mr-4 hover:text-secondary transition-all ease-in-out duration-300'}>
                         <h1 className="text-sm">Hotels</h1>
                     </Link>
-                    <Link href="/tour" className={'mr-4 hover:text-destructive transition-all ease-in-out duration-300'}>
+                    <Link href="/tour" className={'mr-4 hover:text-secondary transition-all ease-in-out duration-300'}>
                         <h1 className="text-sm">Tour plan</h1>
                     </Link>
-                    <Link href="/locations" className={'mr-4 hover:text-destructive transition-all ease-in-out duration-300'}>
+                    <Link href="/locations" className={'mr-4 hover:text-secondary transition-all ease-in-out duration-300'}>
                         <h1 className="text-sm">Locations</h1>
                     </Link>
-                    <Link href="/results" className={'mr-4 hover:text-destructive transition-all ease-in-out duration-300'}>
+                    <Link href="/results" className={'mr-4 hover:text-secondary transition-all ease-in-out duration-300'}>
                         <h1 className="text-sm">My Results</h1>
                     </Link>
                 </div>
                 <div className="flex items-center">
-                    <Link href={'/profile'} className="text-sm mr-4 hover:text-destructive transition-all ease-in-out duration-300">Edit Profile</Link>
+                    <Link href={'/profile'} className="text-sm mr-4 hover:text-secondary transition-all ease-in-out duration-300">Edit Profile</Link>
                     <LogoutContainer />
                 </div>
             </div>

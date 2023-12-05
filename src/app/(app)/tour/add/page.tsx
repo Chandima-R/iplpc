@@ -25,6 +25,9 @@ import {Day18} from "@/components/tour/Day18";
 import {Day19} from "@/components/tour/Day19";
 import {Day20} from "@/components/tour/Day20";
 import {TOUR_PLAN_INITIAL_DATA} from "@/components/InitialData";
+import MapPage from "@/app/(app)/map/page";
+import {MultipleMapLocation} from "@/components/shared/MultipleLocation";
+import {locations} from "@/components/locations/locationData";
 
 const steps = [
     'day01',
@@ -265,8 +268,8 @@ export default function AddTourPlan(){
     }
 
     return(
-        <div className="relative h-full w-full flex items-center justify-center">
-            <div className="relative bg-white w-full max-w-[600px] min-h-[600px] h-auto flex items-center justify-center p-2 z-30 shadow rounded flex-col">
+        <div className="flex w-full items-center justify-between">
+            <div className="relative  w-full max-w-[600px] min-h-[600px] h-auto flex items-center justify-center p-2 rounded flex-col bg-white shadow">
 
                 <div className={'h-8'}>
                     <WizardHeader
@@ -275,7 +278,7 @@ export default function AddTourPlan(){
                     />
                 </div>
 
-                <div>
+                <div >
                     {renderStep()}
                 </div>
                 <WizardFooter
@@ -286,6 +289,10 @@ export default function AddTourPlan(){
                     isLoading={isLoading}
                     refFormSaveButton={refFormSaveButton}
                 />
+            </div>
+
+            <div className={'w-1/2 min-h-[600px] h-auto p-2 shadow rounded bg-white'}>
+                <MultipleMapLocation locations={[]} height={500}/>
             </div>
         </div>
     )

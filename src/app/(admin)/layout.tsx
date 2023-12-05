@@ -1,5 +1,8 @@
 import { NavigationBar } from '@/components/admin/NavigationBar'
 import '../globals.css'
+import {Comfortaa} from "next/font/google";
+
+const comfortaa = Comfortaa({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Next.js',
@@ -13,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={comfortaa.className}>
         <NavigationBar />
         <div className='mx-auto max-w-[1440px] w-full p-6'>
           {children}

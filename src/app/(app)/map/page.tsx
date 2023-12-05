@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react';
-import {APIProvider, Map, useMarkerRef} from "@vis.gl/react-google-maps";
+import {APIProvider, Map, Marker, useMarkerRef} from "@vis.gl/react-google-maps";
 import {useEffect} from "react";
 
 export default function MapPage(){

@@ -1,118 +1,104 @@
-'use client'
+'use client';
 
 import { AdminImageCard } from "@/components/admin/AdminImageCard";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import Image from "next/image";
 import { useState } from "react";
-import {categoryData} from "@/components/admin/categoryData";
-import {usePathname} from "next/navigation";
+import { categoryData } from "@/components/admin/categoryData";
+import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
-export default function SingleCategory(){
-    const [isLoading, setIsLoading] = useState<boolean>(false)
+export default function SingleCategory() {
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [currentPage, setCurrentPage] = useState<number>(1);
+    const [selectedPage, setSelectedPage] = useState<number>(1);
 
     const pathname = usePathname();
-    const category = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.categoryName
-    const images = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.images
+    const category = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.categoryName;
+    const categoryLength = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.images?.length;
+    const images = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.images;
 
-    return(
+    const itemsPerPage = 1;
+    const totalPages = Math.ceil( images && images?.length / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    const visibleImages = images?.slice(startIndex, endIndex);
+
+    const handleNextPage = () => {
+        if (currentPage < totalPages) {
+            setCurrentPage((prevPage) => prevPage + 1);
+        }
+    };
+
+    const handlePrevPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage((prevPage) => prevPage - 1);
+        }
+    };
+
+    const goToPage = (page: number) => {
+        if (page >= 1 && page <= totalPages) {
+            setCurrentPage(page);
+            setSelectedPage(page); // Update selectedPage when navigating to a new page
+        }
+    };
+
+
+    return (
         <div>
-            <div className={'mb-2'}>
-                <h1 className={'text-3xl uppercase font-bold tracking-wider'}>Results</h1>
-                <p className={'text-base font-normal'}>See all the photos uploaded by users</p>
-
-                <hr className="my-2 w-full"/>
+            <div className={'mb-4 pb-2 border-b-[1px] flex items-start justify-between w-full'}>
+                <div>
+                    <h1 className={'text-3xl uppercase font-bold tracking-wider'}>Results</h1>
+                    <p className={'text-base font-normal'}>See all the photos uploaded by users</p>
+                </div>
+                <div>
+                    <p className={'text-xl font-bold'}>{categoryLength}</p>
+                </div>
             </div>
 
-            <div className="grid grid-cols-4 gap-6">
-                {
-                    images?.map((result) => {
-                        return(
-                            <div key={result?.imageId}>
-                                <div>
-                                    <AlertDialog>
-                                        <AlertDialogTrigger asChild>
-                                            <div className="cursor-pointer">
-                                                <AdminImageCard
-                                                    imageId={result?.imageId}
-                                                    imageUrl={result?.imageUrl}
-                                                    date={result?.date}
-                                                    location={result?.location}
-                                                    iso={result?.iso}
-                                                    shutterSpeed={result?.shutterSpeed}
-                                                    aperture={result?.aperture}
-                                                    whiteBalance={result?.whiteBalance}
-                                                    exposure={result?.exposure}
-                                                    focus={result?.focus}
-                                                    meteringMode={result?.meteringMode}
-                                                    fileFormat={result?.fileFormat}
-                                                    resolution={result?.resolution}
-                                                />
-                                            </div>
-                                        </AlertDialogTrigger>
-                                        <AlertDialogContent className={'w-full max-w-[1024px] max-h-[1000px]'}>
-                                            <AlertDialogHeader>
-                                                <AlertDialogTitle className="capitalize text-2xl">{category}</AlertDialogTitle>
-                                                <AlertDialogDescription>
-                                                    <Image
-                                                        src={result?.imageUrl}
-                                                        alt="Placeholder"
-                                                        width={1920}
-                                                        height={1080}
-                                                        className="rounded object-cover w-full h-[500px]"
-                                                    />
-                                                    <div className="grid grid-cols-1 gap-4 mt-4">
-                                                        <div className="grid gap-1">
-                                                            <p className="capitalize text-sm">comment</p>
-                                                            <Label className="sr-only" htmlFor="comment">
-                                                                comment
-                                                            </Label>
-
-                                                            <Textarea
-                                                                id="comment"
-                                                                placeholder="Add your review here"
-                                                                autoCapitalize="none"
-                                                                autoComplete=""
-                                                                autoCorrect="off"
-                                                                disabled={isLoading}
-
-                                                            />
-                                                        </div>
-
-                                                        <div className="grid gap-1">
-                                                            <p className="capitalize text-sm">score</p>
-                                                            <Label className="sr-only" htmlFor="score">
-                                                                score
-                                                            </Label>
-
-                                                            <Input
-                                                                id="score"
-                                                                placeholder="Score"
-                                                                type="text"
-                                                                autoCapitalize="none"
-                                                                autoComplete=""
-                                                                autoCorrect="off"
-                                                                disabled={isLoading}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </AlertDialogDescription>
-                                            </AlertDialogHeader>
-                                            <AlertDialogFooter>
-                                                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                                                <AlertDialogAction>Submit Review</AlertDialogAction>
-                                            </AlertDialogFooter>
-                                        </AlertDialogContent>
-                                    </AlertDialog>
-                                </div>
-
+            <div className={'flex items-start justify-between'}>
+                <div className="grid grid-cols-4 gap-6">
+                    {visibleImages?.map((result) => {
+                        return (
+                            <div className="cursor-pointer" key={result?.imageId}>
+                                <AdminImageCard
+                                    imageId={result?.imageId}
+                                    imageUrl={result?.imageUrl}
+                                    date={result?.date}
+                                    location={result?.location}
+                                    iso={result?.iso}
+                                    shutterSpeed={result?.shutterSpeed}
+                                    aperture={result?.aperture}
+                                    whiteBalance={result?.whiteBalance}
+                                    exposure={result?.exposure}
+                                    focus={result?.focus}
+                                    meteringMode={result?.meteringMode}
+                                    fileFormat={result?.fileFormat}
+                                    resolution={result?.resolution}
+                                />
                             </div>
-                        )
-                    })
-                }
+                        );
+                    })}
+                </div>
+                <div className={'p-2 flex flex-col gap-2'}>
+                    {/*<Button variant={'outline'} onClick={handlePrevPage} disabled={currentPage === 1} className={'text-xs'}>*/}
+                    {/*    <ChevronUp />*/}
+                    {/*</Button>*/}
+                    {Array.from({ length: totalPages }, (_, index) => (
+                        <Button
+                            variant={'outline'}
+                            key={index + 1}
+                            onClick={() => goToPage(index + 1)}
+                            className={`${selectedPage === index + 1 ? 'bg-primary text-white' : ''} hover:bg-primary hover:text-white transition-all ease-in-out duration-300 text-xs rounded-full w-8 h-8`}
+                        >
+                            {index + 1}
+                        </Button>
+                    ))}
+                    {/*<Button variant={'outline'} onClick={handleNextPage} className={'text-xs'}>*/}
+                    {/*    <ChevronDown />*/}
+                    {/*</Button>*/}
+                </div>
             </div>
         </div>
-    )
+    );
 }

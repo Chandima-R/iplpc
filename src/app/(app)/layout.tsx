@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={comfortaa.className}>
         <Navbar />
-        <div  className='mx-auto max-w-[1440px] w-full p-6'>
+        <div  className='mx-auto max-w-[1440px] w-full p-6 max-h-screen'>
           {children}
         </div>
       </body>

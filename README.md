@@ -23,7 +23,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Features
 ### Colors
 - Primary color: `#30302f`
-- Secondary color (destructive in tailwind): `#d5b665`
+- Secondary color: `#d5b665`
 - White: `#ffffff`
 ## Learn More
 

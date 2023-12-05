@@ -48,7 +48,7 @@ export const AdminImageCard = ({
                     className="rounded object-cover h-56 group-hover:scale-105 transition-all duration-500 ease-in-out "
                 />
             </div>
-            <div className='p-4 w-full'>
+            <div className='p-4 w-full h-60'>
                <div className='flex items-center justify-between w-full'>
                     <div className={'w-full'}>
                         <div className='flex w-full items-center justify-between'>

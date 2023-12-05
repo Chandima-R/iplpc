@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="634568f6-c0b0-4455-855b-d6b17018f73c" name="Changes" comment="feat: add tour plans, add map 🎁">
-      <change afterPath="$PROJECT_DIR$/public/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="634568f6-c0b0-4455-855b-d6b17018f73c" name="Changes" comment="feat: update color theme and font">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/[categoryId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/panel/[categoryId]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(app)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/NavigationBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/NavigationBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/map/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/map/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/tour/add/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/tour/add/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/AdminImageCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminImageCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/mini-profile/LogoutContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mini-profile/LogoutContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/Clock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Clock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/WizardHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/WizardHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +130,7 @@
       <workItem from="1701432826975" duration="2525000" />
       <workItem from="1701437386933" duration="5954000" />
       <workItem from="1701610072268" duration="12147000" />
-      <workItem from="1701795455382" duration="1989000" />
+      <workItem from="1701795455382" duration="8501000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add user navigation 🧭">
       <option name="closed" value="true" />
@@ -159,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701436999453</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: update color theme and font">
+      <option name="closed" value="true" />
+      <created>1701800115931</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701800115931</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +189,7 @@
     <MESSAGE value="feat: upate add task ⭐" />
     <MESSAGE value="feat: update panel screens " />
     <MESSAGE value="feat: add tour plans, add map " />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add tour plans, add map " />
+    <MESSAGE value="feat: update color theme and font" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update color theme and font" />
   </component>
 </project>
