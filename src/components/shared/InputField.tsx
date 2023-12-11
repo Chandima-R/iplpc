@@ -28,6 +28,7 @@ export const InputField = ({placeholder, description, label, name, autocomplete,
                             type={type}
                             autoComplete={autocomplete}
                             disabled={disabled}
+                            className="rounded-full"
                         />
                     </FormControl>
                     <FormDescription>

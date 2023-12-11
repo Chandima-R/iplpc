@@ -5,7 +5,6 @@ import { useState } from "react"
 import { Button } from "../ui/button"
 import { Icons } from "../shared/Icons"
 import Link from "next/link"
-import { Aperture } from "lucide-react"
 import {InputField} from "@/components/shared/InputField";
 import * as z from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -32,6 +31,7 @@ export const Login = () => {
             password: "",
         },
     })
+    
     const onSubmit = (values: z.infer<typeof loginSchema>) => {
         try{
             setIsLoading(true)
@@ -53,15 +53,23 @@ export const Login = () => {
             />
             
             <div 
-                className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-70 z-10"
+                className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-50 z-10"
             />
-            <div>
 
+            <div>
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="z-20 absolute h-screen top-0 bottom-0 left-0 right-0 flex items-center justify-center mx-4">
                         <div className="grid gap-3 w-[600px] p-16 bg-white rounded shadow">
-                            <div className="flex items-center justify-center w-full mb-10">
-                                <Aperture className="w-16 h-16 mr-4" />
+                            <div className="flex items-center justify-center w-full mb-10 flex-col">
+                                <div>
+                                    <Image
+                                        src="/images/logo-blue.png"
+                                        alt="logo"
+                                        width={400}
+                                        height={0}
+                                        className="object-contain w-32"
+                                    />
+                                </div>
                                 <h1 className="text-4xl font-bold text-center tracking-wider uppercase">
                                     sign in
                                 </h1>
@@ -87,7 +95,7 @@ export const Login = () => {
 
                             <Button 
                                 disabled={isLoading} 
-                                className="mt-4"
+                                className="mt-4 rounded-full uppercase hover:bg-secondary"
                                 onClick={() => router.push('/register')}
                             >
                                 {isLoading && (
@@ -99,11 +107,11 @@ export const Login = () => {
                             <div className="text-center text-sm w-full flex items-center justify-center px-10 mt-10">
                                 <p className="w-auto">By clicking Sign In, you agree to our
                                     {' '}
-                                    <Link href={'/terms'} className="underline hover:text-blue-600">Terms of Service</Link>
+                                    <Link href={'/terms'} className="underline hover:text-secondary">Terms of Service</Link>
                                     {' '}
                                     and
                                     {' '}
-                                    <Link href={'/policy'} className="underline hover:text-blue-600">Privacy Policy</Link>
+                                    <Link href={'/policy'} className="underline hover:text-secondary">Privacy Policy</Link>
                                     .
                                 </p>
                             </div>
