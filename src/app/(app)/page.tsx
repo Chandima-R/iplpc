@@ -7,7 +7,6 @@ import {
     PointElement,
     LineElement,
 } from "chart.js";
-import { Line } from "react-chartjs-2";
 
 ChartJS.register(
     CategoryScale,
@@ -16,8 +15,6 @@ ChartJS.register(
     LineElement,
     Tooltip
 );
-
-import { PageHeader } from '@/components/shared/PageHeader'
 
 import {CustomCalendar} from "@/components/shared/CustomCalendar";
 import Clock from "@/components/shared/Clock";
@@ -75,44 +72,44 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className={'w-3/5 h-full border-l-2 border-r-2 px-2'}>
-                <MultipleMapLocation locations={locations} height={500}/>
+            <div className={'w-3/5 border-l-2 border-r-2 px-2 h-80'}>
+                <MultipleMapLocation locations={locations} height={400}/>
             </div>
             <div className={'w-1/5 px-2 flex items-center justify-center'}>
                 <Clock />
             </div>
         </div>
 
-        {/* <div>
-            <div className={'flex'}>
-                <div className={'w-2/3 pr-2'}>
-                    <div>
-                        <Line
-                            data={{
-                                labels: [
-                                    "2023-01",
-                                    "2023-02",
-                                    "2023-03",
-                                    "2023-04",
-                                    "2023-05",
-                                    "2023-06",
-                                    "2023-07",
-                                ],
-                                datasets: [
-                                    {
-                                        data: [100, 120, 115, 134, 168, 132, 200,],
-                                        backgroundColor: "purple",
-                                    },
-                                ],
-                            }}
-                        />
-                    </div>
-                </div>
-                <div className={'w-1/3 pl-2 border-l border-slate-900'}>
-                    <h2 className={'text-2xl font-semibold capitalize mb-3'}>nearby hotels</h2>
-                </div>
-            </div>
-        </div> */}
+        {/*<div>*/}
+        {/*    <div className={'flex'}>*/}
+        {/*        <div className={'w-2/3 pr-2'}>*/}
+        {/*            <div>*/}
+        {/*                <Line*/}
+        {/*                    data={{*/}
+        {/*                        labels: [*/}
+        {/*                            "2023-01",*/}
+        {/*                            "2023-02",*/}
+        {/*                            "2023-03",*/}
+        {/*                            "2023-04",*/}
+        {/*                            "2023-05",*/}
+        {/*                            "2023-06",*/}
+        {/*                            "2023-07",*/}
+        {/*                        ],*/}
+        {/*                        datasets: [*/}
+        {/*                            {*/}
+        {/*                                data: [100, 120, 115, 134, 168, 132, 200,],*/}
+        {/*                                backgroundColor: "purple",*/}
+        {/*                            },*/}
+        {/*                        ],*/}
+        {/*                    }}*/}
+        {/*                />*/}
+        {/*            </div>*/}
+        {/*        </div>*/}
+        {/*        <div className={'w-1/3 pl-2 border-l border-slate-900'}>*/}
+        {/*            <h2 className={'text-2xl font-semibold capitalize mb-3'}>nearby hotels</h2>*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+        {/*</div>*/}
     </div>
     )
 }

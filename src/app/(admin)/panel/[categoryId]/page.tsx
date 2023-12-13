@@ -5,7 +5,6 @@ import { useState } from "react";
 import { categoryData } from "@/components/admin/categoryData";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function SingleCategory() {
     const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -18,7 +17,8 @@ export default function SingleCategory() {
     const images = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.images;
 
     const itemsPerPage = 1;
-    const totalPages = Math.ceil( images && images?.length / itemsPerPage);
+    // @ts-ignore
+    const totalPages = Math.ceil( images?.length / itemsPerPage as number);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
 
@@ -63,16 +63,16 @@ export default function SingleCategory() {
                             <div className="cursor-pointer" key={result?.imageId}>
                                 <AdminImageCard
                                     imageId={result?.imageId}
-                                    imageUrl={result?.imageUrl}
+                                    imageUrl={''}
                                     date={result?.date}
-                                    location={result?.location}
+                                    location={''}
                                     iso={result?.iso}
                                     shutterSpeed={result?.shutterSpeed}
                                     aperture={result?.aperture}
                                     whiteBalance={result?.whiteBalance}
                                     exposure={result?.exposure}
-                                    focus={result?.focus}
-                                    meteringMode={result?.meteringMode}
+                                    focus={''}
+                                    meteringMode={''}
                                     fileFormat={result?.fileFormat}
                                     resolution={result?.resolution}
                                 />

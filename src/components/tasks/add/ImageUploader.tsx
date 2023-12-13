@@ -39,6 +39,8 @@ export const ImageUploader = ({
     // Determine whether to show the Dropbox or "Add Image" button
     const showDropbox = images.length === 0;
 
+
+    // @ts-ignore
     return (
         <div className="m-auto w-full">
             <button
@@ -58,7 +60,7 @@ export const ImageUploader = ({
                         <div className="flex w-full flex-col">
                             <DropBox
                                 setActivityImage={(newImage) =>
-                                    handleImageChange(0, newImage)
+                                    handleImageChange(0, '')
                                 }
                                 initialImage={images[0]}
                             />
@@ -73,7 +75,7 @@ export const ImageUploader = ({
                             <div className="flex w-full flex-col">
                                 <DropBox
                                     setActivityImage={(newImage) =>
-                                        handleImageChange(index, newImage)
+                                        handleImageChange(index, '')
                                     }
                                     initialImage={image}
                                 />

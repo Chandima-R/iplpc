@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat: update panel view and dashboard">
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/panel-award-categories/[categoryId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/panel/panel-award-categories/[categoryId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(panel-session)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(panel-session)/layout.tsx" afterDir="false" />
+    <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat: fix build issues">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/[categoryId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/panel/[categoryId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/ImageUploader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks/add/ImageUploader.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +70,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feature/dashboard",
     "last_opened_file_path": "D:/Metawiz/iplpc/src/app/(admin)/panel/panel-award-categories",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
-    "ts.external.directory.path": "C:\\Users\\lumia\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "D:\\Metawiz\\iplpc\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -100,6 +104,7 @@
       <workItem from="1702485176630" duration="1906000" />
       <workItem from="1702487214126" duration="296000" />
       <workItem from="1702493175827" duration="2427000" />
+      <workItem from="1702498018715" duration="1120000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update panel view and dashboard">
       <option name="closed" value="true" />
@@ -109,7 +114,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702496891273</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: update workspace.xml">
+      <option name="closed" value="true" />
+      <created>1702498098415</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702498098415</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: update workspace.xml">
+      <option name="closed" value="true" />
+      <created>1702498139883</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702498139883</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,15 +144,16 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat: update panel view and dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update panel view and dashboard" />
+    <MESSAGE value="feat: update workspace.xml" />
+    <MESSAGE value="feat: fix build issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: fix build issues" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/(admin)/panel/page.tsx</url>
-          <line>24</line>
-          <properties lambdaOrdinal="-1" />
+          <line>21</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
