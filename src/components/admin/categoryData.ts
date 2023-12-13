@@ -38,7 +38,7 @@ export const categoryData = [
             },
             {
                 "imageId": 3,
-                imageUrl: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzZXJ0fGVufDB8fDB8fHww',
+                "imageUrl": 'https://images.unsplash.com/photo-1542401886-65d6c61db217?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzZXJ0fGVufDB8fDB8fHww',
                 "date": "2023-03-20",
                 "location": "Desert",
                 "iso": 150,
@@ -53,7 +53,7 @@ export const categoryData = [
             },
             {
                 "imageId": 4,
-                imageUrl: 'https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8fDB8fHww',
+                "imageUrl": 'https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8fDB8fHww',
                 "date": "2023-04-10",
                 "location": "Forest",
                 "iso": 400,
@@ -68,7 +68,7 @@ export const categoryData = [
             },
             {
                 "imageId": 5,
-                imageUrl: 'https://images.unsplash.com/photo-1546882588-d9bd63f85a7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXJmYWxsfGVufDB8fDB8fHww',
+                "imageUrl": 'https://images.unsplash.com/photo-1546882588-d9bd63f85a7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXJmYWxsfGVufDB8fDB8fHww',
                 "date": "2023-05-05",
                 "location": "Waterfall",
                 "iso": 320,
@@ -83,7 +83,7 @@ export const categoryData = [
             },
             {
                 "imageId": 6,
-                imageUrl: 'https://images.unsplash.com/photo-1532953802613-6f66f1f4cc1b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fENPVU5UUllTSURFfGVufDB8fDB8fHww',
+                "imageUrl": 'https://images.unsplash.com/photo-1532953802613-6f66f1f4cc1b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fENPVU5UUllTSURFfGVufDB8fDB8fHww',
                 "date": "2023-06-15",
                 "location": "Countryside",
                 "iso": 200,
@@ -98,7 +98,7 @@ export const categoryData = [
             },
             {
                 "imageId": 7,
-                imageUrl:'https://images.unsplash.com/photo-1690900330615-10892d0e7dd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2xpZnN8ZW58MHx8MHx8fDA%3D',
+                "imageUrl":'https://images.unsplash.com/photo-1690900330615-10892d0e7dd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2xpZnN8ZW58MHx8MHx8fDA%3D',
                 "date": "2023-07-10",
                 "location": "Cliffs",
                 "iso": 180,
@@ -113,7 +113,7 @@ export const categoryData = [
             },
             {
                 "imageId": 8,
-                imageUrl: 'https://images.unsplash.com/photo-1590664216212-62e763768cae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dmFsbGV5fGVufDB8fDB8fHww',
+                "imageUrl": 'https://images.unsplash.com/photo-1590664216212-62e763768cae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dmFsbGV5fGVufDB8fDB8fHww',
                 "date": "2023-08-22",
                 "location": "Valley",
                 "iso": 250,
@@ -128,7 +128,7 @@ export const categoryData = [
             },
             {
                 "imageId": 9,
-                imageUrl: 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aXNsYW5kfGVufDB8fDB8fHww',
+                "imageUrl": 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aXNsYW5kfGVufDB8fDB8fHww',
                 "date": "2023-09-15",
                 "location": "Island",
                 "iso": 160,
@@ -143,7 +143,7 @@ export const categoryData = [
             },
             {
                 "imageId": 10,
-                imageUrl: 'https://images.unsplash.com/photo-1492681290082-e932832941e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHN1bnJpc2V8ZW58MHx8MHx8fDA%3D',
+                "imageUrl": 'https://images.unsplash.com/photo-1492681290082-e932832941e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHN1bnJpc2V8ZW58MHx8MHx8fDA%3D',
                 "date": "2023-10-10",
                 "location": "Sunrise",
                 "iso": 300,
