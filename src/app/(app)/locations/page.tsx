@@ -1,6 +1,6 @@
 import { LocationCard } from "@/components/locations/LocationCard";
 import { locations } from "@/components/locations/locationData";
-import { PageHeader } from "@/components/shared/PageHeade";
+import { PageHeader } from "@/components/shared/PageHeader";
 import Link from "next/link";
 
 export  default function LocationsPage(){

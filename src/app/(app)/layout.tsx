@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Comfortaa } from 'next/font/google'
 import '../globals.css'
 import { Navbar } from '@/components/shared/Navbar'
+import { ReactNode } from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
+const comfortaa = Comfortaa({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'IPLPC',
@@ -13,13 +14,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={comfortaa.className}>
         <Navbar />
-        <div  className='mx-auto max-w-[1440px] w-full p-6'>
+        <div  className='mx-auto max-w-[1440px] w-full p-6 max-h-screen'>
           {children}
         </div>
       </body>
