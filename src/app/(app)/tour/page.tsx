@@ -1,9 +1,13 @@
-import { PageHeader } from "@/components/shared/PageHeader";
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
 import {TourPlanCard} from "@/components/tour/TourPlanCard";
+import {MultipleMapLocation} from "@/components/shared/MultipleLocation";
+import {tourPlanData} from "@/app/(app)/tour/tour-plan-data";
 
 export default function Tours(){
+
+    const locationData = tourPlanData?.filter(tour => tour.location)
+
     return (
         <div>
             <div className={'border-b-[1px] flex items-start justify-between pb-2'}>
@@ -18,8 +22,26 @@ export default function Tours(){
                 </div>
             </div>
 
-            <div className={'my-4'}>
-                <TourPlanCard />
+            <div className={'flex my-4'}>
+                <div className={'w-7/12 grid grid-cols-3 gap-4'}>
+                    {tourPlanData?.map(tour => {
+                        return(
+                            <TourPlanCard
+                                key={tour.id}
+                                id={tour.id}
+                                location={tour.location}
+                                tripDate={tour.tripDate}
+                                category={tour.photographicCategory}
+                                description={tour.description}
+                                latitude={tour.latitude}
+                                longitude={tour.longitude}
+                            />
+                        )
+                    })}
+                </div>
+                <div className={'w-5/12 border-l-2 border-r-2 px-2 h-auto'}>
+                    <MultipleMapLocation locations={locationData} height={1000}/>
+                </div>
             </div>
         </div>
     )

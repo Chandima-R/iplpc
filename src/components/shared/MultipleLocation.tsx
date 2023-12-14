@@ -6,8 +6,8 @@ import Image from "next/image";
 import { TruncateString } from '@/lib/truncateString';
 
 interface MapPageProps {
-    locations: { latitude: number; longitude: number; description: string, image: string, name: string, day: string }[];
-    height?: number;
+    locations?: { latitude: number; longitude: number; description: string, image: string, name: string, day: string }[];
+    height: number;
 }
 
 export const MultipleMapLocation = ({ locations, height }: MapPageProps) => {

@@ -292,7 +292,7 @@ export default function AddTourPlan(){
             </div>
 
             <div className={'w-1/2 min-h-[600px] h-auto p-2 shadow rounded bg-white'}>
-                <MultipleMapLocation locations={[]} height={500}/>
+                <MultipleMapLocation locations={[]} height={400}/>
             </div>
         </div>
     )
