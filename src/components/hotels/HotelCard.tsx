@@ -13,8 +13,9 @@ interface HotelCardProps {
 }
 export const HotelCard = ({ image, name, location, rating, nearby, amenities, description}: HotelCardProps) => {
     return(
-        <div className='rounded shadow max-w-[350px] w-full group cursor-pointer pb-4 hover:shadow-lg duration-300 ease-in-out transition-all cursor-pointer'>
+        <div className='rounded shadow max-w-[350px] w-full group pb-4 hover:shadow-lg duration-300 ease-in-out transition-all cursor-pointer'>
             <div className='w-full h-56 overflow-hidden'>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src={image}
                     width={1920}

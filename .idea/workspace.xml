@@ -5,38 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat: fix build issues">
-      <change afterPath="$PROJECT_DIR$/public/images/videos/welcome.MP4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(app)/welcome/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/(panel-locations)/panel-locations/[locationId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/panel/(panel-locations)/panel-locations/[locationId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/panel-award-categories/[categoryId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/panel/panel-award-categories/[categoryId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/locations/[locationId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/locations/[locationId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/[categoryId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/panel/[categoryId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/tour/tour-plan-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/tour/tour-plan-data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(register)/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(register)/register/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/AdminImageCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminImageCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/categoryData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/categoryData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/hotels/HotelCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hotels/HotelCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hotels/hotelData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hotels/hotelData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/locations/LocationCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locations/LocationCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/locations/NearbyHotelCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locations/NearbyHotelCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/locations/locationData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locations/locationData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/register/CountrySelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/CountrySelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/register/FinalizeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/FinalizeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/register/PassportSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/PassportSelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/register/TicketSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/TicketSelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/Combobox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Combobox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/MultipleLocation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/MultipleLocation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/SelectTask.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks/add/SelectTask.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tour/StartTour.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tour/StartTour.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/tour/TourPlanCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tour/TourPlanCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/admin" />
+        <entry key="$PROJECT_DIR$" value="feature/dashboard" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,6 +34,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1702706442" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/dashboard" />
                     <option name="lastUsedInstant" value="1702497886" />
@@ -97,7 +75,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/dashboard",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Metawiz/iplpc/src/app/(admin)/panel/panel-award-categories",
     "node.js.detected.package.eslint": "true",
@@ -138,7 +116,7 @@
       <workItem from="1702581313547" duration="2600000" />
       <workItem from="1702648134368" duration="2830000" />
       <workItem from="1702655146257" duration="10205000" />
-      <workItem from="1702696233522" duration="3313000" />
+      <workItem from="1702696233522" duration="4481000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update panel view and dashboard">
       <option name="closed" value="true" />
@@ -180,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702543600840</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: fix build issues">
+      <option name="closed" value="true" />
+      <created>1702706402005</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702706402005</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

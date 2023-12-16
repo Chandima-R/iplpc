@@ -7,12 +7,10 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
 export default function SingleCategory() {
-    const [isLoading, setIsLoading] = useState<boolean>(false);
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [selectedPage, setSelectedPage] = useState<number>(1);
 
     const pathname = usePathname();
-    const category = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.categoryName;
     const categoryLength = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.images?.length;
     const images = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.images;
 
@@ -62,19 +60,7 @@ export default function SingleCategory() {
                         return (
                             <div className="cursor-pointer" key={result?.imageId}>
                                 <AdminImageCard
-                                    imageId={result?.imageId}
-                                    imageUrl={''}
-                                    date={result?.date}
-                                    location={''}
-                                    iso={result?.iso}
-                                    shutterSpeed={result?.shutterSpeed}
-                                    aperture={result?.aperture}
-                                    whiteBalance={result?.whiteBalance}
-                                    exposure={result?.exposure}
-                                    focus={''}
-                                    meteringMode={''}
-                                    fileFormat={result?.fileFormat}
-                                    resolution={result?.resolution}
+                                    result={result}
                                 />
                             </div>
                         );

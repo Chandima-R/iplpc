@@ -20,6 +20,7 @@ export const TourPlanCard = ({
     return(
         <div className='rounded shadow max-w-[300px] w-full group cursor-pointer hover:shadow transition-all ease-in-out duration-300 overflow-hidden'>
             <div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src={image}
                     width={1920}

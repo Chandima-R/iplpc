@@ -35,7 +35,7 @@ export default function Tours(){
                                 description={tour.description}
                                 latitude={tour.latitude}
                                 longitude={tour.longitude}
-                             image={tour?.image}
+                                image={tour?.image}
                             />
                         )
                     })}

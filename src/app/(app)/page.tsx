@@ -20,11 +20,11 @@ import {CustomCalendar} from "@/components/shared/CustomCalendar";
 import Clock from "@/components/shared/Clock";
 import { MultipleMapLocation } from "@/components/shared/MultipleLocation";
 import Link from "next/link";
-import {useState} from "react";
-import {locations} from "@/app/(app)/tour/data";
+import {tourPlanData} from "@/app/(app)/tour/tour-plan-data";
 
 export default function Home() {
-    const [isCompleted, setIsCompleted] = useState(false)
+    const locationData = tourPlanData?.filter(tour => tour.location)
+
     const handleDayClick = (day: Date) => {
         console.log(222, day)
     }
@@ -53,7 +53,7 @@ export default function Home() {
                 </div>
             </div>
             <div className={'w-3/5 border-l-2 border-r-2 px-2 h-80'}>
-                <MultipleMapLocation locations={locations} height={400}/>
+                <MultipleMapLocation locations={locationData} height={400}/>
             </div>
             <div className={'w-1/5 px-2 flex flex-col items-center justify-center pl-10'}>
                 <Clock />
