@@ -45,11 +45,11 @@ export const PassportSelector = ({formData, setFormData, setCurrentStep, refSubm
                 <PageHeader title="passport details" />
                 <div className="mb-10">
                     <Image
-                        src="/images/logo.svg"
+                        src="/images/logo-blue.png"
                         alt="logo"
                         width={400}
                         height={200}
-                        className="object-contain"
+                        className="object-contain h-96"
                         priority={true}
                     />
                 </div>

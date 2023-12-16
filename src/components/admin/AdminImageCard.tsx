@@ -1,41 +1,31 @@
 'use client'
 
-import Image from 'next/image'
 import {usePathname} from "next/navigation";
 import {categoryData} from "@/components/admin/categoryData";
 import { Heart } from 'lucide-react';
 import {useState} from "react";
 import {BsFillHeartFill} from "react-icons/bs";
 
+type ResultType = {
+    imageId?: number,
+    imageUrl?: string,
+    date?: string,
+    location?: string,
+    iso?: number,
+    shutterSpeed?: string,
+    aperture?: string,
+    whiteBalance?: string,
+    exposure?: number,
+    focus?: string,
+    meteringMode?: string,
+    fileFormat?: string,
+    resolution?: string,
+}
 interface AdminImageCardProps {
-    imageId: number,
-    imageUrl: string,
-    date: string,
-    location: string,
-    iso: number,
-    shutterSpeed: string,
-    aperture: string,
-    whiteBalance: string,
-    exposure: number,
-    focus: string,
-    meteringMode: string,
-    fileFormat: string,
-    resolution: string,
+    result: ResultType
 }
 export const AdminImageCard = ({
-    imageId,
-    imageUrl,
-    aperture,
-    fileFormat,
-    exposure,
-    iso,
-    focus,
-    meteringMode,
-    resolution,
-    location,
-    whiteBalance,
-    shutterSpeed,
-    date
+    result
 }: AdminImageCardProps) => {
     const pathname = usePathname();
     const category = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.categoryName
@@ -53,11 +43,12 @@ export const AdminImageCard = ({
                         />
                     }
                 </div>
-                <Image
-                    src={imageUrl}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src={result?.imageUrl}
                     width={1920}
                     height={1080}
-                    alt={imageId.toString()}
+                    alt={result?.location}
                     className="rounded object-cover h-56 group-hover:scale-105 transition-all duration-500 ease-in-out "
                 />
             </div>
@@ -72,29 +63,29 @@ export const AdminImageCard = ({
                         </div>
 
                         <div className='flex w-full items-center justify-between mb-2 h-6'>
-                            <p className='text-base'>Location:&nbsp;{location}</p>
-                            <p className='text-sm'>Date:&nbsp;{date}</p>
+                            <p className='text-base'>Location:&nbsp;{result?.location}</p>
+                            <p className='text-sm'>Date:&nbsp;{result?.date}</p>
                         </div>
 
                         <div className='flex w-full items-center justify-between mb-2 h-6'>
-                            <p className='text-sm'>Aperture:&nbsp;{aperture}</p>
-                            <p className='text-sm'>Exposure:&nbsp;{exposure}</p>
-                            <p className='text-sm'>Focus:&nbsp;{focus}</p>
+                            <p className='text-sm'>Aperture:&nbsp;{result?.aperture}</p>
+                            <p className='text-sm'>Exposure:&nbsp;{result?.exposure}</p>
+                            <p className='text-sm'>Focus:&nbsp;{result?.focus}</p>
                         </div>
 
                         <div className='flex w-full items-center justify-between mb-2 h-6'>
-                            <p className='text-sm'>ISO:&nbsp;{iso}</p>
-                            <p className='text-sm'>Shutter Speed:&nbsp;{shutterSpeed}</p>
+                            <p className='text-sm'>ISO:&nbsp;{result?.iso}</p>
+                            <p className='text-sm'>Shutter Speed:&nbsp;{result?.shutterSpeed}</p>
                         </div>
 
                         <div className='flex w-full items-center justify-between mb-2 h-6'>
-                            <p className='text-sm'>White Balance:&nbsp;{whiteBalance}</p>
-                            <p className='text-sm'>Metering Mode:&nbsp;{meteringMode}</p>
+                            <p className='text-sm'>White Balance:&nbsp;{result?.whiteBalance}</p>
+                            <p className='text-sm'>Metering Mode:&nbsp;{result?.meteringMode}</p>
                         </div>
 
                         <div className='flex w-full items-center justify-between mb-2 h-6'>
-                            <p className='text-sm'>Resolution:&nbsp;{resolution}</p>
-                            <p className='text-sm'>File Format:&nbsp;{fileFormat}</p>
+                            <p className='text-sm'>Resolution:&nbsp;{result?.resolution}</p>
+                            <p className='text-sm'>File Format:&nbsp;{result?.fileFormat}</p>
                         </div>
                     </div>
                 </div>

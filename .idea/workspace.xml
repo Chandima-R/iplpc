@@ -5,20 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat: fix build issues">
-      <change afterPath="$PROJECT_DIR$/src/app/(app)/tour/data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(app)/tour/tour-plan-data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/videos/welcome.MP4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/welcome/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_1_2023_7_04_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/tour/add/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/tour/add/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/(panel-locations)/panel-locations/[locationId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/panel/(panel-locations)/panel-locations/[locationId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/panel-award-categories/[categoryId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/panel/panel-award-categories/[categoryId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/locations/[locationId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/locations/[locationId]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(panel-session)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(panel-session)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/tour/tour-plan-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/tour/tour-plan-data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(register)/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(register)/register/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/AdminImageCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminImageCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/categoryData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/categoryData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hotels/HotelCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hotels/HotelCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hotels/hotelData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hotels/hotelData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/locations/LocationCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locations/LocationCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/locations/NearbyHotelCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locations/NearbyHotelCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/locations/locationData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locations/locationData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/register/CountrySelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/CountrySelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/register/FinalizeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/FinalizeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/register/PassportSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/PassportSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/register/TicketSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/TicketSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/Combobox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Combobox.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/MultipleLocation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/MultipleLocation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/SelectTask.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks/add/SelectTask.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tour/StartTour.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tour/StartTour.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/tour/TourPlanCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tour/TourPlanCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,29 +91,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/dashboard&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Metawiz/iplpc/src/app/(admin)/panel/panel-award-categories&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Metawiz\\iplpc\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feature/dashboard",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Metawiz/iplpc/src/app/(admin)/panel/panel-award-categories",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "ts.external.directory.path": "D:\\Metawiz\\iplpc\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Metawiz\iplpc\src\app\(admin)\panel\panel-award-categories" />
       <recent name="D:\Metawiz\iplpc\src\app\(admin)\panel\(panel-locations)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Metawiz\iplpc\public\images\videos" />
       <recent name="D:\Metawiz\iplpc\src\app\(admin)\panel" />
       <recent name="D:\Metawiz\iplpc\src\app\(admin)\panel\panel-award-categories" />
       <recent name="D:\Metawiz\iplpc\public\images\logos" />
@@ -114,7 +134,11 @@
       <workItem from="1702487214126" duration="296000" />
       <workItem from="1702493175827" duration="2427000" />
       <workItem from="1702498018715" duration="4184000" />
-      <workItem from="1702534225227" duration="3050000" />
+      <workItem from="1702534225227" duration="3718000" />
+      <workItem from="1702581313547" duration="2600000" />
+      <workItem from="1702648134368" duration="2830000" />
+      <workItem from="1702655146257" duration="10205000" />
+      <workItem from="1702696233522" duration="3313000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update panel view and dashboard">
       <option name="closed" value="true" />
@@ -148,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702499169859</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: update tour-plan">
+      <option name="closed" value="true" />
+      <created>1702543600840</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702543600840</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,18 +195,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat: update panel view and dashboard" />
     <MESSAGE value="feat: update workspace.xml" />
+    <MESSAGE value="feat: update tour-plan" />
     <MESSAGE value="feat: fix build issues" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: fix build issues" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/(admin)/panel/page.tsx</url>
-          <line>21</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

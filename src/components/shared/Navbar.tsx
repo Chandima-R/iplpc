@@ -3,10 +3,10 @@
 import Link from "next/link"
 import { MiniProfile } from "../mini-profile/MiniProfile"
 import {
-    NavigationMenu, NavigationMenuContent,
-    NavigationMenuItem, NavigationMenuLink,
+    NavigationMenu,
+    NavigationMenuItem,
+    NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 
@@ -54,12 +54,19 @@ export const Navbar = () => {
                                     </NavigationMenuLink>
                                 </Link>
                             </NavigationMenuItem>
-                            <NavigationMenuItem className={'hover:bg-none relative'}>
-                                <NavigationMenuTrigger  className={'bg-transparent hover:text-secondary hover:bg-transparent transition-all ease-in-out duration-300 text-sm uppercase font-normal tracking-wider'}>Results</NavigationMenuTrigger>
-                                <NavigationMenuContent className={'flex bg-none '}>
-                                    <NavigationMenuLink>Submissions</NavigationMenuLink>
-                                    <NavigationMenuLink>Results</NavigationMenuLink>
-                                </NavigationMenuContent>
+                            <NavigationMenuItem>
+                                <Link href="/results" legacyBehavior passHref>
+                                    <NavigationMenuLink className={'bg-transparent hover:text-secondary transition-all ease-in-out duration-300 mr-4'}>
+                                        submissions
+                                    </NavigationMenuLink>
+                                </Link>
+                            </NavigationMenuItem>
+                            <NavigationMenuItem>
+                                <Link href="/results" legacyBehavior passHref>
+                                    <NavigationMenuLink className={'bg-transparent hover:text-secondary transition-all ease-in-out duration-300 mr-4'}>
+                                        results
+                                    </NavigationMenuLink>
+                                </Link>
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>

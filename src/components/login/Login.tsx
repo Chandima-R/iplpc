@@ -67,7 +67,7 @@ export const Login = () => {
                                         alt="logo"
                                         width={400}
                                         height={0}
-                                        className="object-contain w-32"
+                                        className="object-contain h-72"
                                     />
                                 </div>
                                 <h1 className="text-4xl font-bold text-center tracking-wider uppercase">

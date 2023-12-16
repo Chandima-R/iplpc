@@ -1,4 +1,3 @@
-import {MapComponent} from "@/components/shared/Map";
 import {TruncateString} from "@/lib/truncateString";
 
 interface TourPlanCardProps {
@@ -7,23 +6,26 @@ interface TourPlanCardProps {
     tripDate: string;
     category: string;
     description: string;
-    latitude: number;
-    longitude: number;
+    image: string;
+    latitude?: number;
+    longitude?: number;
 }
 export const TourPlanCard = ({
     location,
     tripDate,
     category,
     description,
-    latitude,
-    longitude,
+    image,
 }: TourPlanCardProps) => {
     return(
         <div className='rounded shadow max-w-[300px] w-full group cursor-pointer hover:shadow transition-all ease-in-out duration-300 overflow-hidden'>
             <div>
-                <MapComponent
-                    latitude={latitude}
-                    longitude={longitude}
+                <img
+                    src={image}
+                    width={1920}
+                    height={1080}
+                    alt="Placeholder"
+                    className="rounded object-cover h-56 group-hover:scale-105 transition-all duration-500 ease-in-out "
                 />
             </div>
             <div className={'px-4 h-[200px]'}>

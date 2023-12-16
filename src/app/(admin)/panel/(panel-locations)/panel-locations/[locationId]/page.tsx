@@ -135,10 +135,10 @@ export default function ViewLocation(){
                             <Link key={hotel?.name} href={`/locations/${path}/hotel/${hotel.id}`} target={'_blank'}>
                                 <NearbyHotelCard
                                     name={hotel?.name}
-                                    image={hotel?.image_url}
+                                    image={hotel?.image}
                                     rating={hotel?.rating}
                                     price={1}
-                                    facilities={hotel?.facilities}
+                                    facilities={hotel?.amenities}
                                     description={hotel?.description}
                                 />
                             </Link>

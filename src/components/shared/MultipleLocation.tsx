@@ -6,13 +6,22 @@ import Image from "next/image";
 import { TruncateString } from '@/lib/truncateString';
 
 interface MapPageProps {
-    locations?: { latitude: number; longitude: number; description: string, image: string, name: string, day: string }[];
+    locations?: {
+        id: number,
+        location: string,
+        tripDate: string,
+        photographicCategory: string,
+        description: string,
+        latitude: number;
+        longitude: number;
+        image: string,
+    }[];
     height: number;
 }
 
 export const MultipleMapLocation = ({ locations, height }: MapPageProps) => {
     const [, marker] = useMarkerRef();
-    const [selectedLocation, setSelectedLocation] = useState<{ latitude: number; longitude: number; description: string, name: string, day: string, image: string} | null>(null);
+    const [selectedLocation, setSelectedLocation] = useState<{ latitude: number; longitude: number; description: string, location: string, tripDate: string, image: string} | null>(null);
 
     useEffect(() => {
         if (marker) {
@@ -20,7 +29,16 @@ export const MultipleMapLocation = ({ locations, height }: MapPageProps) => {
         }
     }, [marker]);
 
-    const handleMarkerClick = (location: { latitude: number; longitude: number; description: string, name: string, day: string, image: string }) => {
+    const handleMarkerClick = (location: {
+        id: number,
+        location: string,
+        tripDate: string,
+        photographicCategory: string,
+        description: string,
+        latitude: number;
+        longitude: number;
+        image: string,
+    }) => {
         setSelectedLocation(location);
     };
 
@@ -29,12 +47,12 @@ export const MultipleMapLocation = ({ locations, height }: MapPageProps) => {
             <div className="relative">
                 <Map
                     zoom={8}
-                    center={locations.length > 0 ? { lat: locations[0].latitude, lng: locations[0].longitude } : { lat: 0, lng: 0 }}
+                    center={locations && locations.length > 0 ? { lat: locations[0].latitude, lng: locations[0].longitude } : { lat: 0, lng: 0 }}
                     gestureHandling="greedy"
                     disableDefaultUI
-                    className={`h-[${height}px] rounded-md relative`}
+                    className={`h-[1000px] rounded-md relative`}
                 >
-                    {locations.map((location, index) => (
+                    {locations && locations.map((location, index) => (
                         <Marker
                             key={index}
                             position={{ lat: location.latitude, lng: location.longitude }}
@@ -59,8 +77,8 @@ export const MultipleMapLocation = ({ locations, height }: MapPageProps) => {
                             />
                         </div>
                         <div className='my-2'>
-                            <p className='text-lg capitalize font-semibold'>{selectedLocation?.day}</p>
-                            <p className='text-sm capitalize font-semibold'>{selectedLocation?.name}</p>
+                            <p className='text-lg capitalize font-semibold'>{selectedLocation?.tripDate}</p>
+                            <p className='text-sm capitalize font-semibold'>{selectedLocation?.location}</p>
                             <p className='text-xs'>{TruncateString({str: selectedLocation?.description, maxLength:100})}</p>
                         </div>
                     </div>

@@ -43,7 +43,7 @@ export default function SingleCategory() {
         }
     };
 
-
+    console.log(visibleImages)
     return (
         <div>
             <div className={'mb-4 pb-2 border-b-[1px] flex items-start justify-between w-full'}>
@@ -62,19 +62,7 @@ export default function SingleCategory() {
                         return (
                             <div className="cursor-pointer" key={result?.imageId}>
                                 <AdminImageCard
-                                    imageId={result?.imageId}
-                                    imageUrl={result?.imageUrl}
-                                    date={result?.date}
-                                    location={result?.location}
-                                    iso={result?.iso}
-                                    shutterSpeed={result?.shutterSpeed}
-                                    aperture={result?.aperture}
-                                    whiteBalance={result?.whiteBalance}
-                                    exposure={result?.exposure}
-                                    focus={result?.focus}
-                                    meteringMode={result?.meteringMode}
-                                    fileFormat={result?.fileFormat}
-                                    resolution={result?.resolution}
+                                    result={result}
                                 />
                             </div>
                         );

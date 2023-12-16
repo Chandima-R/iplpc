@@ -1,7 +1,6 @@
 'use client'
 
 import { TruncateString } from '@/lib/truncateString';
-import Image from 'next/image'
 
 interface LocationCardProps {
     image: string;
@@ -14,18 +13,22 @@ interface LocationCardProps {
 }
 
 type Hotel = {
+    id: number;
     name: string;
+    location: string;
     rating: number;
-    price_range: string;
-    image_url: string;
-    facilities: string[];
+    price: number;
+    description: string;
+    amenities: string[];
+    image: string;
+    nearbyLocations: string[];
 }
 
 export const LocationCard = ({ image, name, location, rating, hotels, description, attractions}: LocationCardProps) => {
     return(
         <div className='rounded shadow max-w-[350px] w-full group cursor-pointer'>
             <div className='w-full h-56 overflow-hidden'>
-                <Image
+                <img
                     src={image}
                     width={1920}
                     height={1080}

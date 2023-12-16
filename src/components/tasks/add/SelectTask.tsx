@@ -55,7 +55,7 @@ export const SelectTask = ({formData, setFormData, refSubmitButton, setCurrentSt
             <div className="flex items-center justify-center w-full h-full min-h-[500px]">
                 <div className={'w-full h-auto flex items-center justify-center'}>
                     <Image
-                        src={'/images/logo.svg'}
+                        src={'/images/logo-blue.png'}
                         alt={'logo'}
                         width={1920}
                         height={1080}

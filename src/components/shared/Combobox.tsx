@@ -68,7 +68,7 @@ export function Combobox({options, name, required, label, description, placehold
                           variant="outline"
                           role="combobox"
                           aria-expanded={open}
-                          className="w-full max-w-[500px] justify-between font-normal text-slate-700"
+                          className="w-full max-w-[500px] justify-between font-normal text-slate-700 rounded-full"
                       >
                         {field?.value
                             ? options.find((option) => option.value === field.value)?.label

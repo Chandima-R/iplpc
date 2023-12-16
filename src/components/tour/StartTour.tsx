@@ -8,7 +8,7 @@ export const StartTour = () => {
                 <PageHeader title="Welcome aboard" />
                 <div className="mb-10">
                     <Image
-                        src="/images/logo.svg"
+                        src="/images/logo-blue.png"
                         alt="logo"
                         width={400}
                         height={200}

@@ -15,7 +15,7 @@ const steps = [
     'country',
     'passport',
     'payment',
-    'ticket'
+    'ticket',
 ]
 
 export default function RegistrationPage(){
@@ -73,6 +73,17 @@ export default function RegistrationPage(){
                         refFormSaveButton={refFormSaveButton}
                     />
                 )
+            // case 'welcome':
+            //     return(
+            //         <FinalizeScreen
+            //             formData={formData}
+            //             setFormData={setFormData}
+            //             refSubmitButton={refSubmitButton}
+            //             setIsButtonDisabled={setIsButtonDisabled}
+            //             setCurrentStep={setCurrentStep}
+            //             refFormSaveButton={refFormSaveButton}
+            //         />
+            //     )
             default:
                 return null;
         }

@@ -2,15 +2,12 @@
 
 import {usePathname} from "next/navigation";
 import {locations} from "@/components/locations/locationData";
-import Image from "next/image";
 import {NearbyHotelCard} from "@/components/locations/NearbyHotelCard";
 import Link from "next/link";
 import {TruncateString} from "@/lib/truncateString";
 import {useState} from "react";
 
 export default function ViewLocation(){
-    const [dateFrom, setDateFrom] = useState<Date>()
-    const [dateTo, setDateTo] = useState<Date>()
 
     const pathname = usePathname();
     const path = pathname.split('/')[2];
@@ -24,7 +21,7 @@ export default function ViewLocation(){
             <div className={'w-2/3 pr-2'}>
                 <h2 className={'text-3xl font-semibold mb-2 capitalize'}>{locationData?.name}</h2>
                 <div className={'mb-2'}>
-                    <Image
+                    <img
                          src={locationData?.image}
                         alt={locationData?.name}
                         width={1920}
@@ -34,7 +31,7 @@ export default function ViewLocation(){
                 </div>
 
                 <div className={'my-4'}>
-                    <p className={'text-sm mb-2'}>{TruncateString({str: locationData?.description, maxLength:450})}</p>
+                    <p className={'text-sm mb-2'}>{TruncateString({str: locationData?.description, maxLength:1000})}</p>
                     <p className={'text-xs font-semibold'}>Rating: &nbsp; {locationData?.rating}</p>
                 </div>
 
@@ -56,10 +53,10 @@ export default function ViewLocation(){
                                <Link key={hotel?.name} href={`/locations/${path}/hotel/${hotel.id}`} target={'_blank'}>
                                    <NearbyHotelCard
                                        name={hotel?.name}
-                                       image={hotel?.image_url}
+                                       image={hotel?.image}
                                        rating={hotel?.rating}
                                        price={1}
-                                       facilities={hotel?.facilities}
+                                       facilities={hotel?.amenities}
                                        description={hotel?.description}
                                    />
                                </Link>
@@ -75,10 +72,10 @@ export default function ViewLocation(){
                                <Link key={hotel?.name} href={`/locations/${path}/hotel/${hotel.id}`} target={'_blank'}>
                                    <NearbyHotelCard
                                        name={hotel?.name}
-                                       image={hotel?.image_url}
+                                       image={hotel?.image}
                                        rating={hotel?.rating}
                                        price={1}
-                                       facilities={hotel?.facilities}
+                                       facilities={hotel?.amenities}
                                        description={hotel?.description}
                                    />
                                </Link>

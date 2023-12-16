@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import {TruncateString} from "@/lib/truncateString";
 
 interface NearbyHotelCardProps{
@@ -11,11 +10,11 @@ interface NearbyHotelCardProps{
     description: string;
     facilities: string[];
 }
-export const NearbyHotelCard = ({name, image, rating, price, facilities, description}: NearbyHotelCardProps) => {
+export const NearbyHotelCard = ({name, image, facilities, description}: NearbyHotelCardProps) => {
     return(
         <div className={'rounded shadow pb-2 mb-4'}>
             <div className='w-full h-56 overflow-hidden'>
-                <Image
+                <img
                     src={image}
                     width={1920}
                     height={1080}

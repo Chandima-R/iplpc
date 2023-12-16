@@ -20,20 +20,15 @@ interface TicketSelectorProps {
 }
 
 const TicketSelectorSchema = z.object({
-    ticketNumber: z.string().min(8, {
-        message: "Ticket number must be at least 8 characters.",
-    }),
-    flightNumber: z.string().min(8, {
-        message: "Flight number must be at least 8 characters.",
-    }),
-    takeOffFrom: z.string().nonempty('Take off from is required.'),
-    takeOffTime: z.string().nonempty('Take off time is required.'),
-    landingTo: z.string().nonempty('Landing to is required.'),
-    landingTime: z.string().nonempty('Landing time is required.'),
+    ticketNumber: z.string(),
+    flightNumber: z.string(),
+    takeOffFrom: z.string(),
+    takeOffTime: z.string(),
+    landingTo: z.string(),
+    landingTime: z.string()
 })
 
-export const TicketSelector = ({formData, setFormData, refSubmitButton, refFormSaveButton}: TicketSelectorProps) => {
-
+export const TicketSelector = ({formData, setFormData, refSubmitButton, refFormSaveButton, setCurrentStep}: TicketSelectorProps) => {
     const form = useForm<z.infer<typeof TicketSelectorSchema>>({
         resolver: zodResolver(TicketSelectorSchema),
         defaultValues: {
@@ -49,10 +44,9 @@ export const TicketSelector = ({formData, setFormData, refSubmitButton, refFormS
         console.log(12, values)
         if(values){
             setFormData({...formData, ...values})
+            setCurrentStep('/')
         }
     }
-
-    const router = useRouter();
     
     return(
         <div className="mb-14 mt-4">
@@ -129,7 +123,7 @@ export const TicketSelector = ({formData, setFormData, refSubmitButton, refFormS
                             type="button"
                             ref={refFormSaveButton}
                             className="invisible"
-                            onClick={() => router.push('/')}
+                            onClick={() => setCurrentStep('payment')}
                         >
                             submit
                         </button>

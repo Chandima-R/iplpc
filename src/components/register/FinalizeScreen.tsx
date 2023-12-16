@@ -1,29 +1,44 @@
-import { PageHeader } from "../shared/PageHeader"
-import Image from "next/image"
+'use client'
 
-export const FinalizeScreen = () => {
+import {RegisterData} from "@/components/types";
+import {Dispatch, RefObject, SetStateAction, useEffect, useRef} from "react";
+
+interface FinalizeScreenProps{
+    formData: RegisterData;
+    setFormData: Dispatch<SetStateAction<RegisterData>>;
+    refSubmitButton: RefObject<HTMLButtonElement> | null;
+    setIsButtonDisabled: (data: boolean) => void;
+    setCurrentStep: Dispatch<SetStateAction<string>>
+    refFormSaveButton: RefObject<HTMLButtonElement> | null;
+}
+export const FinalizeScreen = ({
+    formData,
+    setFormData,
+    refSubmitButton,
+    setIsButtonDisabled,
+    setCurrentStep,
+    refFormSaveButton
+}: FinalizeScreenProps)  => {
+    const videoRef = useRef<HTMLVideoElement | null>(null)
+
+    useEffect(() => {
+        setTimeout(() => {
+            // @ts-ignore
+            videoRef?.current?.play()
+        }, 10)
+    }, [])
+
     return(
         <div className="flex items-center flex-col">
-            <PageHeader title="finalize registration" />
 
-            <div className="mb-4">
-                <Image
-                    src="/images/logo.svg"
-                    alt="logo"
-                    width={300}
-                    height={200}
-                    className="object-contain"
-                    priority={true}
-                    />
-            </div>
-
-            <div>
-                <div className="p-2">
-                    <p className="text-lg font-semibold">Note: </p>
-                    <p className="text--base">You are at the last stages in the registration. If you want to finish the setup, just click next and ignore the ticket details. But if you have ticket details please update it on next screen. </p>
-
-                </div>
-            </div>
+            <video
+                ref={videoRef}
+                loop
+                muted
+                className={'absolute top-0 left-0 ring-0 w-full h-screen z-0 object-cover bg-center'}
+            >
+                <source src={'/video/welcome.MP4'} type={'video/mp4'}/>
+            </video>
         </div>
     )
 }
