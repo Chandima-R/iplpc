@@ -41,7 +41,7 @@ export const Navbar = () => {
                                 </Link>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <Link href="/award-category" legacyBehavior passHref>
+                                <Link href="/award-categories" legacyBehavior passHref>
                                     <NavigationMenuLink className={'bg-transparent hover:text-secondary transition-all ease-in-out duration-300 mr-4'}>
                                         award category
                                     </NavigationMenuLink>
