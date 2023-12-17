@@ -6,7 +6,7 @@ export default function Hotels(){
     return(
         <div>
             
-            <PageHeader title="hotels" subtitle="Check the places where you going to stay." />
+            <PageHeader title="hotels" subtitle="Check the places where you going to stay."  image={'/images/hotels.jpeg'}/>
 
             <div className={'grid grid-cols-4 gap-4'}>
                 {hotelList?.map(hotel => (

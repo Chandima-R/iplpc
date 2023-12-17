@@ -23,7 +23,7 @@ export default function Tours(){
             </div>
 
             <div className={'flex my-4'}>
-                <div className={'w-7/12 grid grid-cols-3 gap-4'}>
+                <div className={'w-1/2 grid grid-cols-2 gap-4'}>
                     {tourPlanData?.map(tour => {
                         return(
                             <TourPlanCard
@@ -40,7 +40,7 @@ export default function Tours(){
                         )
                     })}
                 </div>
-                <div className={'w-5/12 border-l-2 border-r-2 px-2 h-auto'}>
+                <div className={'w-1/2 border-l-2 border-r-2 px-2 h-auto'}>
                     <MultipleMapLocation locations={locationData} height={1000}/>
                 </div>
             </div>

@@ -1,16 +1,17 @@
-import { Aperture } from "lucide-react"
+import Image from "next/image";
 
 interface RegisterHeaderProps {
+    image: string;
     title: string;
     subtitle?: string;
 }
 
-export const PageHeader = ({title, subtitle}: RegisterHeaderProps) => {
+export const PageHeader = ({image, title, subtitle}: RegisterHeaderProps) => {
     return(
        <div className={'w-full flex flex-col justify-center items-center'}>
            <div>
                <div className="flex items-center mb-2">
-                   <Aperture className="w-12 h-12 mr-4" />
+                   <Image src={image} alt={image} width={40} height={50} className="mr-2"/>
                    <h1 className="text-3xl uppercase font-semibold tracking-wider">{title}</h1>
                </div>
 

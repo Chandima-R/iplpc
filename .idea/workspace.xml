@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat: fix build issues">
+    <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat: update logos">
+      <change afterPath="$PROJECT_DIR$/public/images/hotels.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/location.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/[categoryId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/panel/[categoryId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/(panel-locations)/panel-locations/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/panel/(panel-locations)/panel-locations/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/hotels/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/hotels/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/locations/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/locations/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hotels/HotelCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hotels/HotelCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tour/TourPlanCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tour/TourPlanCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/locations/LocationCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locations/LocationCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/PageHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/PageHeader.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,35 +72,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Metawiz/iplpc/src/app/(admin)/panel/panel-award-categories",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "ts.external.directory.path": "D:\\Metawiz\\iplpc\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Metawiz/iplpc/src/app/(admin)/panel/panel-award-categories&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Metawiz\\iplpc\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Metawiz\iplpc\src\app\(admin)\panel\panel-award-categories" />
       <recent name="D:\Metawiz\iplpc\src\app\(admin)\panel\(panel-locations)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Metawiz\iplpc\public\images" />
       <recent name="D:\Metawiz\iplpc\public\images\videos" />
       <recent name="D:\Metawiz\iplpc\src\app\(admin)\panel" />
       <recent name="D:\Metawiz\iplpc\src\app\(admin)\panel\panel-award-categories" />
       <recent name="D:\Metawiz\iplpc\public\images\logos" />
-      <recent name="D:\Metawiz\iplpc\src\app\(app)" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -116,7 +119,8 @@
       <workItem from="1702581313547" duration="2600000" />
       <workItem from="1702648134368" duration="2830000" />
       <workItem from="1702655146257" duration="10205000" />
-      <workItem from="1702696233522" duration="4481000" />
+      <workItem from="1702696233522" duration="5487000" />
+      <workItem from="1702831551427" duration="1635000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update panel view and dashboard">
       <option name="closed" value="true" />
@@ -166,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702706402005</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: fix build issues">
+      <option name="closed" value="true" />
+      <created>1702707500349</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702707500349</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +195,7 @@
     <MESSAGE value="feat: update workspace.xml" />
     <MESSAGE value="feat: update tour-plan" />
     <MESSAGE value="feat: fix build issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: fix build issues" />
+    <MESSAGE value="feat: update logos" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update logos" />
   </component>
 </project>

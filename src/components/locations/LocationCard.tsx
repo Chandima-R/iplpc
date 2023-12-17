@@ -26,8 +26,9 @@ type Hotel = {
 
 export const LocationCard = ({ image, name, location, rating, hotels, description, attractions}: LocationCardProps) => {
     return(
-        <div className='rounded shadow max-w-[350px] w-full group cursor-pointer'>
+        <div className='rounded shadow max-w-[350px] w-full group cursor-pointer pb-4 hover:shadow-lg transition-all ease-in-out duration-300'>
             <div className='w-full h-56 overflow-hidden'>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src={image}
                     width={1920}
@@ -36,7 +37,7 @@ export const LocationCard = ({ image, name, location, rating, hotels, descriptio
                     className="rounded object-cover h-56 group-hover:scale-105 transition-all duration-500 ease-in-out "
                 />
             </div>
-            <div className={'px-4 h-[320px]'}>
+            <div className={'px-4 h-[370px]'}>
                 <div className={'my-2 flex items-center justify-between'}>
                     <div>
                         <p className={'text-xl capitalize font-semibold'}>{name}</p>

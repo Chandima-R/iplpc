@@ -6,7 +6,7 @@ import Link from "next/link";
 export  default function LocationsPage(){
     return(
         <div>
-            <PageHeader title="locations" subtitle="Select you location to create your tour plan." />
+            <PageHeader title="locations" subtitle="Select you location to create your tour plan." image={'/images/location.jpeg'}/>
 
             <div className={'grid grid-cols-4 gap-4'}>
                 {
