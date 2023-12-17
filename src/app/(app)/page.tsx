@@ -19,8 +19,8 @@ ChartJS.register(
 import {CustomCalendar} from "@/components/shared/CustomCalendar";
 import Clock from "@/components/shared/Clock";
 import { MultipleMapLocation } from "@/components/shared/MultipleLocation";
-import Link from "next/link";
 import {tourPlanData} from "@/app/(app)/tour/tour-plan-data";
+import {AlertCircle, CheckSquare } from "lucide-react";
 
 export default function Home() {
     const locationData = tourPlanData?.filter(tour => tour.location)
@@ -59,40 +59,34 @@ export default function Home() {
                 <Clock />
 
                 <div className={'mt-8 flex flex-col justify-end items-end w-full text-end'}>
-                    <div className={'text-md uppercase font-bold group p-4 border-b-[1px] w-full'}>
-                        <Link
-                            href={'/hotels'}
-                            className={''}
-                        >hotels</Link>
+                    <div className={'bg-green-100 text-md uppercase font-bold group p-4 border-b-[1px] w-full flex items-center'}>
+                        <p>Registration</p>
+                        <CheckSquare  className={'text-green-600 ml-4'}/>
                     </div>
 
-                    <div className={'text-md uppercase font-bold group p-4 border-b-[1px] w-full'}>
-                        <Link
-                            href={'/locations'}
-                            className={''}
-                        >locations</Link>
+                    <div className={'bg-red-100 text-md uppercase font-bold group p-4 border-b-[1px] w-full flex items-center'}>
+                        <p>Ticket details</p>
+                        <AlertCircle className={'text-red-600 ml-4'} />
                     </div>
 
-                    <div className={'text-md uppercase font-bold group p-4 border-b-[1px] w-full'}>
-                        <Link
-                            href={'/award-category'}
-                            className={''}
-                        >award category</Link>
+                    <div className={'bg-red-100 text-md uppercase font-bold group p-4 border-b-[1px] w-full flex items-center'}>
+                        <p>tour plan 2/20</p>
+                        <AlertCircle className={'text-red-600 ml-4'} />
                     </div>
 
-                    <div className={'text-md uppercase font-bold group p-4 border-b-[1px] w-full'}>
-                        <Link
-                            href={'/tour'}
-                            className={''}
-                        >tour plan</Link>
-                    </div>
+                    {/*<div className={'text-md uppercase font-bold group p-4 border-b-[1px] w-full'}>*/}
+                    {/*    <Link*/}
+                    {/*        href={'/tour'}*/}
+                    {/*        className={''}*/}
+                    {/*    >tour plan</Link>*/}
+                    {/*</div>*/}
 
-                    <div className={'text-md uppercase font-bold group p-4 border-b-[1px] w-full'}>
-                        <Link
-                            href={'/results'}
-                            className={''}
-                        >results</Link>
-                    </div>
+                    {/*<div className={'text-md uppercase font-bold group p-4 border-b-[1px] w-full'}>*/}
+                    {/*    <Link*/}
+                    {/*        href={'/results'}*/}
+                    {/*        className={''}*/}
+                    {/*    >results</Link>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </div>
