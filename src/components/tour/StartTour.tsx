@@ -5,7 +5,7 @@ export const StartTour = () => {
     return(
         <div>
             <div className="flex items-center flex-col">
-                <PageHeader title="Welcome aboard" />
+                <PageHeader title="Welcome aboard"  image={'/'}/>
                 <div className="mb-10">
                     <Image
                         src="/images/logo-blue.png"

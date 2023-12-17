@@ -66,7 +66,7 @@ export const PhotoUpload = ({formData, setFormData, setCurrentStep, refSubmitBut
 
     return(
         <div className="w-full h-full text-center p-4">
-            <PageHeader title={'upload your photos'} />
+            <PageHeader title={'upload your photos'}  image={'/'}/>
 
             <div className="px-4 mt-10 w-full">
                 <div className={'flex items-start w-full justify-between'}>

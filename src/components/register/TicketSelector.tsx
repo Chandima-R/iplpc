@@ -51,7 +51,7 @@ export const TicketSelector = ({formData, setFormData, refSubmitButton, refFormS
     return(
         <div className="mb-14 mt-4">
             <div className="flex flex-col">
-                <PageHeader title="Add ticket details" />
+                <PageHeader title="Add ticket details"  image={'/'}/>
             </div>
 
             <div>

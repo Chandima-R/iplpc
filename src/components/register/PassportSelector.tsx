@@ -42,7 +42,7 @@ export const PassportSelector = ({formData, setFormData, setCurrentStep, refSubm
     return(
         <div>
             <div className="flex items-center flex-col">
-                <PageHeader title="passport details" />
+                <PageHeader title="passport details"  image={'/'}/>
                 <div className="mb-10">
                     <Image
                         src="/images/logo-blue.png"

@@ -11,7 +11,7 @@ export default function Profile(){
     
     return(
         <div>
-            <PageHeader title="edit profile" subtitle="Update your profile to show your latest status." />
+            <PageHeader title="edit profile" subtitle="Update your profile to show your latest status."  image={'/'}/>
 
 
             <div>

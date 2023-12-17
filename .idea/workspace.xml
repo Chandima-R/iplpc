@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat: update logos">
-      <change afterPath="$PROJECT_DIR$/public/images/hotels.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/location.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/(panel-locations)/panel-locations/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/panel/(panel-locations)/panel-locations/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/hotels/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/hotels/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/locations/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/locations/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/tour/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/locations/LocationCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locations/LocationCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/PageHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/PageHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/profile/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/profile/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/results/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/results/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/register/CountrySelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/CountrySelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/register/PassportSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/PassportSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/register/PaymentSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/PaymentSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/register/TicketSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/TicketSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/PhotoUpload.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks/add/PhotoUpload.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/SelectTask.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks/add/SelectTask.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tour/StartTour.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tour/StartTour.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +122,7 @@
       <workItem from="1702648134368" duration="2830000" />
       <workItem from="1702655146257" duration="10205000" />
       <workItem from="1702696233522" duration="5487000" />
-      <workItem from="1702831551427" duration="1635000" />
+      <workItem from="1702831551427" duration="1998000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update panel view and dashboard">
       <option name="closed" value="true" />
@@ -178,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702707500349</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: update logos">
+      <option name="closed" value="true" />
+      <created>1702833443727</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702833443727</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
