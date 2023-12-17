@@ -50,7 +50,7 @@ export const SelectTask = ({formData, setFormData, refSubmitButton, setCurrentSt
     
     return(
         <div className="w-full h-full text-center p-4">
-            <PageHeader title={`Select your today's task`}  image={'/'}/>
+            <PageHeader title={`Select your today's task`}/>
 
             <div className="flex items-center justify-center w-full h-full min-h-[500px]">
                 <div className={'w-full h-auto flex items-center justify-center'}>

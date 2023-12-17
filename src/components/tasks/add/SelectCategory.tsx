@@ -50,7 +50,7 @@ export const SelectCategory = ({formData, setFormData, refSubmitButton, setCurre
 
     return(
         <div className="w-full h-full text-center p-4">
-            <PageHeader title={`Select your today's category`}  image={'/'}/>
+            <PageHeader title={`Select your today's category`}/>
 
             <div className="flex items-center justify-center w-full h-full min-h-[500px]">
                 <div className={'w-full h-auto flex items-center justify-center'}>

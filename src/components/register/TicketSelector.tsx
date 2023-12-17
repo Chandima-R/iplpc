@@ -29,6 +29,7 @@ const TicketSelectorSchema = z.object({
 })
 
 export const TicketSelector = ({formData, setFormData, refSubmitButton, refFormSaveButton, setCurrentStep}: TicketSelectorProps) => {
+   const router = useRouter()
     const form = useForm<z.infer<typeof TicketSelectorSchema>>({
         resolver: zodResolver(TicketSelectorSchema),
         defaultValues: {
@@ -44,14 +45,14 @@ export const TicketSelector = ({formData, setFormData, refSubmitButton, refFormS
         console.log(12, values)
         if(values){
             setFormData({...formData, ...values})
-            setCurrentStep('/')
+            router.push('/dashboard')
         }
     }
     
     return(
         <div className="mb-14 mt-4">
             <div className="flex flex-col">
-                <PageHeader title="Add ticket details"  image={'/'}/>
+                <PageHeader title="Add ticket details"/>
             </div>
 
             <div>

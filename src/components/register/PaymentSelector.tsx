@@ -59,7 +59,7 @@ export const PaymentSelector = ({formData, setFormData, setCurrentStep, refSubmi
     return(
         <div className="mb-4">
             <div className="flex flex-col">
-                <PageHeader title="Add you payments"  image={'/'}/>
+                <PageHeader title="Add you payments"/>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
