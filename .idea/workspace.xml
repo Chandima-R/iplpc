@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat: fix dashboard issue">
-      <change afterPath="$PROJECT_DIR$/src/app/(admin)/panel/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(app)/award-categories/[categoryId]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(app)/award-categories/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/categories/ImageCard.tsx" afterDir="false" />
+    <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat: update award categories for client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/award-category/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +115,7 @@
       <workItem from="1702655146257" duration="10205000" />
       <workItem from="1702696233522" duration="5487000" />
       <workItem from="1702831551427" duration="3816000" />
-      <workItem from="1702846634383" duration="586000" />
+      <workItem from="1702846634383" duration="1126000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update panel view and dashboard">
       <option name="closed" value="true" />
@@ -202,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702834565234</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: update award categories for client">
+      <option name="closed" value="true" />
+      <created>1702847362147</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702847362147</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +224,7 @@
     <MESSAGE value="feat: update logos" />
     <MESSAGE value="feat: fix build issues" />
     <MESSAGE value="feat: fix dashboard issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: fix dashboard issue" />
+    <MESSAGE value="feat: update award categories for client" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update award categories for client" />
   </component>
 </project>
