@@ -1,7 +1,7 @@
 'use client'
 
 import {Dispatch, RefObject, SetStateAction, useState} from "react"
-import { photographyCategories } from "./categoryData";
+import { photographyCategories } from "../../categories/categoryData";
 import {Form} from "@/components/ui/form";
 import {Combobox} from "@/components/shared/Combobox";
 import {taskList} from "@/components/tasks/add/taskData";

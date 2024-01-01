@@ -1,11 +1,40 @@
 'use client'
 
-import { AdminCategoryCard } from "@/components/admin/AdminCategoryCard";
-import Link from "next/link";
-import {categoryData} from "@/components/admin/categoryData";
-
+import {photographyCategories} from "@/components/categories/categoryData"
+import {AwardCategoryCard} from "@/components/categories/AwardCategoryCard";
+import {useState} from "react";
+import {Button} from "@/components/ui/button";
 export default function AwardCategory(){
-    return(
+    const [currentPage, setCurrentPage] = useState<number>(1);
+    const [selectedPage, setSelectedPage] = useState<number>(1);
+
+    const itemsPerPage = 10;
+    // @ts-ignore
+    const totalPages = Math.ceil( photographyCategories?.length / itemsPerPage as number);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const visibleCategories = photographyCategories?.slice(startIndex, endIndex);
+
+    const handleNextPage = () => {
+        if (currentPage < totalPages) {
+            setCurrentPage((prevPage) => prevPage + 1);
+        }
+    };
+
+    const handlePrevPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage((prevPage) => prevPage - 1);
+        }
+    };
+
+    const goToPage = (page: number) => {
+        if (page >= 1 && page <= totalPages) {
+            setCurrentPage(page);
+            setSelectedPage(page); // Update selectedPage when navigating to a new page
+        }
+    };
+
+    return (
         <div>
             <div className={'mb-2'}>
                 <h1 className={'text-3xl uppercase font-bold tracking-wider'}>Categories</h1>
@@ -13,23 +42,42 @@ export default function AwardCategory(){
 
                 <hr className="my-2 w-full"/>
             </div>
-
-            <div className="grid grid-cols-4 gap-6">
-                {
-                    categoryData?.map((category) => {
-                        return(
-                            <Link href={`award-categories/${category?.categoryId}`} key={category?.categoryId}>
-                                <AdminCategoryCard
-                                    image={category?.categoryImage}
-                                    category={category?.categoryName}
-                                    description={category?.categoryDescription}
-                                    count={category?.imageCount}
-                                />
-                            </Link>
-                        )
-                    })
-                }
+            <div className={'flex justify-between items-start'}>
+                <div className="grid grid-cols-4 gap-6">
+                    {visibleCategories?.map((category) => (
+                        <AwardCategoryCard
+                            key={category.id}
+                            id={category.id}
+                            label={category.label}
+                            coverImage={category.cover || ''}
+                            value={category.value}
+                            rules={category.rules}
+                            description={category.description}
+                            characteristics={category.characteristics}
+                            note={category.note}
+                        />
+                    ))}
+                </div>
+                <div className={'p-2 flex flex-col gap-2 justify-center items-center'}>
+                    {/*<Button variant={'outline'} onClick={handlePrevPage} disabled={currentPage === 1} className={'text-xs w-8 h-8'}>*/}
+                    {/*    <ChevronUp className={'w-4 h-4'}/>*/}
+                    {/*</Button>*/}
+                    {Array.from({length: totalPages}, (_, index) => (
+                        <Button
+                            variant={'outline'}
+                            key={index + 1}
+                            onClick={() => goToPage(index + 1)}
+                            className={`${selectedPage === index + 1 ? 'bg-primary text-white' : ''} hover:bg-primary hover:text-white transition-all ease-in-out duration-300 text-xs rounded-full w-8 h-8`}
+                        >
+                            {index + 1}
+                        </Button>
+                    ))}
+                    {/*<Button variant={'outline'} onClick={handleNextPage} className={'text-xs w-8 h-8'}>*/}
+                    {/*    <ChevronDown className={'w-4 h-4'}/>*/}
+                    {/*</Button>*/}
+                </div>
             </div>
+
         </div>
     )
 }
