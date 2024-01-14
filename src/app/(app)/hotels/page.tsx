@@ -1,6 +1,8 @@
 import { HotelCard } from "@/components/hotels/HotelCard";
 import { hotelList } from "@/components/hotels/hotelData";
 import { PageHeader } from "@/components/shared/PageHeader";
+import { Hotel } from "lucide-react";
+import Link from "next/link";
 
 export default function Hotels(){
     return(
@@ -10,7 +12,8 @@ export default function Hotels(){
 
             <div className={'grid grid-cols-4 gap-4'}>
                 {hotelList?.map(hotel => (
-                    <div key={hotel?.id}>
+                    
+                    <Link href={`/hotels/${hotel?.id}`}  key={hotel?.id}>
                         <HotelCard
                             image={hotel.image}
                             name={hotel.name}
@@ -20,7 +23,8 @@ export default function Hotels(){
                             amenities={hotel.amenities}
                             description={hotel.description}
                         />
-                    </div>
+                    </Link>
+                    
                 )
                 )}
             </div>
