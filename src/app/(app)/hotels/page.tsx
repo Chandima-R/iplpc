@@ -1,6 +1,7 @@
 import { HotelCard } from "@/components/hotels/HotelCard";
 import { hotelList } from "@/components/hotels/hotelData";
 import { PageHeader } from "@/components/shared/PageHeader";
+import Link from "next/link";
 
 export default function Hotels(){
     return(
