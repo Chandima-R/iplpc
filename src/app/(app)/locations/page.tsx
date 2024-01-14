@@ -9,8 +9,7 @@ export  default function LocationsPage(){
             <PageHeader title="locations" subtitle="Select you location to create your tour plan." image={'/images/location.jpeg'}/>
 
             <div className={'grid grid-cols-4 gap-4'}>
-                {
-                    locations?.map((location) => {
+                {locations?.map((location) => {
                         return(
                            <Link href={`/locations/${location?.id}`} key={location?.id}>
                                <LocationCard
