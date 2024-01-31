@@ -3,6 +3,7 @@ import { Comfortaa } from 'next/font/google'
 import '../globals.css'
 import { Navbar } from '@/components/shared/Navbar'
 import { ReactNode } from 'react'
+import { Provider } from '@/components/shared/Providers'
 
 const comfortaa = Comfortaa({ subsets: ['latin'] })
 
@@ -18,12 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={comfortaa.className}>
-        <Navbar />
-        <div  className='mx-auto max-w-[1440px] w-full p-6 max-h-screen'>
-          {children}
-        </div>
-      </body>
+      <Provider>
+        <body className={comfortaa.className}>
+          <Navbar />
+          <div  className='mx-auto max-w-[1440px] w-full p-6 max-h-screen'>
+            {children}
+          </div>
+        </body>
+      </Provider>
     </html>
   )
 }

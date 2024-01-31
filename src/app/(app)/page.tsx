@@ -21,6 +21,8 @@ import Clock from "@/components/shared/Clock";
 import { MultipleMapLocation } from "@/components/shared/MultipleLocation";
 import {tourPlanData} from "@/app/(app)/tour/tour-plan-data";
 import {AlertCircle, CheckSquare } from "lucide-react";
+import { useQuery } from "@apollo/client";
+import { USERS } from "@/graphql";
 
 export default function Home() {
     const locationData = tourPlanData?.filter(tour => tour.location)
@@ -28,6 +30,11 @@ export default function Home() {
     const handleDayClick = (day: Date) => {
         console.log(222, day)
     }
+
+    const {data, loading, error} = useQuery(USERS)
+    
+    console.log(44, data)
+
     return (
     <div className={''}>
         <div className={'mb-4'}>
