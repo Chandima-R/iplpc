@@ -809,7 +809,23 @@ export const photographyCategories = [
       'Capture inviting and well-designed interiors.',
       'Highlight the unique selling points of each hotel.',
       'Create images that evoke a sense of comfort and luxury.'
-    ]
+    ],
+      description: 'Experience the warmth and genuine hospitality of Sri Lanka through photography.',
+      characteristics: [
+          'Cultural Diversity: Respectful representation of diverse traditions and customs.',
+          'Portraiture: Expressive portraits showcasing personalities and traditional attire.',
+          'Daily Life: Documenting authentic everyday moments and cultural ceremonies.',
+          'Festivals: Showcasing vibrant celebrations and local joy.',
+          'Street Photography: Capturing the essence of cities, markets, and interactions.',
+          'Rural Life: Highlighting the simplicity and beauty of rural landscapes.',,
+          'Hospitality Gestures: Featuring welcoming traditions, meal preparations, and acts of kindness.',
+          'Local Crafts: Showcasing traditional crafts and cultural heritage.',
+          'Interaction and Connection: Capturing genuine connections among communities.',
+          'Respect and Consent: Prioritizing permission and cultural sensitivity in photography.',
+          'Storytelling: Crafting a narrative that celebrates Sri Lankan culture and hospitality.',
+          'Local Guides: Consider the value of local guides for cultural nuances and context.'
+      ],
+      note: 'Sri Lankan hospitality photography aims to celebrate the country\'s rich cultural heritage and the warmth of its residents. It serves as a powerful medium for promoting cultural exchange, tourism, and a deeper understanding of the diverse and welcoming communities that make up Sri Lanka.'
   },
   {
     id: 32,
@@ -821,7 +837,19 @@ export const photographyCategories = [
       'Capture the cultural and historical significance of tourism spots.',
       'Highlight the diversity of activities and experiences for tourists.',
       'Create images that inspire travel and exploration.'
-    ]
+    ],
+      description: 'Landscape photography is an immersive genre capturing the beauty and essence of natural landscapes, from mountains and valleys to forests, rivers, and seascapes. The aim is to evoke awe, emphasizing the interplay of light, weather, and the environment. ',
+      characteristics: [
+          'Composition: Employing techniques like the rule of thirds, leading lines, symmetry, and foreground-background relationships for visually appealing and balanced compositions.',
+          'Lighting: Leveraging natural light, especially during the golden and blue hours, to enhance mood and atmosphere.',
+          'Weather and Atmosphere: Capturing ever-changing conditions like fog, rainbows, stormy skies, and dramatic clouds for depth and drama.',
+          'Seasons and Time: Photographing landscapes in different seasons and times for varied appearances and atmospheres.',
+          'Foreground Interest: Including captivating foreground elements to lead the viewer\'s eye and provide scale.',
+          'Depth of Field: Managing aperture settings and focal points to control depth of field for selective focus and sharpness.',
+          'Tripods and Long Exposures: Using tripods for stability in low light and experimenting with long exposures for creative effects.',
+          'Post-Processing: Enhancing images through post-processing for improved contrast, color balance, saturation, and sharpness.'
+      ],
+      note: 'Photographers must adapt to changing conditions and explore diverse locations to find unique and compelling scenes. Beyond documentation, landscape photography is a creative endeavor aiming to evoke emotions, foster a connection to nature, and convey the photographer\'s personal interpretation of the landscape. It is an artistic pursuit that allows photographers to capture and share the breathtaking beauty of the natural world.',
   },
   {
     id: 33,
@@ -833,7 +861,21 @@ export const photographyCategories = [
       'Pay attention to the vibrant colors of coral reefs and marine life.',
       'Use underwater camera equipment for optimal results.',
       'Create images that convey the beauty and wonder of snorkeling adventures.'
-    ]
+    ],
+      description: 'Hotel photography is a specialized genre focused on capturing enticing images to showcase a hotel\'s amenities and guest experience. The goal is to create visually appealing photos that attract potential guests and accurately represent the property.',
+      characteristics: [
+          'Exterior Shots: Capture the hotel\'s architecture, landscaping, entrance, and distinctive features for a strong first impression.',
+          'Interior Spaces: Showcase the design, decor, and ambiance of areas like lobbies, reception, lounges, and corridors.',
+          'Guest Rooms and Suites: Highlight different accommodations, showcasing layouts, furnishings, beddings, and amenities.',
+          'Dining and Cuisine: Photograph on-site restaurants, bars, and culinary offerings to appeal to guests interested in gastronomic experiences.',
+          'Amenities and Facilities: Document various facilities like swimming pools, fitness centers, spas, conference rooms, and event spaces.',
+          'Event Spaces: Capture meeting rooms, event venues, and spaces suitable for conferences, weddings, and gatherings.',
+          'Views and Surroundings: Showcase scenic views or points of interest visible from the hotel, such as ocean vistas, cityscapes, or natural landscapes.',
+          'Activities and Experiences: Capture guests engaging in various activities and experiences, promoting outdoor adventures, cultural activities, and wellness treatments.',
+          'Detail Shots: Focus on small details contributing to the overall guest experience, including room amenities, decorations, textiles, and branded items.'
+      ],
+      note: 'Hotel photography is vital for marketing and promotional materials, used on websites, brochures, social media, and advertisements. Collaboration between photographers and hotel management ensures alignment with branding, target audience, and highlighted features.\n' +
+          'Effective hotel photography not only accurately represents the property but also tells a visual story that invites potential guests to envision themselves enjoying the hotel\'s offerings and services\n'
   },
   {
     id: 34,
@@ -845,7 +887,21 @@ export const photographyCategories = [
       'Use specialized diving camera equipment for underwater shots.',
       'Pay attention to lighting conditions and visibility underwater.',
       'Create images that showcase the diversity of marine ecosystems.'
-    ]
+    ],
+      description: 'Tourism photography is a genre dedicated to capturing the essence of destinations, attractions, and experiences to promote tourism. The primary goal is to create visually captivating images that inspire people to visit and explore a particular location.',
+      characteristics: [
+          'Landscapes and Landmarks: Photograph iconic landmarks, natural landscapes, and architectural wonders that define the beauty of the destination.',
+          'Cultural Experiences: Document local culture, traditions, festivals, and customs to offer a genuine glimpse into the vibrant life of the community.',
+          'Activities and Adventures: Capture tourists engaging in various activities, from hiking and biking to water sports and wildlife safaris.',
+          'Cuisine and Dining: Showcase local cuisine, street food, and dining experiences, providing a taste of the region\'s flavors and culinary traditions.',
+          'People and Portraits: Photograph residents, artisans, guides, and visitors to capture the human element and interactions that contribute to the destination\'s charm.',
+          'Accommodations: Highlight diverse accommodations, from luxury resorts to cozy guesthouses, to give potential travelers a sense of where they can stay.',
+          'Transportation: Include images of transportation modes, showcasing trains, buses, boats, and other means of getting around the destination.',
+          'Nightlife and Entertainment: Showcase the destination\'s nightlife, cultural performances, festivals, and entertainment venues that add vibrancy.',
+          'Hidden Gems: Explore off-the-beaten-path locations and attractions, uncovering hidden gems that offer unique and authentic experiences.'
+      ],
+      note: 'Seasonal and Weather Variations: Capture the destination\'s beauty in different seasons and weather conditions, appealing to a diverse range of travelers.\n' +
+          'Tourism photographers play a vital role in promotional materials, contributing images for travel brochures, websites, social media, and advertisements. Success in tourism photography requires a keen eye for composition, lighting, and storytelling, along with cultural sensitivity when capturing people and communities worldwide. The aim is not only to attract tourists but also to accurately represent the destination and its inhabitants.\n'
   },
   {
     id: 35,
@@ -857,7 +913,18 @@ export const photographyCategories = [
       'Use underwater photography techniques for coral shots.',
       'Highlight the importance of coral reefs in marine ecosystems.',
       'Create images that raise awareness about coral conservation.'
-    ]
+    ],
+      description: 'Snorkeling photography, a specialized form of underwater photography, involves capturing images while snorkeling—a water activity where individuals swim on or through bodies of water using a diving mask, snorkel, and fins.',
+      characteristics:[
+          'Underwater Equipment: Utilize waterproof cameras or those enclosed in waterproof housings. Options range from compact point-and-shoots to advanced mirrorless or DSLRs with underwater housings. Some smartphones also offer waterproof capabilities.',
+          'Composition and Lighting: Focus on composition, seeking interesting subjects like coral reefs, fish, and underwater landscapes. Pay attention to lighting, with natural light providing stunning effects, especially during golden hours.',
+          'Stability and Buoyancy: Snorkelers float on the surface, making camera stability a challenge. Use snorkeling techniques, such as gentle fin kicks or a snorkeling vest, to maintain stability while capturing photos.',
+          'Marine Life Interaction: Approach marine life with respect, maintaining a safe distance to avoid disturbance. Capture candid shots, observing natural behaviors without causing harm.',
+          'Macro and Wide-Angle: Experiment with macro and wide-angle photography based on your camera and lens. Macro captures small details like coral textures, while wide-angle shots showcase expansive underwater scenes.',
+          'Post-Processing: Enhance snorkeling photos through post-processing. Adjust contrast, color balance, exposure, and sharpness to bring out vibrant colors and details lost in underwater shots.',
+          'Environmental Awareness: Practice responsible snorkeling etiquette, avoiding contact with marine life. Follow sustainable practices to protect delicate underwater ecosystems.'
+      ],
+      note: 'Snorkeling photography provides a unique chance to document the beauty of underwater environments, from tropical coral reefs to coastal kelp forests. Capture your underwater adventures, sharing the mesmerizing world beneath the surface with others. Prioritize safety, environmental respect, and the well-being of marine creatures throughout your snorkeling photography journey.'
   },
   {
     id: 36,
@@ -869,7 +936,19 @@ export const photographyCategories = [
       'Use telephoto lenses for close-up shots without disturbing the animals.',
       'Respect ethical guidelines for whale watching and photography.',
       'Create images that convey the beauty and grandeur of these marine mammals.'
-    ]
+    ],
+      description: 'Diving photography, a specialized underwater genre, captures images while scuba diving—a thrilling exploration of oceans and freshwater realms. ',
+      characteristics: [
+          'Underwater Equipment: Use waterproof cameras or those in underwater housings, ranging from compacts to advanced DSLRs.',
+          'Buoyancy and Stability: Achieve neutral buoyancy for steady shots without disturbing marine life, mastering techniques like the frog kick and hover.',
+          'Composition and Lighting: Seek captivating subjects like coral formations and fish. Use natural light for effects, supplementing with strobes in deeper or low-light areas.',
+          'Marine Life Interaction: Capture diverse marine life respectfully, ensuring safety and well-being.',
+          'Macro and Wide-Angle: Experiment with macro for small details and wide-angle for expansive underwater vistas.',
+          'Post-Processing: Enhance photos with adjustments for color, contrast, exposure, and sharpness.',
+          'Dive Planning and Safety: Plan dives meticulously, consider depth, air consumption, and safety stops. Familiarize with camera operation while managing diving gear.',
+          'Environmental Awareness: Practice responsible diving, minimizing impact on the environment and adhering to sustainable practices.'
+      ],
+      note: 'Diving photography uniquely combines the thrill of scuba diving with artistic expression, allowing you to share the mesmerizing beauty of the deep sea.'
   },
   {
     id: 37,
@@ -881,7 +960,21 @@ export const photographyCategories = [
       'Use fast shutter speeds to freeze dynamic surfing maneuvers.',
       'Experiment with different angles to showcase the action.',
       'Highlight the connection between surfers and the ocean.'
-    ]
+    ],
+      description: 'Coral photography, a specialized branch of underwater photography, focuses on capturing the beauty of coral reefs and their diverse marine inhabitants. ',
+      characteristics:[
+          'Equipment: Utilize underwater-capable cameras, from waterproof compacts to DSLRs/mirrorless with underwater housings. Employ macro and wide-angle lenses for detailed shots and expansive reef scenes.',
+          'Buoyancy and Stability: Maintain neutral buoyancy to prevent damage to corals. Master buoyancy control techniques for steady photography.',
+          'Composition: Apply composition principles like the rule of thirds and framing for visually engaging and balanced images.',
+          'Lighting: Ensure proper lighting using natural light and consider strobes or underwater lights, especially in deeper waters.',
+          'Macro and Close-Ups: Capture the textures, patterns, and colors of individual coral polyps through macro photography.',
+          'Wide-Angle Shots: Showcase the entire coral reef landscape, conveying the grandeur and complexity of the ecosystem.',
+          'Color Correction: Address color shifts in post-processing due to underwater conditions, restoring natural colors.',
+          'Marine Life Interaction: Highlight the symbiotic relationships between corals and other marine species.',
+          'Conservation Awareness: Use coral photography to raise awareness about threats like climate change, pollution, and overfishing.',
+          'Ethical Photography: Practice responsible underwater photography, prioritizing marine life safety and coral ecosystem protection.'
+      ],
+      note: 'Coral photography not only captures the stunning beauty of reefs but also serves as a tool for conservation, raising awareness about their importance and advocating for their protection. Documenting the intricate details and scenes beneath the surface contributes to the preservation of these vital ecosystems.'
   },
   {
     id: 38,
@@ -893,7 +986,21 @@ export const photographyCategories = [
       'Use a telephoto lens to get close-up shots of kite surfers.',
       'Pay attention to the interaction between wind, water, and surfers.',
       'Create images that showcase the adrenaline-pumping nature of kite surfing.'
-    ]
+    ],
+      description: 'Whale photography is a captivating genre that seeks to capture the beauty and grandeur of these majestic marine mammals',
+      characteristics:[
+          'Equipment: Use a camera with a telephoto lens for distant shots from a boat or shore. For underwater shots, opt for a camera with underwater housing or a specialized underwater camera.',
+          'Research and Planning: Understand the behavior, migration patterns, and feeding habits of the whale species you aim to photograph. This knowledge enhances your ability to anticipate and capture compelling moments.',
+          'Location and Timing: Choose locations known for whale sightings during specific seasons. Research predictable migration patterns to plan your photography trips effectively.',
+          'Boat Tours: Join whale-watching boat tours led by experienced guides to locate whales. These tours offer diverse angles and perspectives for capturing stunning images.',
+          'Underwater Photography: If possible, engage in underwater photography to capture a unique perspective of whales. Follow ethical guidelines to ensure minimal disruption to the animals.',
+          'Composition: Apply composition principles like the rule of thirds, leading lines, and framing for visually dynamic images.',
+          'Behavior and Action: Capture whale behaviors such as breaching, tail-slapping, and social interactions to convey their vitality and personality.',
+          'Lighting: Pay attention to lighting conditions, particularly during the golden hours, for warm and atmospheric images.',
+          'Patience and Observation: Whale photography demands patience and keen observation. Wait for the right moment to capture the perfect shot.',
+          'Conservation Awareness: Use your photography to raise awareness about whale conservation, addressing issues like habitat protection, climate change, and human impact.',
+      ],
+      note: 'Remember to approach whale photography with respect for their well-being and natural behaviors. Adhere to ethical guidelines to minimize disturbances, ensuring the safety of both the photographer and the whales. By creating powerful images, whale photography contributes to conservation efforts through education and awareness.'
   },
   {
     id: 39,
@@ -905,7 +1012,22 @@ export const photographyCategories = [
       'Use a telephoto lens to get close-up shots of kite surfers.',
       'Pay attention to the interaction between wind, water, and surfers.',
       'Create images that showcase the adrenaline-pumping nature of kite surfing.'
-    ]
+    ],
+      description: 'Surfing photography is a dynamic genre that captures the thrill and athleticism of surfers riding waves. ',
+      characteristics: [
+          'Equipment: Use a camera with fast autofocus and burst mode, coupled with a telephoto or wide-angle lens for varied perspectives.',
+          'Location and Timing: Choose surf spots with good waves and shoot during golden hours for optimal lighting conditions.',
+          'Composition: Apply compositional techniques like the rule of thirds and framing for visually compelling images.',
+          'Action Shots: Freeze the intensity of surfing with fast shutter speeds, capturing water sprays and dynamic surfer movements.',
+          'Aerial Photography: Utilize drones or helicopters for unique aerial perspectives of surfers and the ocean patterns.',
+          'Water Photography: Capture surfers from the water for a different angle, using waterproof cameras or housings.',
+          'Panning: Experiment with panning shots to convey speed and motion as surfers ride the waves.',
+          'Environmental Portraits: Showcase surfers in their element, highlighting their connection with the ocean and the surfing lifestyle.',
+          'Wave and Landscape: Include shots of waves and coastlines to provide context and a sense of place.',
+          'Post-Processing: Enhance photos with post-processing techniques to emphasize contrast, color, and sharpness.',
+          'Safety and Respect: Prioritize safety when shooting in or near the water, respecting surfers\' space and being mindful of ocean conditions.'
+      ],
+      note:'Surfing photography demands anticipation and quick reflexes to freeze those decisive moments that convey the energy and excitement of riding waves. Whether capturing pros in competition or amateurs enjoying the surf, it allows you to share the dynamic dance of the ocean and the exhilaration of surfing.'
   },
   {
     id: 40,
@@ -917,7 +1039,21 @@ export const photographyCategories = [
       'Highlight the beauty of the environment and its features.',
       'Pay attention to composition, lighting, and perspective.',
       'Experiment with different weather conditions for varied moods.'
-    ]
+    ],
+      description: 'Kite surfing photography is a dynamic genre capturing the excitement of harnessing wind power for wave riding and aerial tricks. ',
+      characteristics: [
+          'Equipment: Use a camera with fast autofocus and burst mode, paired with a telephoto lens for close-up shots of kite surfers in action.',
+          'Location and Lighting: Choose spots with good wind conditions and waves. Shoot during golden hours for warm and flattering lighting.',
+          'Composition: Apply techniques like the rule of thirds, leading lines, and framing for visually engaging images.',
+          'Action Shots: Freeze dynamic moments – jumps, flips, and tricks – with fast shutter speeds for crisp images.',
+          'Aerial Photography: Consider drones for unique aerial perspectives of kite surfers riding waves from above.',
+          'Water Photography: Capture kite surfers from various angles, using water housings for your camera or swimming with a waterproof camera.',
+          'Emotion and Expression: Focus on facial expressions and body language to convey the thrill and energy of kite surfers.',
+          'Environmental Context: Showcase the beauty of the ocean, coastline, and landscape for context and a sense of place.',
+          'Post-Processing: Enhance photos through post-processing, emphasizing contrast, color, and sharpness.',
+          'Safety and Respect: Prioritize safety, communicate with kite surfers, and avoid interfering with their movements.'
+      ],
+      note: 'Kite surfing photography freezes adrenaline-pumping moments, showcasing the exhilaration of riders mastering wind and waves. Whether for personal enjoyment or commercial purposes, it offers a chance to highlight the thrilling fusion of wind and water.',
   },
   {
     id: 41,
@@ -929,7 +1065,20 @@ export const photographyCategories = [
       'Use natural or controlled lighting to enhance the subject.',
       'Experiment with different poses and compositions.',
       'Create a connection between the subject and the viewer.'
-    ]
+    ],
+      description: 'Capture the essence of the sky\'s ever-changing beauty in this category. From vibrant sunsets and cloudscapes to celestial events and reflections, Sky Photography invites you to explore and share the magic above. ',
+      characteristics: [
+          'Sunsets and Sunrises: Experiment with compositions, silhouettes, and reflections during the golden hours.',
+          'Cloudscapes: Highlight the diversity of clouds, playing with light and shadow.',
+          'Starry Skies and Celestial Events: Utilize long exposure for captivating night shots of stars, constellations, and celestial phenomena.',
+          'Moon Photography: Document the moon\'s phases, integrating landscapes for compelling compositions.',
+          'Weather Phenomena: Capture the intensity of thunderstorms, lightning, rainbows, and fog.',
+          'Panoramas: Showcase the expansive beauty of the sky with wide-angle shots.',
+          'Reflections: Create visually striking compositions by capturing the sky\'s reflection in bodies of water.',
+          'Composition: Apply techniques like the rule of thirds to enhance visual appeal.',
+          'Color and Mood: Play with diverse palettes and moods offered by different times and weather conditions.'
+      ],
+      note: 'Sky Photography provides a creative outlet to connect with nature and share its dynamic beauty. Whether crafting serene landscapes, dramatic weather shots, or celestial portraits, this category invites you to capture and convey the awe-inspiring wonder of the sky.'
   },
   {
     id: 42,
@@ -941,7 +1090,21 @@ export const photographyCategories = [
       'Get close to your subject for intricate shots.',
       'Pay attention to composition and framing in macro shots.',
       'Experiment with different lighting setups for unique effects.'
-    ]
+    ],
+      description: 'Immerse yourself in the captivating world of Cloud Photography, where the dynamic and ever-changing nature of clouds becomes a canvas for creative expression. Explore various formations, textures, and interactions with the sky to add depth and drama to your images. ',
+      characteristics: [
+          'Types of Clouds: Discover the unique characteristics of cumulus, stratus, cirrus, and cumulonimbus clouds to enhance the mood and composition of your photographs.',
+          'Lighting: Harness the magic of different lighting conditions, such as sunrise or sunset, to create warm, soft, and dramatic effects on clouds.',
+          'Contrast: Play with the contrast between clouds and the sky for visually striking images, incorporating dark clouds against a bright sky or light clouds against a stormy backdrop.',
+          'Foreground and Background: Integrate interesting foreground elements like landscapes or structures to provide context and scale to your cloud images.',
+          'Composition: Apply principles like the rule of thirds, leading lines, and framing to craft visually appealing and balanced compositions.',
+          'Long Exposure: Experiment with long exposure techniques to capture the mesmerizing movement of clouds, adding a sense of motion and dreaminess to your shots.',
+          'Panoramas: Showcase the vastness and beauty of the atmosphere by capturing wide-angle panoramas of expansive cloud-filled skies.',
+          'Silhouettes: Use clouds as a backdrop for creating intriguing silhouettes of objects or people, adding a touch of mystery to your images.',
+          'Weather Events: Document dramatic weather phenomena, including storms, rainbows, and lightning, to infuse your cloud photography with excitement and intensity.',
+          'Equipment: Ensure stability with a tripod, especially for long exposure shots. Experiment with wide-angle and telephoto lenses to capture different aspects of cloud formations.'
+      ],
+      note: 'Cloud photography offers endless opportunities for creative expression and storytelling, allowing you to capture the ever-changing beauty and atmosphere of the sky. Whether aiming for serene scenes or awe-inspiring landscapes, clouds invite you to embark on a journey of artistic exploration.'
   },
   {
     id: 43,
@@ -953,7 +1116,21 @@ export const photographyCategories = [
       'Maintain brand consistency in style and messaging.',
       'Collaborate with creative teams to convey the brand narrative.',
       'Highlight key brand attributes through compelling visuals.'
-    ]
+    ],
+      description: 'Step into the captivating world of Rain Photography, where the beauty, mood, and atmosphere of rainy weather come to life. Rain adds drama, emotion, and visual interest to your photographs, be it portraits, landscapes, or everyday objects in wet conditions. ',
+      characteristics: [
+          'Camera Protection: Safeguard your camera with a waterproof cover, clear plastic bag, or shoot from sheltered areas to minimize exposure to rain.',
+          'Embrace Reflections: Explore the art of reflections in puddles and wet surfaces, adding depth and interest to your images.',
+          'Capture Action: Freeze dynamic moments like people walking in the rain, umbrellas in motion, falling raindrops, or playful splashes for added movement and energy.',
+          'Mood and Emotion: Focus on capturing the varied emotions of people in the rain, ranging from contemplation to joy.',
+          'Color and Contrast: Explore saturated colors and the contrast between wet and dry surfaces under diffused light conditions.',
+          'Lighting: Leverage overcast or diffused lighting for soft and even illumination, influencing the overall mood of your photographs.',
+          'Composition: Apply composition principles such as framing, leading lines, and negative space for visually pleasing and balanced images.',
+          'Close-Ups: Dive into macro photography, capturing intricate details like raindrops on surfaces, flowers, or other objects.',
+          'Backlit Scenes: Create a dramatic effect by shooting against the light, highlighting raindrops and infusing your images with atmospheric beauty.',
+          'Storytelling: Use rain photography to narrate a compelling story, considering how rain influences people\'s activities, interactions, and surroundings.'
+      ],
+      note: 'Rain photography unveils familiar scenes in a new light, allowing you to capture the unique ambiance of wet weather. Embrace the challenges and opportunities that rainy conditions offer to create evocative and compelling images that resonate with viewers on an emotional level.'
   },
   {
     id: 44,
@@ -965,7 +1142,12 @@ export const photographyCategories = [
       'Highlight intricate details not easily visible to the naked eye.',
       'Use a dedicated macro lens for optimal results.',
       'Experiment with different perspectives and depths of field.'
-    ]
+    ],
+      description: 'Embark on the exhilarating journey of Lightning Photography, capturing the breathtaking beauty of thunderstorms. ',
+      characteristics: [
+          'a.\tSafety First: Prioritize personal safety by staying indoors during storms.',
+          'b.\tEquipment: Use a sturdy tripod and consider a remote shutter release for stability.',
+      ]
   },
   {
     id: 45,
@@ -2033,7 +2215,20 @@ export const photographyCategories = [
       'Capture activities that bring joy and happiness.',
       'Highlight the beauty of leisurely pursuits.',
       'Create visual narratives that convey a sense of calm and enjoyment.'
-    ]
+    ],
+      description: 'Dive into the whimsical world of Tilt-Shift Photography, a creative technique using specialized lenses or post-processing to simulate a miniature scene. This unique perspective adds an enchanting touch, making real-life scenes appear like tiny-scale models or dioramas.\n',
+      characteristics: [
+          'Equipment: Utilize tilt-shift lenses or post-processing for a miniature effect.\n',
+          'Subject Selection: Opt for scenes with distinct lines and patterns for enhanced miniaturization.\n',
+          'Camera Settings: Set to manual mode, using a high f-number for a shallow depth of field. Adjust ISO and shutter speed based on lighting conditions.\n',
+          'Tilt-Shift Lens Technique: Adjust tilt and shift movements for focus control and perspective correction.\n',
+          'Post-Processing Technique: Use photo editing software for selective blurring and the tilt-shift effect.\n',
+          'Composition and Framing: Pay attention to composition and leading lines for a convincing miniature illusion.\n',
+          'Focus and Depth of Field: Focus on specific areas to emphasize in the final image. Adjust aperture for depth of field control.\n',
+          'Experimentation: Explore various angles, movements, and settings for diverse effects.\n',
+          'Storytelling: Consider how the tilt-shift effect enhances the narrative or adds a whimsical feel.\n',
+      ],
+      note: 'Tilt-Shift Photography turns ordinary scenes into captivating miniature worlds, offering a fresh perspective and engaging viewers in a whimsical visual experience.\n'
   },
   {
     id: 134,
@@ -2045,7 +2240,20 @@ export const photographyCategories = [
       'Explore landscapes, cityscapes, and natural formations.',
       'Pay attention to regulations and safety guidelines for aerial photography.',
       'Experiment with different altitudes and perspectives.'
-    ]
+    ],
+      description: 'Embark on a visual journey through Time-lapse Photography, a captivating technique that compresses time by capturing a sequence of photos at set intervals. Transforming slow changes into a mesmerizing video, this method provides a unique perspective on the passage of time.\n',
+      characteristics: [
+          'Planning: Choose a visually interesting subject with slow changes. Visualize the final video and plan intervals accordingly.\n',
+          'Camera Setup: Use a stable tripod for shake-free footage. Employ an intervalometer for automated shooting.\n',
+          'Camera Settings: Manual mode provides control. Set a suitable interval, aperture, ISO, and shutter speed.\n',
+          'Framing: Plan compositions adhering to composition rules. Ensure the subject remains well-framed throughout.\n',
+          'Batteries and Memory: Full battery and ample memory are crucial for extended shoots.\n',
+          'Capture: Start the time-lapse sequence, avoiding camera interference.\n',
+          'Post-Processing: Import images into video editing or time-lapse software. Arrange chronologically for a smooth sequence.\n',
+          'Editing: Enhance video quality through color correction and stabilization. Add music or narration for a complete sensory experience.\n',
+          'Export and Sharing: Export the video in a suitable format and resolution. Share on platforms to showcase your unique time-lapse.\n'
+      ],
+      note: 'Time-lapse Photography unveils subtle changes over time, offering a mesmerizing visual experience that captivates viewers and highlights the beauty of slow transformations.\n'
   },
   {
     id: 135,
@@ -2057,7 +2265,23 @@ export const photographyCategories = [
       'Explore the symbolism of roads in your compositions.',
       'Pay attention to leading lines and vanishing points.',
       'Document the journey and stories along the road.'
-    ]
+    ],
+      description: 'Enter the realm of Elegance in Matrimony Photography—a specialized genre dedicated to encapsulating the essence, emotions, and intricate details of a couple\'s exceptional day. As a wedding photographer, your objective is to craft a timeless narrative, embodying the sophistication and grace inherent in matrimonial celebrations.\n',
+      characteristics:[
+          'Preparation: Collaborate with the couple to understand their refined preferences and expectations. Plan meticulously to ensure flawless representation of their special day.\n',
+          'Capture Technique: Utilize an assortment of lenses and consider an assistant to capture diverse perspectives. Skillfully blend candid moments and posed shots, ensuring each frame radiates elegance.\n',
+          'Location Mastery: Plan shots to align seamlessly with the sophistication of chosen venues and locations.\n',
+          'Group Coordination: Organize and efficiently capture must-have group shots with family and friends, maintaining a sense of grace.\n',
+          'Details and Decor: Elevate the visual narrative by highlighting exquisite details, decorations, and rings.\n',
+          'Lighting Expertise: Utilize available light to enhance the ambience, gracefully implementing off-camera flash when necessary.\n',
+          'Posing Finesse: Provide gentle and refined direction for naturally elegant poses, capturing moments that exude sophistication.\n',
+          'Editing Precision: Post-process images with precision, enhancing colors for a consistent and refined visual narrative.\n',
+          'Prompt Delivery: Deliver elegantly edited images promptly, allowing the couple to relive their special day with grace.\n',
+          'Albums and Prints: Offer services that transform the collection into exquisite physical memories, embodying the timeless elegance of the occasion.\n',
+          'Professionalism: Uphold a professional demeanor, dressing with an understanding of the occasion\'s elegance. Approach intimate moments with the utmost respect and discretion.\n',
+          'Communication: Maintain transparent and open communication with the couple and the wedding coordinator.\n'
+      ],
+      note: 'Elegance in Matrimony Photography seamlessly marries technical skill with artistic vision, producing a stunning visual narrative that elevates the sophistication and grace of matrimonial celebrations. Flexibility, adaptability, and the ability to capture genuine emotions are pivotal for success in this refined genre.\n'
   },
   {
     id: 136,
@@ -2069,7 +2293,22 @@ export const photographyCategories = [
       'Capture the essence of historical events and eras.',
       'Pay attention to architectural details with historical significance.',
       'Create visual narratives that honor and preserve history.'
-    ]
+    ],
+      description: 'Embark on capturing dynamic moments with Action Photography—freezing the energy of fast-paced subjects. This guide equips you with the skills to master this genre, spanning sports events, wildlife, dance, and more. Discover the art of seizing the perfect shot in the realm of motion.\n',
+      characteristics: [
+          'Swift Shutter Mastery: Employ a fast shutter speed to freeze action, starting at 1/500th of a second.\n',
+          'Continuous Shooting Brilliance: Activate continuous shooting (burst) mode for rapid shots, enhancing chances of capturing peak action.\n',
+          'Autofocus Precision: Opt for continuous autofocus, using advanced tracking modes for optimal results.\n',
+          'Anticipatory Focus: Predict action trajectory and pre-focus on the spot, useful for sports and wildlife.\n',
+          'Panning Expertise: Explore panning for moving subjects, creating a focused subject against a blurred backdrop.\n',
+          'Creative Composition: Craft compositions that convey energy, using rule of thirds and framing techniques.\n',
+          'Impeccable Timing: Capture peak action and pivotal moments, mastering the art of timing.\n',
+          'Strategic Positioning: Position strategically, experimenting with elevated or low perspectives.\n',
+          'Adaptive Lighting: Navigate diverse lighting conditions swiftly, adapting settings for optimal results.\n',
+          'Optimal Equipment: Equip with a suitable lens for capturing distant action.\n',
+          'Safety and Etiquette: Adhere to safety guidelines and respect boundaries.\n',
+          'Post-Processing Finesse: Enhance images during post-processing for optimal impact.\n'
+      ],
   },
   {
     id: 137,
@@ -2081,7 +2320,20 @@ export const photographyCategories = [
       'Highlight natural and holistic approaches to wellness.',
       'Document herbal remedies, treatments, and rituals.',
       'Create images that reflect the balance of mind, body, and spirit.'
-    ]
+    ],
+      description: 'Delve into Nude Photography—an artistic genre delicately capturing the human form. From classic to contemporary, this genre demands finesse, respect, and a focus on consent. Explore the nuances of creating tasteful and meaningful images that celebrate the human body.\n',
+      characteristics: [
+          'Consent and Respect: Prioritize model comfort and consent, fostering a safe and empowering environment.\n',
+          'Artistic Vision: Define your artistic intent, whether classic, abstract, or conceptual nude photography.\n',
+          'Model Collaboration: Work with professional models, ensuring open communication about expectations and boundaries.\n',
+          'Lighting and Composition: Utilize controlled lighting, composing images with an artistic eye.\n',
+          'Posing Grace: Guide models into poses emphasizing natural lines and beauty.\n',
+          'Location and Props: Select locations and props that enhance the artistic concept.\n',
+          'Privacy and Security: Respect model privacy and secure images accordingly.\n',
+          'Ethical Considerations: Be aware of legal considerations and obtain necessary permits.\n',
+          'Continuous Learning: Study renowned nude photographers for insights.\n',
+          'Selective Display: Choose images for display aligning with your artistic vision.\n'
+      ]
   },
   {
     id: 138,
@@ -2093,7 +2345,22 @@ export const photographyCategories = [
       'Document sacred places and symbols of faith.',
       'Respect cultural sensitivities and practices in religious photography.',
       'Create images that evoke a sense of spirituality and devotion.'
-    ]
+    ],
+      description: 'Immerse in Beverage Photography—a genre transforming drinks into visually enticing art. From wine to coffee, this demands meticulous attention to detail and creative finesse. Elevate the sensory experience through your lens.\n',
+      characteristics: [
+          'Pristine Preparation: Ensure impeccable cleanliness, gathering props and ingredients in advance.\n',
+          'Luminous Lighting: Master controlled, diffused lighting to accentuate textures and colors.\n',
+          'Backdrop Brilliance: Select a backdrop harmonizing with the beverage, setting the mood.\n',
+          'Composition Craftsmanship: Experiment with compositions and angles for visually appealing shots.\n',
+          'Focal Finesse: Showcase captivating aspects of the beverage, such as foam or condensation.\n',
+          'Prop Play: Integrate complementary props and garnishes for enhanced composition.\n',
+          'Close-Up Intricacies: Capture detailed shots revealing the intricacies of the beverage.\n',
+          'Dynamic Pouring Moments: Freeze dynamic moments of pouring or stirring for added interest.\n',
+          'Color Harmony Enhancement: Post-process to enhance colors, contrast, and sharpness.\n',
+          'Reflections and Highlights: Handle reflections judiciously to avoid distraction.\n',
+          'Creative Experimentation: Fearlessly experiment with compositions, lighting setups, and angles.\n',
+      ],
+      note:'Beverage photography demands meticulous attention, blending detail with creative flair to create visually enticing images that evoke sensory experiences\n'
   },
   {
     id: 139,
@@ -2105,7 +2372,25 @@ export const photographyCategories = [
       'Document cultural festivals, clothing, and traditions.',
       'Highlight the uniqueness of customs and rituals.',
       'Create visual narratives that promote cross-cultural understanding.'
-    ]
+    ],
+    description: 'Embark on a visual journey with Train Photography, capturing the allure of trains and the diverse landscapes they navigate. From vintage locomotives to modern speedsters, this genre offers a canvas for creative exploration. Discover how to masterfully document the world of railways.\n',
+    characteristics: [
+        'Research and Location Planning: Explore train routes and locations, balancing urban and natural settings.\n',
+        'Safety First: Prioritize safety, obeying signs, and maintaining a safe distance from tracks.\n',
+        'Versatile Equipment: Utilize various lenses for wide-angle vistas and detailed close-ups.\n',
+        'Creative Composition: Experiment with angles, framing, and composition techniques.\n',
+        'Dynamic Shots: Capture trains in motion, experimenting with shutter speeds for diverse effects.\n',
+        'Detail Embrace: Focus on intricate details like wheels, steam, and mechanical elements.\n',
+        'Golden Hour Magic: Leverage the golden hour for warm and captivating lighting.\n',
+        'Environmental Context: Blend trains with surrounding landscapes for added depth.\n',
+        'People and Stories: Include human elements like engineers and passengers for narrative richness.\n',
+        'Weather Dramatics: Embrace diverse weather conditions for atmospheric variety.\n',
+        'Patterns and Symmetry: Utilize tracks, rail yards, and formations for engaging patterns.\n',
+        'Post-Processing Finesse: Enhance images in post-processing, adjusting colors and contrast.\n',
+        'Seasonal Storytelling: Capture trains in different seasons to showcase changing surroundings.\n',
+        'Narrative Essence: Aim for images that tell a story about the train, its journey, or its role.\n'
+    ],
+    note: 'Train photography is a captivating blend of technical skill and creative expression. Whether you\'re a railway enthusiast or seeking diverse visual opportunities, this genre allows you to document the beauty and power of locomotives and the scenic routes they traverse.\n'
   },
   {
     id: 140,
@@ -2117,7 +2402,18 @@ export const photographyCategories = [
       'Experiment with unconventional perspectives and angles.',
       'Focus on creating visual impact and emotional response.',
       'Encourage viewers to interpret and perceive your images uniquely.'
-    ]
+    ],
+      description: 'Step into the world of 3D Photography, where images come to life with depth and dimensionality. Explore various methods, from anaglyphs to digital displays, and discover tips for creating visually striking 3D imagery.\n',
+      characteristics: [
+          'Anaglyph 3D Brilliance: Use color filters for depth illusion, requiring special glasses for viewing.\n',
+          'Stereo Pairs Mastery: Capture two images from slightly different angles to simulate left and right eye views.\n',
+          'View-Master Wonders: Dive into circular reels and stereoscopic viewers for a classic 3D experience.\n',
+          '3D Cameras: Explore cameras with dual lenses for a simulated eye perspective.\n',
+          'Digital Displays Evolution: Embrace modern digital displays for glasses-free 3D experiences.\n',
+          '3D Printing Exploration: Take 3D imagery into the physical realm with 3D printing.\n',
+          'Tips for Compelling 3D Images: Use a stable tripod for aligned shots. Pay attention to composition, emphasizing foreground and background elements. Experiment with different subjects and scenes for optimal 3D translation. Avoid excessive movement between shots for viewer comfort. Post-process to align and optimize images for a seamless 3D effect.\n'
+      ],
+      note:'3D photography adds an immersive layer to your images, providing viewers with a unique depth and perspective experience.\n',
   },
   {
     id: 141,
@@ -2129,6 +2425,22 @@ export const photographyCategories = [
       'Engage with your young subjects to evoke natural expressions.',
       'Pay attention to composition and lighting in child portraits.',
       'Create images that reflect the joy and wonder of childhood.'
-    ]
+    ],
+      description: 'Delve into the world of 360-Degree Photography, capturing scenes in all directions for immersive experiences. From equipment selection to post-processing, discover the techniques to create captivating panoramic images.\n',
+      characteristics: [
+          'Equipment Selection: Choose between specialized 360-degree cameras or standard cameras for stitching.\n',
+          'Camera Settings Precision: Opt for manual mode, fixed white balance, and focus for consistent exposures.\n',
+          'Overlap and Consistency: Ensure sufficient overlap between frames for accurate stitching.\n',
+          'Tripod Stability: Use a stable tripod for level shots and seamless alignment.\n',
+          '360-Degree Views Mastery: Capture images in equal increments to form a complete circle.\n',
+          'HDR Panoramas: Experiment with bracketed exposures for challenging lighting conditions.\n',
+          'Stitching Software Expertise: Utilize specialized software like Adobe Photoshop for seamless stitching.\n',
+          'Editing and Enhancements: Polish panoramic images in post-processing, adjusting colors and contrast.\n',
+          'Virtual Tours and Platforms: Share images on platforms like Facebook and Google Maps for interactive experiences.\n',
+          'Interactive Elements Integration: Enhance virtual tours with interactive features like hotspots and information pop-ups.\n',
+          'Mobile App Convenience: Explore smartphone apps for simplified 360-degree image capture.\n',
+          'Composition Consciousness: Pay attention to overall composition and points of interest for engaging visuals.\n'
+      ],
+      note: '360-degree photography opens doors to immersive storytelling, virtual tours, and interactive experiences. With the right equipment and techniques, you can transport viewers into the heart of captivating panoramic environments'
   },
 ];

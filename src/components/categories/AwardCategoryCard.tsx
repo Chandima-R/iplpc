@@ -66,10 +66,10 @@ export const AwardCategoryCard = (
                             }
                         </div>
 
-                        {/*<div className='flex w-full items-center justify-between mb-2 h-6'>*/}
-                        {/*    <p className='text-sm'>Aperture:&nbsp;{result?.aperture}</p>*/}
-                        {/*    <p className='text-sm'>Exposure:&nbsp;{result?.exposure}</p>*/}
-                        {/*    <p className='text-sm'>Focus:&nbsp;{result?.focus}</p>*/}
+                        {/*<div className='w-full'>*/}
+                        {/*    <p className='text-sm'></p>*/}
+                        {/*    <p className='text-sm'>Exposure:&nbsp;</p>*/}
+                        {/*    <p className='text-sm'>Focus:&nbsp;</p>*/}
                         {/*</div>*/}
 
                         {/*<div className='flex w-full items-center justify-between mb-2 h-6'>*/}

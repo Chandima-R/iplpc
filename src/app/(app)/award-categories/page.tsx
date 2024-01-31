@@ -35,15 +35,15 @@ export default function AwardCategory(){
     };
 
     return (
-        <div>
+        <div className={'pb-8'}>
             <div className={'mb-2'}>
-                <h1 className={'text-3xl uppercase font-bold tracking-wider'}>Categories</h1>
-                <p className={'text-base font-normal'}>See all the categories of photos uploaded by users</p>
+                <h1 className={'text-3xl uppercase font-bold tracking-wider'}>Award Categories</h1>
+                <p className={'text-base font-normal'}>See all the categories of photos.</p>
 
                 <hr className="my-2 w-full"/>
             </div>
-            <div className={'flex justify-between items-start'}>
-                <div className="grid grid-cols-4 gap-6">
+            <div className={'flex justify-center'}>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {visibleCategories?.map((category) => (
                         <AwardCategoryCard
                             key={category.id}
@@ -58,7 +58,7 @@ export default function AwardCategory(){
                         />
                     ))}
                 </div>
-                <div className={'p-2 flex flex-col gap-2 justify-center items-center'}>
+                <div className={'p-5 h-full bg-primary/5 flex flex-col gap-2 justify-center items-center fixed right-0 top-0 bottom-0'}>
                     {/*<Button variant={'outline'} onClick={handlePrevPage} disabled={currentPage === 1} className={'text-xs w-8 h-8'}>*/}
                     {/*    <ChevronUp className={'w-4 h-4'}/>*/}
                     {/*</Button>*/}

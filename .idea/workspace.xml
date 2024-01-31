@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat:add all new award categories">
-      <change afterPath="$PROJECT_DIR$/.idea/iplpc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/categories/AwardCategoryCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/categories/categoryData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shared/TruncateDescription.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shared/TruncateTitle.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(app)/award-categories/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/award-categories/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tasks/add/SelectCategory.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tasks/add/categoryData.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/categories/AwardCategoryCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/categories/AwardCategoryCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/categories/categoryData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/categories/categoryData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +127,8 @@
       <workItem from="1703921642323" duration="14705000" />
       <workItem from="1703991072109" duration="3513000" />
       <workItem from="1704017688293" duration="689000" />
-      <workItem from="1704083466607" duration="11085000" />
+      <workItem from="1704083466607" duration="18614000" />
+      <workItem from="1704162134863" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update panel view and dashboard">
       <option name="closed" value="true" />
@@ -238,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702848953257</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat:add all new award categories">
+      <option name="closed" value="true" />
+      <created>1704103159633</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1704103159633</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
