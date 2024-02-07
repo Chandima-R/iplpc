@@ -20,7 +20,9 @@ import {CustomCalendar} from "@/components/shared/CustomCalendar";
 import Clock from "@/components/shared/Clock";
 import { MultipleMapLocation } from "@/components/shared/MultipleLocation";
 import {tourPlanData} from "@/app/(app)/tour/tour-plan-data";
-import {AlertCircle, CheckSquare } from "lucide-react";
+import {AlertCircle, CalendarIcon, CheckSquare } from "lucide-react";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { Button } from "@/components/ui/button";
 
 export default function Dashboard() {
     const locationData = tourPlanData?.filter(tour => tour.location)
@@ -59,20 +61,63 @@ export default function Dashboard() {
                     <Clock />
 
                     <div className={'mt-8 flex flex-col justify-end items-end w-full text-end'}>
-                        <div className={'bg-green-100 text-md uppercase font-bold group p-4 border-b-[1px] w-full flex items-center'}>
+                      
+
+                        <HoverCard>
+                            <HoverCardTrigger asChild>
+                            
+                            <div className={'bg-green-100 text-md uppercase font-bold group p-4 border-b-[1px] w-full flex items-center cursor-pointer'}>
                             <p>Registration</p>
                             <CheckSquare  className={'text-green-600 ml-4'}/>
                         </div>
+                            </HoverCardTrigger>
+                            <HoverCardContent className="w-80 bg-green-50">
+                                <div className="flex justify-between space-x-4">
+                                <div className="space-y-1">
+                                    <p className="text-md">
+                                    You have successfully regiesterd to start the competition.
+                                    </p>
+                                </div>
+                                </div>
+                            </HoverCardContent>
+                        </HoverCard>
 
-                        <div className={'bg-red-100 text-md uppercase font-bold group p-4 border-b-[1px] w-full flex items-center'}>
+                        <HoverCard>
+                            <HoverCardTrigger asChild>
+                            
+                        <div className={'bg-red-100 text-md uppercase font-bold group p-4 border-b-[1px] w-full flex items-center cursor-pointer'}>
                             <p>Ticket details</p>
                             <AlertCircle className={'text-red-600 ml-4'} />
                         </div>
+                            </HoverCardTrigger>
+                            <HoverCardContent className="w-80 bg-red-50">
+                                <div className="flex justify-between space-x-4">
+                                <div className="space-y-1">
+                                    <p className="text-md">
+                                    You need to complete your ticket details before you start the competition.
+                                    </p>
+                                </div>
+                                </div>
+                            </HoverCardContent>
+                        </HoverCard>
 
-                        <div className={'bg-red-100 text-md uppercase font-bold group p-4 border-b-[1px] w-full flex items-center'}>
+                        <HoverCard>
+                            <HoverCardTrigger asChild>
+                            <div className={'bg-red-100 text-md uppercase font-bold group p-4 border-b-[1px] w-full flex items-center cursor-pointer'}>
                             <p>tour plan 2/20</p>
                             <AlertCircle className={'text-red-600 ml-4'} />
                         </div>
+                            </HoverCardTrigger>
+                            <HoverCardContent className="w-80 bg-red-50">
+                                <div className="flex justify-between space-x-4">
+                                <div className="space-y-1">
+                                    <p className="text-md">
+                                    There are remaining 18 tasks to create before you start the competition.
+                                    </p>
+                                </div>
+                                </div>
+                            </HoverCardContent>
+                        </HoverCard>
 
                         {/*<div className={'text-md uppercase font-bold group p-4 border-b-[1px] w-full'}>*/}
                         {/*    <Link*/}
