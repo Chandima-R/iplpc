@@ -18,7 +18,7 @@ export default function ViewHotel(){
     
         return(
             <div className={'flex items-start'}>
-                <div className={'w-2/3 pr-2'}>
+                <div className={'w-3/3 pr-2'}>
                     <h2 className={'text-3xl font-semibold mb-2 capitalize'}>{hotelData?.name}</h2>
                     <div className={'mb-2'}>
                         <img

@@ -6,6 +6,8 @@ import {NearbyHotelCard} from "@/components/locations/NearbyHotelCard";
 import Link from "next/link";
 import {TruncateString} from "@/lib/truncateString";
 import {useState} from "react";
+import {Carousel,CarouselContent,CarouselItem,CarouselNext,CarouselPrevious,} from "@/components/ui/carousel"
+import { Card, CardContent } from "@/components/ui/card"
 
 export default function ViewLocation(){
 
@@ -47,40 +49,60 @@ export default function ViewLocation(){
            <div className={'flex flex-col w-1/3'}>
                <div className={'pl-2 border-l border-slate-900'}>
                    <h2 className={'text-2xl font-semibold capitalize mb-3'}>nearby locations</h2>
-                   <div>
-                       {
-                           locationData?.hotels?.map((hotel) => (
-                               <Link key={hotel?.name} href={`/locations/${path}/hotel/${hotel.id}`} target={'_blank'}>
-                                   <NearbyHotelCard
-                                       name={hotel?.name}
-                                       image={hotel?.image}
-                                       rating={hotel?.rating}
-                                       price={1}
-                                       facilities={hotel?.amenities}
-                                       description={hotel?.description}
-                                   />
-                               </Link>
-                           ))}
-                   </div>
+                   
+ <Carousel>
+  <CarouselContent>
+    {locationData?.hotels?.map((location, index) => (
+      <CarouselItem key={index}>
+        <Link href={`/locations/${path}/location/${location.id}`} target={'_blank'}>
+        </Link>
+        <Link key={location?.name} href={`/locations/${path}/location/${location.id}`} target={'_blank'}>
+          <NearbyHotelCard
+            name={location?.name}
+            image={location?.image}
+            rating={location?.rating}
+            price={1}
+            facilities={location?.amenities}
+            description={location?.description}
+          />
+        </Link>
+      </CarouselItem>
+    ))}
+  </CarouselContent>
+  <div className="flex justify-between items-center mt-4">
+    <CarouselPrevious />
+    <CarouselNext />
+  </div>
+</Carousel>
+
                </div>
 
                <div className={'pl-2 border-l border-slate-900'}>
                    <h2 className={'text-2xl font-semibold capitalize mb-3'}>nearby hotels</h2>
-                   <div>
-                       {
-                           locationData?.hotels?.map((hotel) => (
-                               <Link key={hotel?.name} href={`/locations/${path}/hotel/${hotel.id}`} target={'_blank'}>
-                                   <NearbyHotelCard
-                                       name={hotel?.name}
-                                       image={hotel?.image}
-                                       rating={hotel?.rating}
-                                       price={1}
-                                       facilities={hotel?.amenities}
-                                       description={hotel?.description}
-                                   />
-                               </Link>
-                           ))}
-                   </div>
+<Carousel>
+  <CarouselContent>
+    {locationData?.hotels?.map((hotel, index) => (
+      <CarouselItem key={index}>
+        <Link href={`/locations/${path}/hotel/${hotel.id}`} target={'_blank'}>
+        </Link>
+        <Link key={hotel?.name} href={`/locations/${path}/hotel/${hotel.id}`} target={'_blank'}>
+          <NearbyHotelCard
+            name={hotel?.name}
+            image={hotel?.image}
+            rating={hotel?.rating}
+            price={1}
+            facilities={hotel?.amenities}
+            description={hotel?.description}
+          />
+        </Link>
+      </CarouselItem>
+    ))}
+  </CarouselContent>
+  <div className="flex justify-between items-center mt-4">
+    <CarouselPrevious />
+    <CarouselNext />
+  </div>
+</Carousel>
                </div>
            </div>
         </div>
