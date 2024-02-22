@@ -23,6 +23,7 @@ import {tourPlanData} from "@/app/(app)/tour/tour-plan-data";
 import {AlertCircle, CalendarIcon, CheckSquare } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Dashboard() {
     const locationData = tourPlanData?.filter(tour => tour.location)
@@ -60,6 +61,12 @@ export default function Dashboard() {
                 <div className={'w-1/5 px-2 flex flex-col items-center justify-center pl-10'}>
                     <Clock />
 
+                    <div className={'w-full flex items-center justify-end mt-8'}>
+                        <Button>
+                            <Link href={'/task/add'}>Add Tour Plan</Link>
+                        </Button>
+                    </div>
+
                     <div className={'mt-8 flex flex-col justify-end items-end w-full text-end'}>
                       
 
@@ -83,7 +90,7 @@ export default function Dashboard() {
                         </HoverCard>
 
                         <HoverCard>
-                            <HoverCardTrigger asChild>
+                                <HoverCardTrigger asChild>
                             
                         <div className={'bg-red-100 text-md uppercase font-bold group p-4 border-b-[1px] w-full flex items-center cursor-pointer'}>
                             <p>Ticket details</p>

@@ -1,31 +1,24 @@
 'use client'
 
-import {photographyCategories} from "@/components/categories/categoryData"
 import {AwardCategoryCard} from "@/components/categories/AwardCategoryCard";
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
-export default function AwardCategory(){
+import {GET_ALL_CATEGORIES} from "@/graphql";
+import {useQuery} from "@apollo/client";
+
+export default function AwardCategory() {
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [selectedPage, setSelectedPage] = useState<number>(1);
 
-    const itemsPerPage = 10;
-    // @ts-ignore
-    const totalPages = Math.ceil( photographyCategories?.length / itemsPerPage as number);
+    const {data, loading, error} = useQuery(GET_ALL_CATEGORIES);
+    const awardCategories = data?.award_categories;
+
+    const itemsPerPage = 9;
+
+    const totalPages = Math.ceil(awardCategories?.length / itemsPerPage as number);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const visibleCategories = photographyCategories?.slice(startIndex, endIndex);
-
-    const handleNextPage = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage((prevPage) => prevPage + 1);
-        }
-    };
-
-    const handlePrevPage = () => {
-        if (currentPage > 1) {
-            setCurrentPage((prevPage) => prevPage - 1);
-        }
-    };
+    const visibleCategories = awardCategories?.slice(startIndex, endIndex);
 
     const goToPage = (page: number) => {
         if (page >= 1 && page <= totalPages) {
@@ -36,32 +29,37 @@ export default function AwardCategory(){
 
     return (
         <div className={'pb-8'}>
-            <div className={'mb-2'}>
-                <h1 className={'text-3xl uppercase font-bold tracking-wider'}>Award Categories</h1>
-                <p className={'text-base font-normal'}>See all the categories of photos.</p>
-
-                <hr className="my-2 w-full"/>
+            <div className={'mb-2 flex items-start justify-between'}>
+                <div>
+                    <h1 className={'text-3xl uppercase font-bold tracking-wider'}>Award Categories</h1>
+                    <p className={'text-base font-normal'}>See all the categories of photos.</p>
+                </div>
+                <div className={'flex items-center'}>
+                    <p className={'text-xl font-bold'}>{awardCategories?.length}</p>
+                    <p className={'ml-2 capitalize'}>award categories</p>
+                </div>
             </div>
+
+            <hr className="my-2 w-full"/>
+
             <div className={'flex justify-center'}>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    {visibleCategories?.map((category) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {visibleCategories?.map((visibleCategory: { id: string ; name: string; cover: any; value: number; rules: string[] | undefined; description: string | undefined; characteristics: string[] | undefined; note: string | undefined; }) => (
                         <AwardCategoryCard
-                            key={category.id}
-                            id={category.id}
-                            label={category.label}
-                            coverImage={category.cover || ''}
-                            value={category.value}
-                            rules={category.rules}
-                            description={category.description}
-                            characteristics={category.characteristics}
-                            note={category.note}
+                            key={visibleCategory?.id}
+                            id={visibleCategory?.id}
+                            label={visibleCategory?.name}
+                            coverImage={visibleCategory?.cover || '/images/placeholder.png'}
+                            value={visibleCategory?.value}
+                            rules={visibleCategory?.rules}
+                            description={visibleCategory?.description}
+                            characteristics={visibleCategory?.characteristics}
+                            note={visibleCategory?.note}
                         />
                     ))}
                 </div>
-                <div className={'p-5 h-full bg-primary/5 flex flex-col gap-2 justify-center items-center fixed right-0 top-0 bottom-0'}>
-                    {/*<Button variant={'outline'} onClick={handlePrevPage} disabled={currentPage === 1} className={'text-xs w-8 h-8'}>*/}
-                    {/*    <ChevronUp className={'w-4 h-4'}/>*/}
-                    {/*</Button>*/}
+                <div
+                    className={'p-5 h-full bg-primary/5 flex flex-col gap-2 justify-center items-center fixed right-0 top-0 bottom-0'}>
                     {Array.from({length: totalPages}, (_, index) => (
                         <Button
                             variant={'outline'}
@@ -72,9 +70,6 @@ export default function AwardCategory(){
                             {index + 1}
                         </Button>
                     ))}
-                    {/*<Button variant={'outline'} onClick={handleNextPage} className={'text-xs w-8 h-8'}>*/}
-                    {/*    <ChevronDown className={'w-4 h-4'}/>*/}
-                    {/*</Button>*/}
                 </div>
             </div>
 

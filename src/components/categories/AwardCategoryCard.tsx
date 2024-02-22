@@ -4,7 +4,7 @@ import {TruncateDescription} from "@/components/shared/TruncateDescription";
 import {TruncateTitle} from "@/components/shared/TruncateTitle";
 
 interface AwardCategoryCardProps {
-    id: number;
+    id: string;
     label: string;
     coverImage: string;
     value: number;
@@ -27,7 +27,7 @@ export const AwardCategoryCard = (
     }: AwardCategoryCardProps
 ) => {
     return(
-        <div className={`rounded shadow max-w-[350px] min-w-[300px] w-full group bg-white cursor-pointer hover:shadow-lg transition-all ease-in-out duration-300`}>
+        <div className={`rounded shadow w-full group bg-white cursor-pointer hover:shadow-lg transition-all ease-in-out duration-300`}>
             <div className='w-full h-56 overflow-hidden relative'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -46,8 +46,8 @@ export const AwardCategoryCard = (
                             <div className={'items-center'}>
                                 <p className='text-xs capitalize'>category:&nbsp;</p>
                                 {
-                                    label?.length && label?.length > 20 ? (
-                                        <TruncateTitle str={label} maxLength={20} />
+                                    label?.length && label?.length > 30 ? (
+                                        <TruncateTitle str={label} maxLength={30} />
                                     ): (
                                         <p className='text-xl font-bold ml'>{label}</p>
                                     )
@@ -55,37 +55,16 @@ export const AwardCategoryCard = (
                             </div>
                         </div>
 
-                        <div className='w-full items-center justify-between mb-2 h-36'>
+                        <div className='w-full items-center justify-between h-36'>
                             <p className='text-xs mb-1'>Description</p>
                             {
                                 description?.length && description?.length > 200 ? (
-                                    <TruncateDescription str={description} maxLength={200} />
+                                    <TruncateDescription str={description} maxLength={300} />
                                 ):(
                                     <p className={'text-sm'}>{description}</p>
                                 )
                             }
                         </div>
-
-                        {/*<div className='w-full'>*/}
-                        {/*    <p className='text-sm'></p>*/}
-                        {/*    <p className='text-sm'>Exposure:&nbsp;</p>*/}
-                        {/*    <p className='text-sm'>Focus:&nbsp;</p>*/}
-                        {/*</div>*/}
-
-                        {/*<div className='flex w-full items-center justify-between mb-2 h-6'>*/}
-                        {/*    <p className='text-sm'>ISO:&nbsp;{result?.iso}</p>*/}
-                        {/*    <p className='text-sm'>Shutter Speed:&nbsp;{result?.shutterSpeed}</p>*/}
-                        {/*</div>*/}
-
-                        {/*<div className='flex w-full items-center justify-between mb-2 h-6'>*/}
-                        {/*    <p className='text-sm'>White Balance:&nbsp;{result?.whiteBalance}</p>*/}
-                        {/*    <p className='text-sm'>Metering Mode:&nbsp;{result?.meteringMode}</p>*/}
-                        {/*</div>*/}
-
-                        {/*<div className='flex w-full items-center justify-between mb-2 h-6'>*/}
-                        {/*    <p className='text-sm'>Resolution:&nbsp;{result?.resolution}</p>*/}
-                        {/*    <p className='text-sm'>File Format:&nbsp;{result?.fileFormat}</p>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
             </div>
