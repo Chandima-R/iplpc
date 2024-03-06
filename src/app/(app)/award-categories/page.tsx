@@ -5,13 +5,15 @@ import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {GET_ALL_CATEGORIES} from "@/graphql";
 import {useQuery} from "@apollo/client";
+import Link from "next/link";
+import {Spinner} from "@/components/shared/Spinner";
 
 export default function AwardCategory() {
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [selectedPage, setSelectedPage] = useState<number>(1);
 
     const {data, loading, error} = useQuery(GET_ALL_CATEGORIES);
-    const awardCategories = data?.award_categories;
+    const awardCategories = data?.awardCategory;
 
     const itemsPerPage = 9;
 
@@ -26,6 +28,8 @@ export default function AwardCategory() {
             setSelectedPage(page); // Update selectedPage when navigating to a new page
         }
     };
+
+    if(loading) return <Spinner/>
 
     return (
         <div className={'pb-8'}>
@@ -45,17 +49,19 @@ export default function AwardCategory() {
             <div className={'flex justify-center'}>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {visibleCategories?.map((visibleCategory: { id: string ; name: string; cover: any; value: number; rules: string[] | undefined; description: string | undefined; characteristics: string[] | undefined; note: string | undefined; }) => (
-                        <AwardCategoryCard
-                            key={visibleCategory?.id}
-                            id={visibleCategory?.id}
-                            label={visibleCategory?.name}
-                            coverImage={visibleCategory?.cover || '/images/placeholder.png'}
-                            value={visibleCategory?.value}
-                            rules={visibleCategory?.rules}
-                            description={visibleCategory?.description}
-                            characteristics={visibleCategory?.characteristics}
-                            note={visibleCategory?.note}
-                        />
+                        <Link href={`/award-categories/${visibleCategory.id}`} key={visibleCategory.id}>
+                            <AwardCategoryCard
+                                key={visibleCategory?.id}
+                                id={visibleCategory?.id}
+                                label={visibleCategory?.name}
+                                coverImage={visibleCategory?.cover || '/images/placeholder.png'}
+                                value={visibleCategory?.value}
+                                rules={visibleCategory?.rules}
+                                description={visibleCategory?.description}
+                                characteristics={visibleCategory?.characteristics}
+                                note={visibleCategory?.note}
+                            />
+                        </Link>
                     ))}
                 </div>
                 <div

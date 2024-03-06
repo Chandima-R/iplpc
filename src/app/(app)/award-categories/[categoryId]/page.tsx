@@ -1,92 +1,52 @@
-'use client';
+'use client'
 
-import { useState } from "react";
-import { categoryData } from "@/components/admin/categoryData";
-import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import {ImageCard} from "@/components/categories/ImageCard";
+import {useParams} from "next/navigation";
+import {useQuery} from "@apollo/client";
+import {GET_CATEGORY_BY_ID} from "@/graphql";
+import {Spinner} from "@/components/shared/Spinner";
+import Image from "next/image";
 
-export default function SingleCategory() {
-    const [currentPage, setCurrentPage] = useState<number>(1);
-    const [selectedPage, setSelectedPage] = useState<number>(1);
-
-    const pathname = usePathname();
-    const category = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.categoryName;
-    const categoryLength = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.images?.length;
-    const images = categoryData?.find((category) => category?.categoryId === Number(pathname?.split('/')[2]))?.images;
-
-    const itemsPerPage = 2;
-    // @ts-ignore
-    const totalPages = Math.ceil( images?.length / itemsPerPage as number);
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-
-    const visibleImages = images?.slice(startIndex, endIndex);
-
-
-    const handleNextPage = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage((prevPage) => prevPage + 1);
+export default function ViewIndividualCategory(){
+    const params = useParams()
+    const {data, loading, error} = useQuery(GET_CATEGORY_BY_ID, {
+        variables: {
+            _eq: params?.categoryId
         }
-    };
+    })
 
-    const handlePrevPage = () => {
-        if (currentPage > 1) {
-            setCurrentPage((prevPage) => prevPage - 1);
-        }
-    };
+    if(loading) return <Spinner />
 
-    const goToPage = (page: number) => {
-        if (page >= 1 && page <= totalPages) {
-            setCurrentPage(page);
-            setSelectedPage(page); // Update selectedPage when navigating to a new page
-        }
-    };
-
-    console.log(visibleImages)
     return (
         <div>
-            <div className={'mb-4 pb-2 border-b-[1px] flex items-start justify-between w-full'}>
-                <div>
-                    <h1 className={'text-3xl uppercase font-bold tracking-wider flex items-center'}>Results <span className={'text-2xl font-bold ml-4'}>{categoryLength}</span></h1>
-                    <p className={'text-base font-normal'}>See all the photos uploaded by users</p>
-                </div>
-                {/* <div>
-                    <Link href={`/panel/panel-award-categories/favorites}`}>Favorites </Link>
-                </div> */}
+            <div className={'mb-4 w-full'}>
+                <h1 className={'text-3xl uppercase font-bold tracking-wider flex items-center'}>{data?.awardCategory[0]?.name}</h1>
             </div>
 
-            <div className={'flex items-start justify-between'}>
-                <div className="grid grid-cols-4 gap-6">
-                    {visibleImages?.map((result) => {
-                        return (
-                            <div className="cursor-pointer" key={result?.imageId}>
-                                <ImageCard
-                                    result={result}
-                                />
-                            </div>
-                        );
-                    })}
+            <hr className="my-2 mb-4 w-full"/>
+
+            <div className={'w-full flex items-start justify-between'}>
+                <div className={'w-3/5'}>
+                    <Image
+                        src={data?.awardCategory[0]?.cover || '/images/placeholder.png'}
+                        alt={data?.awardCategory[0]?.name}
+                        width={1920}
+                        height={1080}
+                        className={'w-full object-cover h-auto rounded mb-4'}
+                    />
+
+                    <p>{data?.awardCategory[0]?.description}</p>
                 </div>
-                <div className={'p-2 flex flex-col gap-2'}>
-                    {/*<Button variant={'outline'} onClick={handlePrevPage} disabled={currentPage === 1} className={'text-xs'}>*/}
-                    {/*    <ChevronUp />*/}
-                    {/*</Button>*/}
-                    {Array.from({ length: totalPages }, (_, index) => (
-                        <Button
-                            variant={'outline'}
-                            key={index + 1}
-                            onClick={() => goToPage(index + 1)}
-                            className={`${selectedPage === index + 1 ? 'bg-primary text-white' : ''} hover:bg-primary hover:text-white transition-all ease-in-out duration-300 text-xs rounded-full w-8 h-8`}
-                        >
-                            {index + 1}
-                        </Button>
-                    ))}
-                    {/*<Button variant={'outline'} onClick={handleNextPage} className={'text-xs'}>*/}
-                    {/*    <ChevronDown />*/}
-                    {/*</Button>*/}
+                <div className={'w-2/5 px-4'}>
+                    <p className={'font-bold text-xl mb-2'}>Tips for the best shot</p>
+                    <ol className={'list-decimal pl-2'}>
+                        {
+                            data?.awardCategory[0]?.tips?.map((tip: { id: string; tip: string }) => (
+                                <li key={tip.id} className={'text-sm mb-2'}>{tip.tip}</li>
+                            ))
+                        }
+                    </ol>
                 </div>
             </div>
         </div>
-    );
+    )
 }

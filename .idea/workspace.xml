@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat: update dashboard">
-      <change afterPath="$PROJECT_DIR$/public/images/placeholder.png" afterDir="false" />
+    <list default="true" id="478b297b-1990-4619-bb35-2dea29202596" name="Changes" comment="feat: add backend for award-categories">
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/(support)/support/new-ticket/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/(support)/support/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/Spinner.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/(panel-locations)/panel-locations/[locationId]/hotel/[hotelId]/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/(panel-locations)/panel-locations/[locationId]/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/(panel-locations)/panel-locations/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/[categoryId]/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/panel-award-categories/[categoryId]/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/panel-award-categories/favorites/hot-photos/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/panel-award-categories/favorites/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/panel/panel-award-categories/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/award-categories/[categoryId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/award-categories/[categoryId]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(app)/award-categories/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/award-categories/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/dashboard/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(panel-session)/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(panel-session)/panel-login/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/categories/AwardCategoryCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/categories/AwardCategoryCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphql/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphql/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,11 +96,11 @@
       <recent name="D:\Metawiz\iplpc\src\app\(admin)\panel\(panel-locations)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Metawiz\iplpc\iplpc\src\app\(app)\(support)\support" />
       <recent name="D:\Metawiz\iplpc\iplpc\public\images" />
       <recent name="D:\Metawiz\iplpc\src\components\categories" />
       <recent name="D:\Metawiz\iplpc\public\images" />
       <recent name="D:\Metawiz\iplpc\public\images\videos" />
-      <recent name="D:\Metawiz\iplpc\src\app\(admin)\panel" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -155,7 +145,18 @@
       <workItem from="1707464830013" duration="6000" />
       <workItem from="1708531901823" duration="1996000" />
       <workItem from="1708539699986" duration="11000" />
-      <workItem from="1708598792480" duration="1637000" />
+      <workItem from="1708598792480" duration="7307000" />
+      <workItem from="1709034164329" duration="180000" />
+      <workItem from="1709034356076" duration="14000" />
+      <workItem from="1709118829878" duration="2227000" />
+      <workItem from="1709141359449" duration="27000" />
+      <workItem from="1709143457338" duration="1160000" />
+      <workItem from="1709176732708" duration="594000" />
+      <workItem from="1709183884364" duration="12000" />
+      <workItem from="1709271544389" duration="91000" />
+      <workItem from="1709272292535" duration="127000" />
+      <workItem from="1709272429894" duration="20000" />
+      <workItem from="1709735923093" duration="5945000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update panel view and dashboard">
       <option name="closed" value="true" />
@@ -285,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707292185738</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: add backend for award-categories">
+      <option name="closed" value="true" />
+      <created>1708600963328</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708600963328</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +319,7 @@
     <MESSAGE value="feat:add all new award categories" />
     <MESSAGE value="feat: update category card and navbar" />
     <MESSAGE value="feat: update dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update dashboard" />
+    <MESSAGE value="feat: add backend for award-categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add backend for award-categories" />
   </component>
 </project>
