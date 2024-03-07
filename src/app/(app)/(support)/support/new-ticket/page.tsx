@@ -21,7 +21,7 @@ export default function NewTicket(){
                         </div>
                     </div>
                     <div className={'border p-4'}>
-                        <p className={'text-lg font-semibold'}>Ticket #12345</p>
+                        <p className={'text-lg font-semibold'}>#IPLPC-12345</p>
                         <div className={'flex items-center justify-between'}>
                             <p>Closed</p>
                             <p className={'text-sm'}>Last updated: 2 hours ago</p>

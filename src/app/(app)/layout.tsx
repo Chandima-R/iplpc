@@ -4,6 +4,7 @@ import '../globals.css'
 import { Navbar } from '@/components/shared/Navbar'
 import { ReactNode } from 'react'
 import { Provider } from '@/components/shared/Providers'
+import {Footer} from "@/components/shared/Footer";
 
 const comfortaa = Comfortaa({ subsets: ['latin'] })
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           <div  className='mx-auto max-w-[1440px] w-full p-6 max-h-screen'>
             {children}
           </div>
+        <Footer />
         </body>
       </Provider>
     </html>

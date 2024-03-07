@@ -2,15 +2,13 @@
 
 import { PhotoUpload } from "@/components/tasks/add/PhotoUpload";
 import { SelectCategory } from "@/components/tasks/add/SelectCategory";
-import { SelectTask } from "@/components/tasks/add/SelectTask";
 import {useRef, useState} from "react";
-import {WizardHeader} from "@/components/shared/WizardHeader";
 import {WizardFooter} from "@/components/shared/WizardFooter";
 import {TaskData} from "@/components/types";
 import {TASK_INITIAL_DATA} from "@/components/InitialData";
 
 const steps = [
-    'task',
+    // 'task',
     'category',
     'upload'
 ]
@@ -26,16 +24,16 @@ export default function AddTask(){
 
     const renderStep = () => {
         switch(currentStep){
-            case 'task':
-                return(
-                    <SelectTask
-                        formData={formData}
-                        refSubmitButton={refSubmitButton}
-                        setCurrentStep={setCurrentStep}
-                        setFormData={setFormData}
-                        setIsButtonDisabled={setIsButtonDisabled}
-                    />
-                )
+            // case 'task':
+            //     return(
+            //         <SelectTask
+            //             formData={formData}
+            //             refSubmitButton={refSubmitButton}
+            //             setCurrentStep={setCurrentStep}
+            //             setFormData={setFormData}
+            //             setIsButtonDisabled={setIsButtonDisabled}
+            //         />
+            //     )
             case 'category':
                 return(
                     <SelectCategory
@@ -67,10 +65,10 @@ export default function AddTask(){
         <div className="w-full flex items-center justify-center py-4 px-4">
             <div className="h-auto w-full max-w-[1000px]">
                 <div className={''}>
-                    <WizardHeader
-                        currentStep={currentStep}
-                        steps={steps}
-                    />
+                    {/*<WizardHeader*/}
+                    {/*    currentStep={currentStep}*/}
+                    {/*    steps={steps}*/}
+                    {/*/>*/}
                 </div>
 
                 <div>

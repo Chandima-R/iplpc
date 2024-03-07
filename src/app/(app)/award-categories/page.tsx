@@ -4,7 +4,7 @@ import {AwardCategoryCard} from "@/components/categories/AwardCategoryCard";
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {GET_ALL_CATEGORIES} from "@/graphql";
-import {useQuery} from "@apollo/client";
+import { useSubscription} from "@apollo/client";
 import Link from "next/link";
 import {Spinner} from "@/components/shared/Spinner";
 
@@ -12,7 +12,7 @@ export default function AwardCategory() {
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [selectedPage, setSelectedPage] = useState<number>(1);
 
-    const {data, loading, error} = useQuery(GET_ALL_CATEGORIES);
+    const {data, loading, error} = useSubscription(GET_ALL_CATEGORIES);
     const awardCategories = data?.awardCategory;
 
     const itemsPerPage = 9;

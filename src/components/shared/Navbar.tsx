@@ -9,6 +9,7 @@ import {
     NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import {usePathname} from "next/navigation";
+import Image from "next/image";
 
 export const Navbar = () => {
     const router = usePathname()
@@ -21,15 +22,9 @@ export const Navbar = () => {
         <div className="bg-primary text-white shadow sticky top-0 left-0 right-0 z-20 h-18 py-2 flex items-center">
             <div className="flex items-center justify-between w-full max-w-[1440px] mx-auto px-6 py-2">
                 <div className="flex items-center uppercase tracking-wider text-xs">
-                    {/*<Link href="/">*/}
-                    {/*    <Image*/}
-                    {/*        src={'/images/logos/logo-gold.png'}*/}
-                    {/*        alt={'logo-gold'}*/}
-                    {/*        width={100}*/}
-                    {/*        height={100}*/}
-                    {/*        className={'cursor-pointer mr-4'}*/}
-                    {/*    />*/}
-                    {/*</Link>*/}
+                        <Link href="/">
+                            <Image src={'/images/logos/logo-gold.png'} alt={'logo'} width={100} height={100} className={'cursor-pointer mr-4'}/>
+                        </Link>
                     <NavigationMenu>
                         <NavigationMenuList>
                             <NavigationMenuItem>

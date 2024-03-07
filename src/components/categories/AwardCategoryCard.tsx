@@ -2,6 +2,7 @@
 
 import {TruncateDescription} from "@/components/shared/TruncateDescription";
 import {TruncateTitle} from "@/components/shared/TruncateTitle";
+import Image from "next/image";
 
 interface AwardCategoryCardProps {
     id: string;
@@ -16,26 +17,21 @@ interface AwardCategoryCardProps {
 
 export const AwardCategoryCard = (
     {
-        id,
         label,
         coverImage,
-        value,
-        rules,
         description,
-        characteristics,
-        note
     }: AwardCategoryCardProps
 ) => {
     return(
         <div className={`rounded shadow w-full group bg-white cursor-pointer hover:shadow-lg transition-all ease-in-out duration-300`}>
-            <div className='w-full h-56 overflow-hidden relative'>
+            <div className='w-full h-72 overflow-hidden relative'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                     src={coverImage}
                     width={1920}
                     height={1080}
                     alt={label}
-                    className="rounded object-cover h-56 group-hover:scale-105 transition-all duration-500 ease-in-out "
+                    className="rounded object-cover h-72 group-hover:scale-105 transition-all duration-500 ease-in-out "
                 />
             </div>
 
